@@ -2,19 +2,20 @@ package me.char321.sfadvancements.api.criteria;
 
 import me.char321.sfadvancements.SFAdvancements;
 import org.bukkit.ChatColor;
+import org.bukkit.NamespacedKey;
+import org.bukkit.Registry;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.EntityType;
 
 /**
- * this criterion is performed when a player kills a mob
+ * This criterion is performed when a player kills a mob.
  *
- */
-/**
  * @author char321
  */
 public class MobKillCriterion extends Criterion {
     private final EntityType entity;
 
+    @SuppressWarnings("deprecation")
     public static MobKillCriterion loadFromConfig(ConfigurationSection config) {
         String id = config.getName();
 
@@ -35,7 +36,7 @@ public class MobKillCriterion extends Criterion {
             SFAdvancements.warn("entity not provided for " + id);
             return null;
         }
-        EntityType entityType = EntityType.fromName(entity);
+        EntityType entityType = Registry.ENTITY_TYPE.match(entity);
         if (entityType == null) {
             SFAdvancements.warn("invalid entity type " + entity + " for criterion " + id);
             return null;

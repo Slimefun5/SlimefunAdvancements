@@ -19,10 +19,9 @@ import javax.annotation.Nullable;
 import java.util.Objects;
 
 /**
- * an advancement that appears in the advancements gui and players can complete
- * when all of an advancement's criteria are completed, it becomes shiny oooh
- */
-/**
+ * An advancement that appears in the advancements gui and players can complete.
+ * When all of an advancement's criteria are completed, it becomes shiny.
+ *
  * @author char321
  */
 public class Advancement {
@@ -120,7 +119,6 @@ public class Advancement {
 
     public void register() {
         group.addAdvancement(this);
-//        group.getAdvancements().add(this);
         SFAdvancements.getRegistry().getAdvancements().put(key, this);
     }
 
@@ -160,13 +158,16 @@ public class Advancement {
         }
     }
 
+    @SuppressWarnings("deprecation")
     private void broadcastMessage(Player p) {
         BaseComponent component = new TextComponent();
         component.addExtra(p.getName() + " has made the advancement ");
         BaseComponent sub = new TextComponent(getName());
         sub.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(getDescription())));
         component.addExtra(sub);
-        Bukkit.spigot().broadcast(component);
+        for (Player online : Bukkit.getOnlinePlayers()) {
+            online.spigot().sendMessage(component);
+        }
     }
 
     @Override
