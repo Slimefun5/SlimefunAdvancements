@@ -17,9 +17,9 @@ you should maybe use the latest commit
 
     <dependencies>
         <dependency>
-            <groupId>com.github.slimefun</groupId>
-            <artifactId>slimefun4</artifactId>
-            <version>RC-30</version>
+            <groupId>com.github.Slimefun5</groupId>
+            <artifactId>Slimefun5</artifactId>
+            <version>v5.0.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

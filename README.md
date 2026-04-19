@@ -174,7 +174,7 @@ see [api.md](https://github.com/qwertyuioplkjhgfd/SlimefunAdvancements/blob/main
 ## TODO:
 - ~~criteria system~~
   - ~~inventory criteria~~
-  - ~~craft criteria (soon, see [Slimefun/Slimefun4#3439](https://github.com/Slimefun/Slimefun4/pull/3439))~~
+  - ~~craft criteria (soon, see [Slimefun5/Slimefun5#3439](https://github.com/Slimefun5/Slimefun5/pull/3439))~~
   - ~~interact criteria~~
       - ~~place criteria~~
   - ~~research criteria~~
