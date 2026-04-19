@@ -10,6 +10,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.List;
 
+/**
+ * @author char321
+ */
 public class ConfigUtils {
     private ConfigUtils() {}
 
@@ -26,7 +29,7 @@ public class ConfigUtils {
         ConfigurationSection itemSection = config.getConfigurationSection(path);
         if (itemSection == null) {
             String itemName = config.getString(path);
-            if(itemName != null) {
+            if (itemName != null) {
                 try {
                     return getTemplate(itemName).clone();
                 } catch (IllegalArgumentException x) {
@@ -48,7 +51,7 @@ public class ConfigUtils {
         ItemMeta im = item.getItemMeta();
 
         String name = itemSection.getString("name");
-        if(name != null) {
+        if (name != null) {
             im.setDisplayName(translate(name));
         }
 

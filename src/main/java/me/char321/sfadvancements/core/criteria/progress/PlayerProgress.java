@@ -34,6 +34,9 @@ import java.util.logging.Level;
  * json <br>
  *
  */
+/**
+ * @author char321
+ */
 public class PlayerProgress {
     private final UUID player;
     private final Map<NamespacedKey, AdvancementProgress> progressMap = new HashMap<>();
@@ -146,7 +149,7 @@ public class PlayerProgress {
     private void loadFromObject(JsonObject object) {
         for (Map.Entry<String, JsonElement> entry : object.entrySet()) {
             NamespacedKey advkey = NamespacedKey.fromString(entry.getKey());
-            if(!Utils.isValidAdvancement(advkey)) {
+            if (!Utils.isValidAdvancement(advkey)) {
                 SFAdvancements.warn("unknown advancement in player progress: " + advkey);
                 continue;
             }

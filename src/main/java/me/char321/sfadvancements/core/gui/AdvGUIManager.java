@@ -10,6 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * @author char321
+ */
 public class AdvGUIManager implements Listener {
     private final Map<UUID, OpenGUI> guis = new HashMap<>();
 

@@ -23,6 +23,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author char321
+ */
 public class InventoryCriterionCompleter implements CriterionCompleter, Listener {
     private final Map<Material, Set<InventoryCriterion>> criteria = new EnumMap<>(Material.class);
 

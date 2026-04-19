@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+/**
+ * @author char321
+ */
 public class AdvancementGroup {
     private final ItemStack display;
     private final String frameType;

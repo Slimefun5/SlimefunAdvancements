@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author char321
+ */
 public class GrantCommand implements SubCommand {
     @Override
     public boolean onExecute(CommandSender sender, Command command, String label, String[] args) {
@@ -71,7 +74,7 @@ public class GrantCommand implements SubCommand {
                 for (Advancement adv : SFAdvancements.getRegistry().getAdvancements().values()) {
                     if (!SFAdvancements.getAdvManager().isCompleted(p, adv)) {
                         String s = adv.getKey().toString();
-                        if(s.contains(args[2])) {
+                        if (s.contains(args[2])) {
                             res.add(s);
                         }
                     }

@@ -18,10 +18,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * @author char321
+ */
 public class DumpItemCommand implements SubCommand {
     @Override
     public boolean onExecute(CommandSender sender, Command command, String label, String[] args) {
-        if(!(sender instanceof Player)) {
+        if (!(sender instanceof Player)) {
             sender.sendMessage("you must be a player to execute this command");
             return false;
         }
@@ -32,7 +35,7 @@ public class DumpItemCommand implements SubCommand {
         ItemStack item = p.getInventory().getItemInMainHand();
         SFAdvancements.info("Representing " + item);
 
-        if(!item.hasItemMeta()) {
+        if (!item.hasItemMeta()) {
             SFAdvancements.info("This item can be represented with just the string \n" + item.getType().name());
         }
 
@@ -52,7 +55,7 @@ public class DumpItemCommand implements SubCommand {
         StringBuilder representation = new StringBuilder();
         representation.append("type: ").append(type).append("\n");
         representation.append("name: ").append(ItemUtils.getItemName(item).replace(ChatColor.COLOR_CHAR, '&').replaceAll("[\\[\\]]", "")).append("\n");
-        if(im.hasLore()) {
+        if (im.hasLore()) {
             representation.append("lore: ").append("\n");
             for (String s : im.getLore()) {
                 representation.append("  - ").append(s.replace(ChatColor.COLOR_CHAR, '&')).append("\n");

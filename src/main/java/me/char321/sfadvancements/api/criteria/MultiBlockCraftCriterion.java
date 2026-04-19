@@ -8,6 +8,9 @@ import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nullable;
 
+/**
+ * @author char321
+ */
 public class MultiBlockCraftCriterion extends Criterion {
     @Nullable private final ItemStack item;
     @Nullable private final String machineId;
@@ -26,7 +29,7 @@ public class MultiBlockCraftCriterion extends Criterion {
         }
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

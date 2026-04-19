@@ -18,6 +18,9 @@ import java.util.Locale;
 import java.util.Map;
 
 @SuppressWarnings("unused")
+/**
+ * @author char321
+ */
 public class Utils {
     private Utils() {}
 

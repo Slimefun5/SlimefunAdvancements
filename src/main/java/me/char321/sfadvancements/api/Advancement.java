@@ -22,6 +22,9 @@ import java.util.Objects;
  * an advancement that appears in the advancements gui and players can complete
  * when all of an advancement's criteria are completed, it becomes shiny oooh
  */
+/**
+ * @author char321
+ */
 public class Advancement {
     private final NamespacedKey key;
     private final NamespacedKey parent;

@@ -8,6 +8,9 @@ import java.util.function.Function;
 /**
  * utility class that contain methods for criteria types
  */
+/**
+ * @author char321
+ */
 public class CriteriaTypes {
     private CriteriaTypes() {}
 
@@ -51,7 +54,7 @@ public class CriteriaTypes {
         }
 
         Function<ConfigurationSection, Criterion> function = SFAdvancements.getRegistry().getCriterionTypes().get(type);
-        if(function == null) {
+        if (function == null) {
             SFAdvancements.warn("unknown criterion type: " + type);
             return null;
         }

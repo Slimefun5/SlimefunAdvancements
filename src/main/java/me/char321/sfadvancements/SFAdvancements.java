@@ -33,6 +33,9 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author char321
+ */
 public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
     private static SFAdvancements instance;
     private final AdvManager advManager = new AdvManager();

@@ -22,6 +22,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 
+/**
+ * @author char321
+ */
 public class ImportCommand implements SubCommand {
     @Override
     public boolean onExecute(CommandSender sender, Command command, String label, String[] args) {

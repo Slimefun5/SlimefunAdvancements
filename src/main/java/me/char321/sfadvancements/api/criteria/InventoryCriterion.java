@@ -10,6 +10,9 @@ import org.bukkit.inventory.ItemStack;
  * this criterion is performed when someone obtains an item
  * count is not applicable in this class
  */
+/**
+ * @author char321
+ */
 public class InventoryCriterion extends Criterion {
     private final ItemStack item;
 
@@ -19,7 +22,7 @@ public class InventoryCriterion extends Criterion {
         String id = config.getName();
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

@@ -3,6 +3,9 @@ package me.char321.sfadvancements.core.criteria.completer;
 import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.criteria.Criterion;
 
+/**
+ * @author char321
+ */
 public interface CriterionCompleter {
     void register(Criterion criterion);
 

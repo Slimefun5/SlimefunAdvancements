@@ -6,6 +6,9 @@ import org.bukkit.command.CommandSender;
 import javax.annotation.Nonnull;
 import java.util.List;
 
+/**
+ * @author char321
+ */
 public interface SubCommand {
     boolean onExecute(CommandSender sender, Command command, String label, String[] args);
     @Nonnull

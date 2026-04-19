@@ -15,6 +15,9 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author char321
+ */
 public class AdvancementBuilder {
     private NamespacedKey key;
     private NamespacedKey parent;
@@ -85,7 +88,7 @@ public class AdvancementBuilder {
 
         List<Reward> rewards = new ArrayList<>();
         ConfigurationSection rewardSection = config.getConfigurationSection("rewards");
-        if(rewardSection != null) {
+        if (rewardSection != null) {
             for (String command : rewardSection.getStringList("commands")) {
                 rewards.add(p -> {
                     Utils.runSync(() -> {

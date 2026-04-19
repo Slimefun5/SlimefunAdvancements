@@ -12,6 +12,9 @@ import org.bukkit.event.player.PlayerAdvancementDoneEvent;
  * sync progress if someone uses /advancement grant ...
  *
  */
+/**
+ * @author char321
+ */
 public class AdvancementListener implements Listener {
     @EventHandler
     public void onAdvancement(PlayerAdvancementDoneEvent e) {

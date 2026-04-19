@@ -24,6 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * @author char321
+ */
 public class OpenGUI {
     private final Inventory inventory;
     private final AdvancementsRegistry registry = SFAdvancements.getRegistry();
@@ -99,7 +102,7 @@ public class OpenGUI {
         completedadvancements.append(ChatColor.GRAY).append("Completed Advancements: ");
         int completed = SFAdvancements.getAdvManager().getProgress(playerUUID).getCompletedAdvancements().size();
         int total = SFAdvancements.getRegistry().getAdvancements().size();
-        if(completed == total) {
+        if (completed == total) {
             completedadvancements.append(ChatColor.YELLOW);
         } else {
             completedadvancements.append(ChatColor.WHITE);
@@ -187,14 +190,14 @@ public class OpenGUI {
             ItemStack display = null;
             if (advindex < advancements.size()) {
                 Advancement adv = advancements.get(advindex);
-                display = getDisplayFor(adv);
+                display = getDisplayfor (adv);
             }
 
             inventory.setItem(slot, display);
         }
     }
 
-    private ItemStack getDisplayFor(Advancement adv) {
+    private ItemStack getDisplayfor (Advancement adv) {
         ItemStack display = adv.getDisplay().clone();
         ItemMeta displayim = display.getItemMeta();
         if (displayim == null) {

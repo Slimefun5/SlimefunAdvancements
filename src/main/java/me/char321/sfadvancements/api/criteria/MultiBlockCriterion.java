@@ -4,6 +4,9 @@ import me.char321.sfadvancements.SFAdvancements;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 
+/**
+ * @author char321
+ */
 public class MultiBlockCriterion extends Criterion {
     private final String machineid;
 
@@ -16,14 +19,14 @@ public class MultiBlockCriterion extends Criterion {
         }
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 
         name = ChatColor.translateAlternateColorCodes('&', name);
 
         String multiBlockId = config.getString("multiblock");
-        if(multiBlockId == null) {
+        if (multiBlockId == null) {
             SFAdvancements.warn("specify a multiblock for criterion " + id);
             return null;
         }

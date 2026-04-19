@@ -17,6 +17,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author char321
+ */
 public class InteractCriterionCompleter implements Listener, CriterionCompleter {
     private final Map<Material, Set<InteractCriterion>> criteria = new EnumMap<>(Material.class);
 

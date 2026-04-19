@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
+/**
+ * @author char321
+ */
 public class AdvancementsRegistry {
     private final List<AdvancementGroup> advancementGroups = new ArrayList<>();
     private final Map<NamespacedKey, Advancement> advancements = new HashMap<>();

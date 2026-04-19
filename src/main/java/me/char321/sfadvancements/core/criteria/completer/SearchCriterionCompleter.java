@@ -17,6 +17,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author char321
+ */
 public class SearchCriterionCompleter implements CriterionCompleter {
     private final Map<String, List<SearchCriterion>> criteria = new HashMap<>();
 

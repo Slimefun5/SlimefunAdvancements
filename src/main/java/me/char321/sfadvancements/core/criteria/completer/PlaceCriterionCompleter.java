@@ -15,6 +15,9 @@ import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author char321
+ */
 public class PlaceCriterionCompleter implements CriterionCompleter, Listener {
     //maybe i should made this under something but that would be kinda jank oh well
     private EnumMap<Material, Set<PlaceCriterion>> criteria = new EnumMap<>(Material.class);

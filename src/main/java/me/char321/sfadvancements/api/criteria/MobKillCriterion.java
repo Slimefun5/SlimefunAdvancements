@@ -9,6 +9,9 @@ import org.bukkit.entity.EntityType;
  * this criterion is performed when a player kills a mob
  *
  */
+/**
+ * @author char321
+ */
 public class MobKillCriterion extends Criterion {
     private final EntityType entity;
 
@@ -21,7 +24,7 @@ public class MobKillCriterion extends Criterion {
         }
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

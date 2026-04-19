@@ -57,7 +57,7 @@ public class Criterion {
         }
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

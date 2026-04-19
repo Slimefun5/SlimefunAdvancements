@@ -21,6 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author char321
+ */
 public class VanillaHook {
     private AdvancementManager vanillaManager;
     private boolean initialized = false;
@@ -114,7 +117,7 @@ public class VanillaHook {
                 } else {
                     title = Utils.getItemName(item);
                 }
-                description = getDescriptionFor(meta.getLore(), advancement);
+                description = getDescriptionfor (meta.getLore(), advancement);
                 display.setTitle(title);
                 display.setDescription(description);
                 display.setIcon(new Icon(item));
@@ -130,7 +133,7 @@ public class VanillaHook {
         });
     }
 
-    private static String getDescriptionFor(List<String> lore, Advancement adv) {
+    private static String getDescriptionfor (List<String> lore, Advancement adv) {
         lore = lore == null ? new ArrayList<>() : new ArrayList<>(lore);
         for (int i = lore.size() - 1; i >= 0; i--) {
             if ("%criteria%".equals(lore.get(i))) {

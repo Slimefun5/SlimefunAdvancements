@@ -10,6 +10,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 
+/**
+ * @author char321
+ */
 public class SaveCommand implements SubCommand {
 
     @Override
@@ -18,7 +21,7 @@ public class SaveCommand implements SubCommand {
             SFAdvancements.getAdvManager().save();
             sender.sendMessage("Successfully saved advancements.");
             return true;
-        } catch(IOException e) {
+        } catch (IOException e) {
             sender.sendMessage("An error occured while saving advancements!");
             sender.sendMessage("Check the console for details.");
             SFAdvancements.logger().log(Level.SEVERE, e, () -> "Could not save advancements");

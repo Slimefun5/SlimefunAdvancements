@@ -9,6 +9,9 @@ import org.bukkit.inventory.ItemStack;
 /**
  * this criterion is performed whenever someone interacts with a specified {@link ItemStack}
  */
+/**
+ * @author char321
+ */
 public class InteractCriterion extends Criterion {
     private final ItemStack item;
 
@@ -21,7 +24,7 @@ public class InteractCriterion extends Criterion {
         }
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

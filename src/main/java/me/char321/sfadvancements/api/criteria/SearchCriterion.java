@@ -6,6 +6,9 @@ import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 
+/**
+ * @author char321
+ */
 public class SearchCriterion extends Criterion {
 
     private final String search;
@@ -14,7 +17,7 @@ public class SearchCriterion extends Criterion {
         String id = config.getName();
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

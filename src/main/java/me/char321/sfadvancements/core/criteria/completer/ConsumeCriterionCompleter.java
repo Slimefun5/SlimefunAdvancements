@@ -17,6 +17,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author char321
+ */
 public class ConsumeCriterionCompleter implements CriterionCompleter, Listener {
     private final Map<Material, Set<ConsumeCriterion>> criteria = new EnumMap<>(Material.class);
 

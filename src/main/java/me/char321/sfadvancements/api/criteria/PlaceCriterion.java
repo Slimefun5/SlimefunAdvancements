@@ -11,6 +11,9 @@ import org.bukkit.inventory.ItemStack;
  * what? an actually practical criterion? no way
  * this criterion is completed whenever someone places a specified item a specified number of times
  */
+/**
+ * @author char321
+ */
 public class PlaceCriterion extends Criterion {
     private final ItemStack item;
 
@@ -23,7 +26,7 @@ public class PlaceCriterion extends Criterion {
         }
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

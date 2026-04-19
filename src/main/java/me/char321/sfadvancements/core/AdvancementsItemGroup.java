@@ -9,6 +9,9 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 
+/**
+ * @author char321
+ */
 public class AdvancementsItemGroup extends FlexItemGroup {
 
     public static void init(SFAdvancements plugin) {

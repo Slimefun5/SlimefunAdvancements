@@ -10,6 +10,9 @@ import org.bukkit.inventory.ItemStack;
  * this criterion is performed when a player consumes an item
  *
  */
+/**
+ * @author char321
+ */
 public class ConsumeCriterion extends Criterion {
     private final ItemStack item;
 
@@ -22,7 +25,7 @@ public class ConsumeCriterion extends Criterion {
         }
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

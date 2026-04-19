@@ -14,6 +14,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author char321
+ */
 public class MultiBlockCriterionCompleter implements CriterionCompleter, Listener {
     private final Map<String, Set<MultiBlockCriterion>> criteria = new HashMap<>();
 
@@ -24,7 +27,7 @@ public class MultiBlockCriterionCompleter implements CriterionCompleter, Listene
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onMultiBlock(MultiBlockInteractEvent e) {
         String machineid = e.getMultiBlock().getSlimefunItem().getId();
-        if(!criteria.containsKey(machineid)) {
+        if (!criteria.containsKey(machineid)) {
             return;
         }
         for (MultiBlockCriterion criterion : criteria.get(machineid)) {

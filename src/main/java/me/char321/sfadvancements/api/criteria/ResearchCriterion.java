@@ -8,6 +8,9 @@ import org.bukkit.configuration.ConfigurationSection;
 /**
  * this criterion is performed when a player unlocks a specific research
  */
+/**
+ * @author char321
+ */
 public class ResearchCriterion extends Criterion {
     private NamespacedKey research;
 
@@ -15,7 +18,7 @@ public class ResearchCriterion extends Criterion {
         String id = config.getName();
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

@@ -9,6 +9,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author char321
+ */
 public class SFACommand implements CommandExecutor {
     private final List<SubCommand> subcommands = new LinkedList<>();
 

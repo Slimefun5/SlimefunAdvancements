@@ -13,6 +13,9 @@ import java.util.UUID;
 /**
  * should really be named progress manager or something
  */
+/**
+ * @author char321
+ */
 public class AdvManager {
     private final Map<UUID, PlayerProgress> playerMap = new HashMap<>();
 

@@ -6,6 +6,9 @@ import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 
+/**
+ * @author char321
+ */
 public class BlockBreakCriterion extends Criterion {
     private ItemStack item;
 
@@ -18,7 +21,7 @@ public class BlockBreakCriterion extends Criterion {
         }
 
         String name = config.getString("name");
-        if(name == null) {
+        if (name == null) {
             name = id;
         }
 

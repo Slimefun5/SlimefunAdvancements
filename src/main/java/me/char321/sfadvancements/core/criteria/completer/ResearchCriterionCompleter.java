@@ -19,6 +19,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author char321
+ */
 public class ResearchCriterionCompleter implements CriterionCompleter, Listener {
     private final Map<NamespacedKey, Set<ResearchCriterion>> criteria = new HashMap<>();
 

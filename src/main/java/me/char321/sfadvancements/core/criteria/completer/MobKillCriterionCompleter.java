@@ -16,6 +16,9 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author char321
+ */
 public class MobKillCriterionCompleter implements CriterionCompleter, Listener {
     private final Map<EntityType, List<MobKillCriterion>> criteria = new EnumMap<>(EntityType.class);
 

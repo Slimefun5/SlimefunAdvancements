@@ -18,6 +18,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author char321
+ */
 public class MultiBlockCraftCriterionCompleter implements CriterionCompleter, Listener {
     private final Map<Material, Set<MultiBlockCraftCriterion>> criteria = new EnumMap<>(Material.class);
     private final Set<MultiBlockCraftCriterion> nonMaterialCriteria = new HashSet<>();

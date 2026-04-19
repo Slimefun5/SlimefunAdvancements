@@ -11,6 +11,9 @@ import org.bukkit.inventory.ItemStack;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author char321
+ */
 public class MenuItems {
     private MenuItems() {}
 

@@ -9,6 +9,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * @author char321
+ */
 public class SFATabCompleter implements TabCompleter {
     private final SFACommand basecmd;
 
