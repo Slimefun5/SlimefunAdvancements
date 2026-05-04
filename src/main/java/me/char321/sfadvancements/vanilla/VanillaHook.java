@@ -47,7 +47,11 @@ public class VanillaHook {
         vanillaManager.clearAdvancements();
         registerGroups(vanillaManager);
         registerAdvancements(vanillaManager);
-        vanillaManager.createAll(true);
+        try {
+            vanillaManager.createAll(true);
+        } catch (Exception e) {
+            SFAdvancements.warn("Failed to create vanilla advancements due to JSON format changes in 1.21.4+. Skipping vanilla advancement generation.");
+        }
 
         for (Player p : Bukkit.getOnlinePlayers()) {
             syncProgress(p);
