@@ -1,12 +1,12 @@
 plugins {
     java
-    id("com.gradleup.shadow") version "9.3.2"
-    id("io.github.intisy.github-gradle") version "1.8.2.1"
+    id("com.gradleup.shadow")
+    id("io.github.intisy.github-gradle")
     id("jacoco")
 }
 
 group = "me.char321"
-version = "MODIFIED"
+version = "1.0.0-UNOFFICIAL"
 description = "Slimefun Advancements is a Slimefun addon adding an advancement system."
 
 github {
@@ -18,7 +18,7 @@ github {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(JavaLanguageVersion.of(25))
     }
 }
 
@@ -31,11 +31,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:${property("paperApiVersion")}")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
     "githubCompileOnly"("Slimefun5:Slimefun5:v5.0.3")
 
-    // Shaded libraries
     implementation("org.bstats:bstats-bukkit:3.0.2")
     implementation("com.github.qwertyuioplkjhgfd:AdvancementAPI:f243bdaf75") {
         isTransitive = false
@@ -71,7 +70,7 @@ tasks {
         enabled = false
     }
     shadowJar {
-        archiveFileName.set("sfadvancements-${project.version}.jar")
+        archiveFileName.set("SlimefunAdvancements v${project.version}-MC26.1.2.jar")
         relocate("org.bstats", "me.char321.sfadvancements.libs.bstats")
         relocate("net.roxeez.advancement", "me.char321.sfadvancements.libs.advancementapi")
         relocate("io.github.bakedlibs.dough", "me.char321.sfadvancements.libs.dough")

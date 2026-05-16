@@ -1,7 +1,7 @@
 package me.char321.sfadvancements.core.criteria.completer;
 
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
+import io.github.thebusybiscuit.slimefun5.api.events.PlayerRightClickEvent;
+import io.github.thebusybiscuit.slimefun5.utils.SlimefunUtils;
 import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.api.criteria.InteractCriterion;
@@ -63,3 +63,4 @@ public class InteractCriterionCompleter implements Listener, CriterionCompleter 
         criteria.clear();
     }
 }
+

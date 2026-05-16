@@ -1,6 +1,6 @@
 package me.char321.sfadvancements.core.criteria.completer;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import me.char321.sfadvancements.api.criteria.BlockBreakCriterion;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.util.Utils;
@@ -60,3 +60,4 @@ public class BlockBreakCriterionCompleter implements CriterionCompleter, Listene
         criteria.clear();
     }
 }
+

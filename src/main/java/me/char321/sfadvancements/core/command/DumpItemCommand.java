@@ -1,9 +1,9 @@
 package me.char321.sfadvancements.core.command;
 
 import io.github.bakedlibs.dough.items.ItemUtils;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.utils.SlimefunUtils;
 import me.char321.sfadvancements.SFAdvancements;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -82,3 +82,4 @@ public class DumpItemCommand implements SubCommand {
         return Collections.emptyList();
     }
 }
+

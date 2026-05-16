@@ -1,6 +1,6 @@
 package me.char321.sfadvancements.core.criteria.completer;
 
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
+import io.github.thebusybiscuit.slimefun5.utils.SlimefunUtils;
 import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.api.criteria.PlaceCriterion;
@@ -62,3 +62,4 @@ public class PlaceCriterionCompleter implements CriterionCompleter, Listener {
         criteria.clear();
     }
 }
+
