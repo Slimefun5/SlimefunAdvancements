@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     java
     id("com.gradleup.shadow")
     id("io.github.intisy.github-gradle")
@@ -33,7 +33,7 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:${property("paperApiVersion")}")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
-    "githubCompileOnly"("Slimefun5:Slimefun5:v5.0.3")
+    "githubCompileOnly"("Slimefun5:Slimefun5:v5.1.1")
 
     implementation("org.bstats:bstats-bukkit:3.0.2")
     implementation("com.github.qwertyuioplkjhgfd:AdvancementAPI:f243bdaf75") {
