@@ -6,4 +6,6 @@ on:
 
 jobs:
   merge:
+    permissions:
+      contents: write
     uses: Slimefun5/workflows/.github/workflows/auto-merge.yaml@stable
