@@ -7,6 +7,9 @@ on:
 
 jobs:
   readme:
+    permissions:
+      contents: write
     uses: Slimefun5/workflows/.github/workflows/readme-addon.yaml@stable
     with:
       repository: ${{ github.repository }}
+
