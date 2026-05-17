@@ -12,10 +12,6 @@ A Slimefun addon that adds an advancement and achievement system.
 - Paper 1.16.* - 26.1.*
 - Slimefun 5
 
-A Slimefun addon that adds fully customizable advancements. Create your own progression!
-
-[Download here](https://blob.build/project/SlimefunAdvancements)
-
 ## Configuration
 
 The configuration files can be found in your `plugins/SFAdvancements/` folder.
