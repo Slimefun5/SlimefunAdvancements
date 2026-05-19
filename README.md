@@ -4,6 +4,7 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Slimefun5/SlimefunAdvancements/total)
 [![GitHub Followers](https://img.shields.io/github/followers/Slimefun5?style=social)](https://github.com/Slimefun5)
 [![GitHub Stars](https://img.shields.io/github/stars/Slimefun5/SlimefunAdvancements?style=social)](https://github.com/Slimefun5/SlimefunAdvancements)
+[![bStats](https://bStats.org/signatures/bukkit/SlimefunAdvancements.svg)](https://bStats.org/plugin/bukkit/SlimefunAdvancements/31436)
 
 A Slimefun addon that adds an advancement and achievement system.
 
