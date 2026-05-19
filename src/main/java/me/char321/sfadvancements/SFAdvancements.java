@@ -84,8 +84,7 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
 
         if (!testing) {
             Metrics metrics = new Metrics(this, 14130);
-            metrics.addCustomChart(new SimplePie("AdvancementAPI enabled", () -> config.getBoolean("use-advancements-api") ? "true" : "false"));
-        }
+                    }
 
         //allow other plugins to register their criteria completers
         info("Waiting for server start...");
