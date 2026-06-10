@@ -31,12 +31,12 @@ repositories {
 }
 
 dependencies {
+    implementation("com.github.Slimefun5:SlimefunMetrics:master-SNAPSHOT")
     compileOnly("io.papermc.paper:paper-api:${property("paperApiVersion")}")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
     "githubCompileOnly"("Slimefun5:Slimefun5:v5.1.1")
 
-    implementation("org.bstats:bstats-bukkit:3.0.2")
-    implementation("com.github.qwertyuioplkjhgfd:AdvancementAPI:f243bdaf75") {
+        implementation("com.github.qwertyuioplkjhgfd:AdvancementAPI:f243bdaf75") {
         isTransitive = false
     }
     implementation("com.github.baked-libs.dough:dough-api:1108163a49") {
@@ -71,8 +71,7 @@ tasks {
     }
     shadowJar {
         archiveFileName.set("SlimefunAdvancements v${project.version}-MC26.1.2.jar")
-        relocate("org.bstats", "me.char321.sfadvancements.libs.bstats")
-        relocate("net.roxeez.advancement", "me.char321.sfadvancements.libs.advancementapi")
+                relocate("net.roxeez.advancement", "me.char321.sfadvancements.libs.advancementapi")
         relocate("io.github.bakedlibs.dough", "me.char321.sfadvancements.libs.dough")
         exclude("META-INF/**")
     }
