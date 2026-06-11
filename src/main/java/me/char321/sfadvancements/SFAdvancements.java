@@ -1,6 +1,6 @@
 package me.char321.sfadvancements;
 
-import io.github.bakedlibs.dough.config.Config;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun5.api.SlimefunAddon;
 import me.char321.sfadvancements.api.AdvancementBuilder;
 import me.char321.sfadvancements.api.AdvancementGroup;

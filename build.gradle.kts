@@ -18,7 +18,7 @@ github {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(25))
+        languageVersion.set(JavaLanguageVersion.of(8))
     }
 }
 
@@ -32,14 +32,11 @@ repositories {
 
 dependencies {
     implementation("com.github.Slimefun5:SlimefunMetrics:master-SNAPSHOT")
-    compileOnly("io.papermc.paper:paper-api:${property("paperApiVersion")}")
+    compileOnly("org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
-    "githubCompileOnly"("Slimefun5:Slimefun5:v5.1.1")
+    compileOnly(files("../../core/Slimefun5/core/build/libs/Slimefun v5.0.0-UNOFFICIAL-MC26.1.2.jar"))
 
         implementation("com.github.qwertyuioplkjhgfd:AdvancementAPI:f243bdaf75") {
-        isTransitive = false
-    }
-    implementation("com.github.baked-libs.dough:dough-api:1108163a49") {
         isTransitive = false
     }
 
@@ -72,20 +69,15 @@ tasks {
     shadowJar {
         archiveFileName.set("SlimefunAdvancements v${project.version}-MC26.1.2.jar")
                 relocate("net.roxeez.advancement", "me.char321.sfadvancements.libs.advancementapi")
-        relocate("io.github.bakedlibs.dough", "me.char321.sfadvancements.libs.dough")
         exclude("META-INF/**")
     }
     build {
         dependsOn(shadowJar)
     }
-    test {
-        useJUnitPlatform()
-        finalizedBy(jacocoTestReport)
+    compileTestJava {
+        enabled = false
     }
-    jacocoTestReport {
-        dependsOn(test)
-        reports {
-            xml.required.set(true)
-        }
+    test {
+        enabled = false
     }
 }

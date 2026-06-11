@@ -56,7 +56,7 @@ public class PlayerProgress {
         File f = new File(advancementsFolder, player.toString() + ".json");
         if (f.exists()) {
             try {
-                JsonObject object = JsonParser.parseReader(new BufferedReader(new InputStreamReader(new FileInputStream(f), StandardCharsets.UTF_8))).getAsJsonObject();
+                JsonObject object = new JsonParser().parse(new BufferedReader(new InputStreamReader(new FileInputStream(f), StandardCharsets.UTF_8))).getAsJsonObject();
                 res.loadFromObject(object);
             } catch (IOException e) {
                 SFAdvancements.logger().log(Level.SEVERE, "Error reading progress file", e);

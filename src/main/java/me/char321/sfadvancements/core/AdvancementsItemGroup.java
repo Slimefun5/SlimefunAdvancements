@@ -1,6 +1,6 @@
 package me.char321.sfadvancements.core;
 
-import io.github.bakedlibs.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.api.items.groups.FlexItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.player.PlayerProfile;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuideMode;
@@ -22,8 +22,8 @@ public class AdvancementsItemGroup extends FlexItemGroup {
 
     public AdvancementsItemGroup() {
         super(
-                new NamespacedKey(SFAdvancements.instance(), "advancements"),
-                new CustomItemStack(Material.FILLED_MAP, "&9Advancements"),
+                new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("sfadvancements", "advancements"),
+                CustomItemStack.create(Material.FILLED_MAP, "&9Advancements"),
                 -1);
     }
 

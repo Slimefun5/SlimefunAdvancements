@@ -1,6 +1,6 @@
 package me.char321.sfadvancements.core.gui;
 
-import io.github.bakedlibs.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.api.player.PlayerProfile;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuide;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuideMode;
@@ -121,17 +121,17 @@ public class OpenGUI {
 
         ItemStack leftArrow;
         if (page == 1) {
-            leftArrow = new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, "&7Previous Page", pageLore);
+            leftArrow = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, "&7Previous Page", pageLore);
         } else {
-            leftArrow = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&ePrevious Page", pageLore);
+            leftArrow = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&ePrevious Page", pageLore);
         }
         inventory.setItem(1, leftArrow);
 
         ItemStack rightArrow;
         if (page == maxPage) {
-            rightArrow = new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, "&7Next Page", pageLore);
+            rightArrow = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, "&7Next Page", pageLore);
         } else {
-            rightArrow = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&eNext Page", pageLore);
+            rightArrow = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&eNext Page", pageLore);
         }
         inventory.setItem(7, rightArrow);
     }
@@ -163,7 +163,7 @@ public class OpenGUI {
         if (scroll == 0) {
             scrollUp = MenuItems.YELLOW;
         } else {
-            scrollUp = new CustomItemStack(Material.ARROW, "&eScroll Up");
+            scrollUp = CustomItemStack.create(Material.ARROW, "&eScroll Up");
         }
         inventory.setItem(17, scrollUp);
 
@@ -173,7 +173,7 @@ public class OpenGUI {
         if (scroll >= maxScroll) {
             scrollDown = MenuItems.YELLOW;
         } else {
-            scrollDown = new CustomItemStack(Material.ARROW, "&eScroll Down");
+            scrollDown = CustomItemStack.create(Material.ARROW, "&eScroll Down");
         }
         inventory.setItem(53, scrollDown);
     }
