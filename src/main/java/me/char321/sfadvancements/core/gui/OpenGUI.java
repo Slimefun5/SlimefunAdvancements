@@ -4,7 +4,9 @@ import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.api.player.PlayerProfile;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuide;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuideMode;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import me.char321.sfadvancements.SFAdvancements;
+import me.char321.sfadvancements.util.MaterialCompat;
 import me.char321.sfadvancements.api.Advancement;
 import me.char321.sfadvancements.api.AdvancementGroup;
 import me.char321.sfadvancements.api.criteria.Criterion;
@@ -12,7 +14,7 @@ import me.char321.sfadvancements.core.registry.AdvancementsRegistry;
 import me.char321.sfadvancements.util.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
@@ -94,9 +96,9 @@ public class OpenGUI {
     }
 
     private void refreshStats() {
-        ItemStack head = new ItemStack(Material.PLAYER_HEAD);
+        ItemStack head = new ItemStack(MaterialCompat.safe(XMaterial.PLAYER_HEAD));
         SkullMeta meta = (SkullMeta) head.getItemMeta();
-        meta.setOwningPlayer(Bukkit.getOfflinePlayer(playerUUID));
+        setOwningPlayer(meta, Bukkit.getOfflinePlayer(playerUUID));
         meta.setDisplayName(ChatColor.YELLOW + "Stats");
         StringBuilder completedadvancements = new StringBuilder();
         completedadvancements.append(ChatColor.GRAY).append("Completed Advancements: ");
@@ -121,17 +123,17 @@ public class OpenGUI {
 
         ItemStack leftArrow;
         if (page == 1) {
-            leftArrow = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, "&7Previous Page", pageLore);
+            leftArrow = CustomItemStack.create(MaterialCompat.safe(XMaterial.BLACK_STAINED_GLASS_PANE), "&7Previous Page", pageLore);
         } else {
-            leftArrow = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&ePrevious Page", pageLore);
+            leftArrow = CustomItemStack.create(MaterialCompat.safe(XMaterial.LIME_STAINED_GLASS_PANE), "&ePrevious Page", pageLore);
         }
         inventory.setItem(1, leftArrow);
 
         ItemStack rightArrow;
         if (page == maxPage) {
-            rightArrow = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, "&7Next Page", pageLore);
+            rightArrow = CustomItemStack.create(MaterialCompat.safe(XMaterial.BLACK_STAINED_GLASS_PANE), "&7Next Page", pageLore);
         } else {
-            rightArrow = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&eNext Page", pageLore);
+            rightArrow = CustomItemStack.create(MaterialCompat.safe(XMaterial.LIME_STAINED_GLASS_PANE), "&eNext Page", pageLore);
         }
         inventory.setItem(7, rightArrow);
     }
@@ -163,7 +165,7 @@ public class OpenGUI {
         if (scroll == 0) {
             scrollUp = MenuItems.YELLOW;
         } else {
-            scrollUp = CustomItemStack.create(Material.ARROW, "&eScroll Up");
+            scrollUp = CustomItemStack.create(MaterialCompat.safe(XMaterial.ARROW), "&eScroll Up");
         }
         inventory.setItem(17, scrollUp);
 
@@ -173,7 +175,7 @@ public class OpenGUI {
         if (scroll >= maxScroll) {
             scrollDown = MenuItems.YELLOW;
         } else {
-            scrollDown = CustomItemStack.create(Material.ARROW, "&eScroll Down");
+            scrollDown = CustomItemStack.create(MaterialCompat.safe(XMaterial.ARROW), "&eScroll Down");
         }
         inventory.setItem(53, scrollDown);
     }
@@ -229,6 +231,18 @@ public class OpenGUI {
         displayim.setLore(lore);
         display.setItemMeta(displayim);
         return display;
+    }
+
+    @SuppressWarnings("deprecation")
+    private static void setOwningPlayer(SkullMeta meta, OfflinePlayer player) {
+        try {
+            SkullMeta.class.getMethod("setOwningPlayer", OfflinePlayer.class).invoke(meta, player);
+        } catch (ReflectiveOperationException e) {
+            String name = player.getName();
+            if (name != null) {
+                meta.setOwner(name);
+            }
+        }
     }
 
     private List<String> getCriteriaLore(Advancement adv) {

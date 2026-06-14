@@ -4,7 +4,7 @@ import me.char321.sfadvancements.api.Advancement;
 import me.char321.sfadvancements.api.AdvancementGroup;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.core.criteria.completer.CriterionCompleter;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.ArrayList;

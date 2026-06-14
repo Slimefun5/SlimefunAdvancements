@@ -3,8 +3,9 @@ package me.char321.sfadvancements.core.gui;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.common.ChatColors;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import me.char321.sfadvancements.util.MaterialCompat;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 
@@ -18,13 +19,13 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class MenuItems {
     private MenuItems() {}
 
-    public static final ItemStack BLACK = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " ");
-    public static final ItemStack GRAY = CustomItemStack.create(Material.GRAY_STAINED_GLASS_PANE, " ");
-    public static final ItemStack YELLOW = CustomItemStack.create(Material.YELLOW_STAINED_GLASS_PANE, " ");
+    public static final ItemStack BLACK = CustomItemStack.create(MaterialCompat.safe(XMaterial.BLACK_STAINED_GLASS_PANE), " ");
+    public static final ItemStack GRAY = CustomItemStack.create(MaterialCompat.safe(XMaterial.GRAY_STAINED_GLASS_PANE), " ");
+    public static final ItemStack YELLOW = CustomItemStack.create(MaterialCompat.safe(XMaterial.YELLOW_STAINED_GLASS_PANE), " ");
     public static final ItemStack BACK_ITEM = createBackItem();
 
     private static ItemStack createBackItem() {
-        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        ItemStack item = new ItemStack(MaterialCompat.safe(XMaterial.ENCHANTED_BOOK));
         ItemMeta meta = item.getItemMeta();
         final List<String> lore = new ArrayList<>();
         lore.add("");

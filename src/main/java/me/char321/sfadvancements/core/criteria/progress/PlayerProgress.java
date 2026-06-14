@@ -9,7 +9,7 @@ import me.char321.sfadvancements.api.Advancement;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.util.Utils;
 import org.bukkit.Bukkit;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.entity.Player;
 
 import java.io.BufferedReader;
