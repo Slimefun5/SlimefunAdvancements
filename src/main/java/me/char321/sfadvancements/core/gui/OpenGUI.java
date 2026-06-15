@@ -96,7 +96,7 @@ public class OpenGUI {
     }
 
     private void refreshStats() {
-        ItemStack head = new ItemStack(MaterialCompat.safe(XMaterial.PLAYER_HEAD));
+        ItemStack head = MaterialCompat.stack(XMaterial.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) head.getItemMeta();
         setOwningPlayer(meta, Bukkit.getOfflinePlayer(playerUUID));
         meta.setDisplayName(ChatColor.YELLOW + "Stats");
