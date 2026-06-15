@@ -32,7 +32,7 @@ public class DumpItemCommand implements SubCommand {
         Player p = (Player) sender;
 
         sender.sendMessage("Representing the item in your hand in yml...");
-        ItemStack item = p.getInventory().getItemInMainHand();
+        ItemStack item = p.getInventory().getItemInHand();
         SFAdvancements.info("Representing " + item);
 
         if (!item.hasItemMeta()) {
