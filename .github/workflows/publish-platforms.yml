@@ -1,0 +1,61 @@
+name: Publish to platforms
+
+# On a release tag, builds the addon jar and publishes it to Modrinth and Hangar IF the matching repo
+# credentials exist. mc-publish auto-skips any platform whose id/token is empty, so this stays a no-op
+# until you add them:
+#   Secrets:   MODRINTH_TOKEN, HANGAR_TOKEN
+#   Variables: MODRINTH_ID (Modrinth project slug), HANGAR_ID (Hangar project slug)
+# SpigotMC has no upload API and cannot be automated here - upload that jar manually.
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: temurin
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build jar
+        run: ./gradlew shadowJar -Partifact_version=${{ github.ref_name }} --no-daemon
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Publish to Modrinth + Hangar (skips a platform if its id/token is unset)
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          files: |
+            build/libs/!(*-sources|*-javadoc).jar
+          name: ${{ github.event.repository.name }} ${{ github.ref_name }}
+          version: ${{ github.ref_name }}
+          version-type: release
+          # Universal Java-8 jars run on 1.8.8+; trim/extend per addon (e.g. Galactifun is 1.17+).
+          game-versions: |
+            1.8.9
+            1.16.5
+            1.20.6
+            1.21.4
+          loaders: |
+            paper
+            spigot
+            bukkit
+          modrinth-id: ${{ vars.MODRINTH_ID }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          hangar-id: ${{ vars.HANGAR_ID }}
+          hangar-token: ${{ secrets.HANGAR_TOKEN }}
