@@ -17,7 +17,7 @@ public class AdvancementsItemGroup extends FlexItemGroup {
     public static void init(SFAdvancements plugin) {
         if (SFAdvancements.getMainConfig().getConfiguration().getBoolean("add-advancements-to-guide")) {
             AdvancementsItemGroup itemGroup = new AdvancementsItemGroup();
-            itemGroup.setTheme("misc");
+            itemGroup.setTheme("advancements");
             itemGroup.register(plugin);
         }
     }
