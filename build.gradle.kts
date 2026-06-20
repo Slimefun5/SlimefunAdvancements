@@ -68,7 +68,7 @@ tasks {
     }
     shadowJar {
         relocate("org.bstats", "slimefunadvancements.libs.bstats")
-        archiveFileName.set("SlimefunAdvancements v${project.version}-MC26.1.2.jar")
+        archiveFileName.set("SFAdvancements-1.0.0-UNOFFICIAL.jar")
                 relocate("net.roxeez.advancement", "me.char321.sfadvancements.libs.advancementapi")
         exclude("META-INF/**")
     }
