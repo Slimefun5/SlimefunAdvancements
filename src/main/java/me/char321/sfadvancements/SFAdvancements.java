@@ -83,7 +83,7 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
         Bukkit.getScheduler().runTaskTimerAsynchronously(this, new AutoSaveTask(), 6000L, 6000L);
 
         if (!testing) {
-            Metrics metrics = new Metrics(this, 14130);
+            Metrics metrics = new Metrics(this, 31436);
                     }
 
         //allow other plugins to register their criteria completers
