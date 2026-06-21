@@ -27,6 +27,7 @@ import java.util.Map;
 public class VanillaHook {
     private AdvancementManager vanillaManager;
     private boolean initialized = false;
+    private boolean vanillaUnavailable = false;
 
     private static final boolean HAS_ADVANCEMENT_API = hasAdvancementApi();
 
@@ -62,7 +63,16 @@ public class VanillaHook {
             return;
         }
 
-        this.vanillaManager = new AdvancementManager(SFAdvancements.instance());
+        try {
+            // Constructing the manager triggers AdvancementAPI's ObjectSerializer static init,
+            // which registers BungeeCord chat serializers that no longer have public constructors
+            // on newer Paper. Catch Throwable so a NoSuchMethodError there cannot abort enable.
+            this.vanillaManager = new AdvancementManager(SFAdvancements.instance());
+        } catch (Throwable t) {
+            vanillaUnavailable = true;
+            SFAdvancements.warn("Could not initialize vanilla advancement integration on this server version. Disabling it: " + t);
+            return;
+        }
 
         Utils.listen(new PlayerJoinListener());
         Utils.listen(new AdvancementListener());
@@ -74,7 +84,7 @@ public class VanillaHook {
             init();
         }
 
-        if (!HAS_ADVANCEMENT_API) {
+        if (!HAS_ADVANCEMENT_API || vanillaUnavailable || vanillaManager == null) {
             return;
         }
 
@@ -224,7 +234,7 @@ public class VanillaHook {
     }
 
     public void syncProgress(Player p) {
-        if (!HAS_ADVANCEMENT_API) {
+        if (!HAS_ADVANCEMENT_API || vanillaUnavailable) {
             return;
         }
         for (AdvancementGroup group : SFAdvancements.getRegistry().getAdvancementGroups()) {
@@ -240,7 +250,7 @@ public class VanillaHook {
     }
 
     public void complete(Player p, NamespacedKey key) {
-        if (!HAS_ADVANCEMENT_API) {
+        if (!HAS_ADVANCEMENT_API || vanillaUnavailable) {
             return;
         }
         org.bukkit.advancement.Advancement advancement = getBukkitAdvancement(key);
@@ -252,7 +262,7 @@ public class VanillaHook {
     }
 
     public void revoke(Player p, NamespacedKey key) {
-        if (!HAS_ADVANCEMENT_API) {
+        if (!HAS_ADVANCEMENT_API || vanillaUnavailable) {
             return;
         }
         org.bukkit.advancement.Advancement advancement = getBukkitAdvancement(key);
