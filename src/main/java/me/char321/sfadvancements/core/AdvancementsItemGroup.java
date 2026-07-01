@@ -1,12 +1,12 @@
 package me.char321.sfadvancements.core;
 
-import io.github.bakedlibs.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.api.items.groups.FlexItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.player.PlayerProfile;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuideMode;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import me.char321.sfadvancements.SFAdvancements;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
+import me.char321.sfadvancements.util.MaterialCompat;
 import org.bukkit.entity.Player;
 
 /**
@@ -16,14 +16,16 @@ public class AdvancementsItemGroup extends FlexItemGroup {
 
     public static void init(SFAdvancements plugin) {
         if (SFAdvancements.getMainConfig().getConfiguration().getBoolean("add-advancements-to-guide")) {
-            new AdvancementsItemGroup().register(plugin);
+            AdvancementsItemGroup itemGroup = new AdvancementsItemGroup();
+            itemGroup.setTheme("misc");
+            itemGroup.register(plugin);
         }
     }
 
     public AdvancementsItemGroup() {
         super(
-                new NamespacedKey(SFAdvancements.instance(), "advancements"),
-                new CustomItemStack(Material.FILLED_MAP, "&9Advancements"),
+                new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("sfadvancements", "advancements"),
+                CustomItemStack.create(MaterialCompat.safe(XMaterial.FILLED_MAP), "&9Advancements"),
                 -1);
     }
 

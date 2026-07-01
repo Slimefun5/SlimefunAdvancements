@@ -18,7 +18,7 @@ github {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(25))
+        languageVersion.set(JavaLanguageVersion.of(8))
     }
 }
 
@@ -31,15 +31,12 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:${property("paperApiVersion")}")
+    implementation("com.github.Slimefun5:SlimefunMetrics:master-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
-    "githubCompileOnly"("Slimefun5:Slimefun5:v5.1.1")
+    githubCompileOnly("Slimefun5:Slimefun5:gh-v5.2.3.2")
 
-    implementation("org.bstats:bstats-bukkit:3.0.2")
-    implementation("com.github.qwertyuioplkjhgfd:AdvancementAPI:f243bdaf75") {
-        isTransitive = false
-    }
-    implementation("com.github.baked-libs.dough:dough-api:1108163a49") {
+        implementation("com.github.qwertyuioplkjhgfd:AdvancementAPI:f243bdaf75") {
         isTransitive = false
     }
 
@@ -70,23 +67,18 @@ tasks {
         enabled = false
     }
     shadowJar {
-        archiveFileName.set("SlimefunAdvancements v${project.version}-MC26.1.2.jar")
-        relocate("org.bstats", "me.char321.sfadvancements.libs.bstats")
-        relocate("net.roxeez.advancement", "me.char321.sfadvancements.libs.advancementapi")
-        relocate("io.github.bakedlibs.dough", "me.char321.sfadvancements.libs.dough")
+        relocate("org.bstats", "slimefunadvancements.libs.bstats")
+        archiveFileName.set("SFAdvancements-1.0.0-UNOFFICIAL.jar")
+                relocate("net.roxeez.advancement", "me.char321.sfadvancements.libs.advancementapi")
         exclude("META-INF/**")
     }
     build {
         dependsOn(shadowJar)
     }
-    test {
-        useJUnitPlatform()
-        finalizedBy(jacocoTestReport)
+    compileTestJava {
+        enabled = false
     }
-    jacocoTestReport {
-        dependsOn(test)
-        reports {
-            xml.required.set(true)
-        }
+    test {
+        enabled = false
     }
 }

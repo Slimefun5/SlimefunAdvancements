@@ -1,5 +1,6 @@
 package me.char321.sfadvancements.vanilla;
 
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.Advancement;
 import me.char321.sfadvancements.util.Utils;
@@ -18,9 +19,11 @@ import org.bukkit.event.player.PlayerAdvancementDoneEvent;
 public class AdvancementListener implements Listener {
     @EventHandler
     public void onAdvancement(PlayerAdvancementDoneEvent e) {
-        if (!Utils.keyIsSFA(e.getAdvancement().getKey())) return;
+        org.bukkit.NamespacedKey bukkitKey = e.getAdvancement().getKey();
+        NamespacedKey key = new NamespacedKey(bukkitKey.getNamespace(), bukkitKey.getKey());
+        if (!Utils.keyIsSFA(key)) return;
 
-        Advancement advancement = Utils.fromKey(e.getAdvancement().getKey());
+        Advancement advancement = Utils.fromKey(key);
         if (advancement == null) return;
 
         Player player = e.getPlayer();

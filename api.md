@@ -115,4 +115,4 @@ Now, to add these advancements , just type `/sfa import <plugin name>`, and they
 And that's it!
 
 Once again, you can always look at a [reference implementation](https://github.com/qwertyuioplkjhgfd/ExampleCriteria). <br>
-If you're still confused, feel free to ask in the [Slimefun Addon Community discord server](https://discord.gg/SqD3gg5SAU).
+If you're still confused, feel free to ask in the [Slimefun Addon Community discord server](https://discord.gg/CbBYZBEWdR).

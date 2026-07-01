@@ -12,7 +12,7 @@ import net.roxeez.advancement.display.FrameType;
 import net.roxeez.advancement.display.Icon;
 import net.roxeez.advancement.trigger.TriggerType;
 import org.bukkit.Bukkit;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -27,12 +27,52 @@ import java.util.Map;
 public class VanillaHook {
     private AdvancementManager vanillaManager;
     private boolean initialized = false;
+    private boolean vanillaUnavailable = false;
+
+    private static final boolean HAS_ADVANCEMENT_API = hasAdvancementApi();
+
+    private static boolean hasAdvancementApi() {
+        try {
+            Class.forName("org.bukkit.NamespacedKey");
+            Class.forName("org.bukkit.advancement.Advancement");
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
+    }
+
+    /**
+     * Converts a relocated {@link NamespacedKey} shim into a real {@code org.bukkit.NamespacedKey}.
+     * Only ever reached when {@link #HAS_ADVANCEMENT_API} is true, so the modern API is present.
+     */
+    private static Object toBukkitKey(NamespacedKey key) {
+        try {
+            Class<?> bukkitKey = Class.forName("org.bukkit.NamespacedKey");
+            return bukkitKey.getConstructor(String.class, String.class).newInstance(key.getNamespace(), key.getKey());
+        } catch (ReflectiveOperationException e) {
+            throw new IllegalStateException("Could not create org.bukkit.NamespacedKey", e);
+        }
+    }
 
     public void init() {
         if (initialized) return;
         initialized = true;
 
-        this.vanillaManager = new AdvancementManager(SFAdvancements.instance());
+        if (!HAS_ADVANCEMENT_API) {
+            SFAdvancements.warn("Vanilla advancement API is unavailable on this server version. Disabling vanilla advancement integration.");
+            return;
+        }
+
+        try {
+            // Constructing the manager triggers AdvancementAPI's ObjectSerializer static init,
+            // which registers BungeeCord chat serializers that no longer have public constructors
+            // on newer Paper. Catch Throwable so a NoSuchMethodError there cannot abort enable.
+            this.vanillaManager = new AdvancementManager(SFAdvancements.instance());
+        } catch (Throwable t) {
+            vanillaUnavailable = true;
+            SFAdvancements.warn("Could not initialize vanilla advancement integration on this server version. Disabling it: " + t);
+            return;
+        }
 
         Utils.listen(new PlayerJoinListener());
         Utils.listen(new AdvancementListener());
@@ -42,6 +82,10 @@ public class VanillaHook {
     public void reload() {
         if (!initialized) {
             init();
+        }
+
+        if (!HAS_ADVANCEMENT_API || vanillaUnavailable || vanillaManager == null) {
+            return;
         }
 
         vanillaManager.clearAdvancements();
@@ -61,7 +105,7 @@ public class VanillaHook {
     private static void registerGroups(AdvancementManager manager) {
         for (AdvancementGroup group : SFAdvancements.getRegistry().getAdvancementGroups()) {
             manager.register(context -> {
-                net.roxeez.advancement.Advancement vadvancement = new net.roxeez.advancement.Advancement(Utils.keyOf(group.getId()));
+                net.roxeez.advancement.Advancement vadvancement = new net.roxeez.advancement.Advancement(SFAdvancements.instance(), group.getId());
 
                 vadvancement.setDisplay(display -> {
                     ItemStack item = group.getDisplayItem();
@@ -76,7 +120,7 @@ public class VanillaHook {
                     display.setDescription(String.join("\n", lore));
                     display.setIcon(new Icon(item));
                     display.setFrame(FrameType.valueOf(group.getFrameType()));
-                    display.setBackground(NamespacedKey.minecraft("textures/block/" + background.toLowerCase() + ".png"));
+                    setBackground(display, NamespacedKey.minecraft("textures/block/" + background.toLowerCase() + ".png"));
                     display.setAnnounce(false);
                 });
 
@@ -98,9 +142,11 @@ public class VanillaHook {
         if (advancement == null) return;
 
         //TODO optimize
-        if (manager.getAdvancements().stream().anyMatch(vadv -> vadv.getKey().equals(advancement.getKey()))) return;
+        String advKey = advancement.getKey().toString();
+        String parentKey = advancement.getParent().toString();
+        if (manager.getAdvancements().stream().anyMatch(vadv -> vadv.getKey().toString().equals(advKey))) return;
         //do i even need to do this?
-        if (manager.getAdvancements().stream().noneMatch(vadv -> vadv.getKey().equals(advancement.getParent()))) {
+        if (manager.getAdvancements().stream().noneMatch(vadv -> vadv.getKey().toString().equals(parentKey))) {
             Advancement parent = Utils.fromKey(advancement.getParent());
             if (parent != null) {
                 registerAdvancement(manager, parent);
@@ -108,7 +154,7 @@ public class VanillaHook {
         }
 
         manager.register(context -> {
-            net.roxeez.advancement.Advancement vadvancement = new net.roxeez.advancement.Advancement(advancement.getKey());
+            net.roxeez.advancement.Advancement vadvancement = newRoxeezAdvancement(advancement.getKey());
 
             vadvancement.setDisplay(display -> {
                 ItemStack item = advancement.getDisplay();
@@ -130,11 +176,41 @@ public class VanillaHook {
                 display.setAnnounce(false);
             });
 
-            vadvancement.setParent(advancement.getParent());
+            setParent(vadvancement, advancement.getParent());
             vadvancement.addCriteria("impossible", TriggerType.IMPOSSIBLE, a -> {});
 
             return vadvancement;
         });
+    }
+
+    private static net.roxeez.advancement.Advancement newRoxeezAdvancement(NamespacedKey key) {
+        try {
+            return net.roxeez.advancement.Advancement.class
+                    .getConstructor(Class.forName("org.bukkit.NamespacedKey"))
+                    .newInstance(toBukkitKey(key));
+        } catch (ReflectiveOperationException e) {
+            throw new IllegalStateException("Could not create vanilla advancement", e);
+        }
+    }
+
+    private static void setParent(net.roxeez.advancement.Advancement advancement, NamespacedKey parent) {
+        try {
+            net.roxeez.advancement.Advancement.class
+                    .getMethod("setParent", Class.forName("org.bukkit.NamespacedKey"))
+                    .invoke(advancement, toBukkitKey(parent));
+        } catch (ReflectiveOperationException e) {
+            throw new IllegalStateException("Could not set vanilla advancement parent", e);
+        }
+    }
+
+    private static void setBackground(net.roxeez.advancement.display.Display display, NamespacedKey background) {
+        try {
+            display.getClass()
+                    .getMethod("setBackground", Class.forName("org.bukkit.NamespacedKey"))
+                    .invoke(display, toBukkitKey(background));
+        } catch (ReflectiveOperationException e) {
+            throw new IllegalStateException("Could not set vanilla advancement background", e);
+        }
     }
 
     private static String getDescriptionfor (List<String> lore, Advancement adv) {
@@ -158,6 +234,9 @@ public class VanillaHook {
     }
 
     public void syncProgress(Player p) {
+        if (!HAS_ADVANCEMENT_API || vanillaUnavailable) {
+            return;
+        }
         for (AdvancementGroup group : SFAdvancements.getRegistry().getAdvancementGroups()) {
             complete(p, Utils.keyOf(group.getId()));
         }
@@ -171,7 +250,10 @@ public class VanillaHook {
     }
 
     public void complete(Player p, NamespacedKey key) {
-        org.bukkit.advancement.Advancement advancement = Bukkit.getAdvancement(key);
+        if (!HAS_ADVANCEMENT_API || vanillaUnavailable) {
+            return;
+        }
+        org.bukkit.advancement.Advancement advancement = getBukkitAdvancement(key);
         if (advancement == null) {
             SFAdvancements.warn("Tried to complete unregistered advancement " + key);
             return;
@@ -180,12 +262,25 @@ public class VanillaHook {
     }
 
     public void revoke(Player p, NamespacedKey key) {
-        org.bukkit.advancement.Advancement advancement = Bukkit.getAdvancement(key);
+        if (!HAS_ADVANCEMENT_API || vanillaUnavailable) {
+            return;
+        }
+        org.bukkit.advancement.Advancement advancement = getBukkitAdvancement(key);
         if (advancement == null) {
             SFAdvancements.warn("Tried to revoke unregistered advancement " + key);
             return;
         }
         Utils.runSync(() -> p.getAdvancementProgress(advancement).revokeCriteria("impossible"));
 
+    }
+
+    private static org.bukkit.advancement.Advancement getBukkitAdvancement(NamespacedKey key) {
+        try {
+            return (org.bukkit.advancement.Advancement) Bukkit.class
+                    .getMethod("getAdvancement", Class.forName("org.bukkit.NamespacedKey"))
+                    .invoke(null, toBukkitKey(key));
+        } catch (ReflectiveOperationException e) {
+            return null;
+        }
     }
 }
