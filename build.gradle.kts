@@ -50,9 +50,7 @@ dependencies {
 
         // Slimefun5 fork of the (abandoned) AdvancementAPI: serializes chat components via the stable
         // public ComponentSerializer.toString(), fixing NoSuchMethodError on modern bungeecord-chat (26.x).
-        implementation("com.github.Slimefun5:AdvancementAPI:53d5b0ef1e0bf33c4c246566ea1d9120b3ac77f5") {
-        isTransitive = false
-    }
+        githubImplementation("Slimefun5:AdvancementAPI:v1.0.0")
 
     testImplementation(platform("org.junit:junit-bom:5.11.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")
