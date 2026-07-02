@@ -48,7 +48,9 @@ dependencies {
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
     githubCompileOnly("Slimefun5:Slimefun5:gh-v5.2.3.2")
 
-        implementation("com.github.qwertyuioplkjhgfd:AdvancementAPI:f243bdaf75") {
+        // Slimefun5 fork of the (abandoned) AdvancementAPI: serializes chat components via the stable
+        // public ComponentSerializer.toString(), fixing NoSuchMethodError on modern bungeecord-chat (26.x).
+        implementation("com.github.Slimefun5:AdvancementAPI:53d5b0ef1e0bf33c4c246566ea1d9120b3ac77f5") {
         isTransitive = false
     }
 
