@@ -46,7 +46,7 @@ dependencies {
     implementation("org.bstats:bstats-bukkit:2.2.1")
     compileOnly("org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
-    githubCompileOnly("Slimefun5:Slimefun5:gh-v5.2.3.2")
+    githubCompileOnly("Slimefun5:Slimefun5:gh-v5.2.4.6")
 
         // Slimefun5 fork of the (abandoned) AdvancementAPI: serializes chat components via the stable
         // public ComponentSerializer.toString(), fixing NoSuchMethodError on modern bungeecord-chat (26.x).
