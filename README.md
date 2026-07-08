@@ -5,7 +5,7 @@
 [![GitHub Followers](https://img.shields.io/github/followers/Slimefun5?style=social)](https://github.com/Slimefun5)
 [![GitHub Stars](https://img.shields.io/github/stars/Slimefun5/SlimefunAdvancements?style=social)](https://github.com/Slimefun5/SlimefunAdvancements)
 
-A Slimefun addon that adds an advancement and achievement system.
+Slimefun Advancements is a Slimefun addon adding an advancement system.
 
 ## Requirements
 - Java 25
