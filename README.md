@@ -4,7 +4,6 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Slimefun5/SlimefunAdvancements/total)
 [![GitHub Followers](https://img.shields.io/github/followers/Slimefun5?style=social)](https://github.com/Slimefun5)
 [![GitHub Stars](https://img.shields.io/github/stars/Slimefun5/SlimefunAdvancements?style=social)](https://github.com/Slimefun5/SlimefunAdvancements)
-[![bStats](https://bStats.org/signatures/bukkit/SlimefunAdvancements.svg)](https://bStats.org/plugin/bukkit/SlimefunAdvancements/31436)
 
 A Slimefun addon that adds an advancement and achievement system.
 
@@ -210,7 +209,7 @@ plugins {
 }
 
 dependencies {
-    "githubCompileOnly"("Slimefun5:SlimefunAdvancements:v1.0.0")
+    "githubCompileOnly"("Slimefun5:SlimefunAdvancements:v1.0.1.4")
 }
 ```
 
@@ -223,7 +222,7 @@ dependencies {
 You can find Slimefun's community on Discord! Click the badge below to join the server for suggestions/questions or other discussions about this plugin.
 
 <p align="center">
-  <a href="https://discord.gg/fsD4Bkh">
+  <a href="https://discord.gg/CbBYZBEWdR">
     <img src="https://discordapp.com/api/guilds/738626600539160576/widget.png?style=banner2" alt="Discord"/>
   </a>
 </p>
