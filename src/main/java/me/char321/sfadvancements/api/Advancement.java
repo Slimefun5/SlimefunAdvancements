@@ -3,14 +3,12 @@ package me.char321.sfadvancements.api;
 import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.api.reward.Reward;
+import me.char321.sfadvancements.util.ComponentCompat;
 import me.char321.sfadvancements.util.Utils;
 import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.api.chat.HoverEvent;
-import net.md_5.bungee.api.chat.TextComponent;
-import net.md_5.bungee.api.chat.hover.content.Text;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -158,15 +156,10 @@ public class Advancement {
         }
     }
 
-    @SuppressWarnings("deprecation")
     private void broadcastMessage(Player p) {
-        BaseComponent component = new TextComponent();
-        component.addExtra(p.getName() + " has made the advancement ");
-        BaseComponent sub = new TextComponent(getName());
-        sub.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(getDescription())));
-        component.addExtra(sub);
+        BaseComponent component = ComponentCompat.buildAdvancementMessage(p.getName() + " has made the advancement ", getName(), getDescription());
         for (Player online : Bukkit.getOnlinePlayers()) {
-            online.spigot().sendMessage(component);
+            ComponentCompat.send(online, component);
         }
     }
 

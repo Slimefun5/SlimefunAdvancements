@@ -1,7 +1,8 @@
 package me.char321.sfadvancements;
 
-import io.github.bakedlibs.dough.config.Config;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun5.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import me.char321.sfadvancements.api.AdvancementBuilder;
 import me.char321.sfadvancements.api.AdvancementGroup;
 import me.char321.sfadvancements.api.criteria.CriteriaTypes;
@@ -74,6 +75,7 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
 
         // init sf
         AdvancementsItemGroup.init(this);
+        Slimefun.getItemTranslationService().registerTranslations(this);
 
         // init core
         DefaultCompleters.registerDefaultCompleters();
@@ -83,7 +85,7 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
         Bukkit.getScheduler().runTaskTimerAsynchronously(this, new AutoSaveTask(), 6000L, 6000L);
 
         if (!testing) {
-            Metrics metrics = new Metrics(this, 14130);
+            Metrics metrics = new Metrics(this, 31436);
                     }
 
         //allow other plugins to register their criteria completers

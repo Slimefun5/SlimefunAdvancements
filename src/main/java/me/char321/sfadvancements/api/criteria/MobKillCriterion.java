@@ -2,8 +2,6 @@ package me.char321.sfadvancements.api.criteria;
 
 import me.char321.sfadvancements.SFAdvancements;
 import org.bukkit.ChatColor;
-import org.bukkit.NamespacedKey;
-import org.bukkit.Registry;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.EntityType;
 
@@ -36,7 +34,7 @@ public class MobKillCriterion extends Criterion {
             SFAdvancements.warn("entity not provided for " + id);
             return null;
         }
-        EntityType entityType = Registry.ENTITY_TYPE.match(entity);
+        EntityType entityType = org.bukkit.entity.EntityType.fromName(entity);
         if (entityType == null) {
             SFAdvancements.warn("invalid entity type " + entity + " for criterion " + id);
             return null;

@@ -5,7 +5,7 @@ import me.char321.sfadvancements.api.Advancement;
 import net.md_5.bungee.api.chat.TranslatableComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
@@ -28,14 +28,14 @@ public class Utils {
         item = item.clone();
         ItemMeta im = item.getItemMeta();
         //noinspection DataFlowIssue
-        im.addEnchant(Enchantment.UNBREAKING, 1, false);
+        im.addEnchant(Enchantment.DURABILITY, 1, false);
         im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(im);
         return item;
     }
 
     public static void makeShiny(ItemMeta im) {
-        im.addEnchant(Enchantment.UNBREAKING, 1, false);
+        im.addEnchant(Enchantment.DURABILITY, 1, false);
         im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
     }
 

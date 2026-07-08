@@ -1,5 +1,3 @@
-<<<<<<<< HEAD:CONTENT.md
-========
 # SlimefunAdvancements
 
 [![Build Status](https://Slimefun5.github.io/builds/Slimefun5/SlimefunAdvancements/stable/badge.svg)](https://Slimefun5.github.io/builds/Slimefun5/SlimefunAdvancements/stable)
@@ -7,14 +5,13 @@
 [![GitHub Followers](https://img.shields.io/github/followers/Slimefun5?style=social)](https://github.com/Slimefun5)
 [![GitHub Stars](https://img.shields.io/github/stars/Slimefun5/SlimefunAdvancements?style=social)](https://github.com/Slimefun5/SlimefunAdvancements)
 
-A Slimefun addon that adds an advancement and achievement system.
+Slimefun Advancements is a Slimefun addon adding an advancement system.
 
 ## Requirements
 - Java 25
 - Paper 1.16.* - 26.1.*
 - [Slimefun 5](https://github.com/Slimefun5/Slimefun5)
 
->>>>>>>> origin/feature/java8-universal-jar:README.md
 ## Configuration
 
 The configuration files can be found in your `plugins/SFAdvancements/` folder.
@@ -212,7 +209,7 @@ plugins {
 }
 
 dependencies {
-    "githubCompileOnly"("Slimefun5:SlimefunAdvancements:v1.0.0")
+    "githubCompileOnly"("Slimefun5:SlimefunAdvancements:v1.0.1.4")
 }
 ```
 

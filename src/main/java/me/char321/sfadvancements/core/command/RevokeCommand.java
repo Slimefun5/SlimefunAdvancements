@@ -4,7 +4,7 @@ import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.core.criteria.progress.PlayerProgress;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

@@ -2,7 +2,7 @@ package me.char321.sfadvancements.api.criteria;
 
 import me.char321.sfadvancements.SFAdvancements;
 import org.bukkit.ChatColor;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
 
 /**

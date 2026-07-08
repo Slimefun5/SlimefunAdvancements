@@ -7,7 +7,7 @@ import me.char321.sfadvancements.api.reward.Reward;
 import me.char321.sfadvancements.util.ConfigUtils;
 import me.char321.sfadvancements.util.Utils;
 import org.bukkit.Bukkit;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 
@@ -46,7 +46,7 @@ public class AdvancementBuilder {
         if (parent == null) {
             parent = groupName;
         }
-        NamespacedKey parentKey = NamespacedKey.fromString(parent, SFAdvancements.instance());
+        NamespacedKey parentKey = parent.indexOf(':') >= 0 ? NamespacedKey.fromString(parent) : Utils.keyOf(parent);
         builder.parent(parentKey != null ? parentKey : Utils.keyOf(parent));
 
         ItemStack display = ConfigUtils.getItem(config, "display");
