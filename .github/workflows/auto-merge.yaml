@@ -9,3 +9,5 @@ jobs:
     permissions:
       contents: write
     uses: Slimefun5/workflows/.github/workflows/auto-merge.yaml@stable
+    with:
+      repository: ${{ github.repository }}
