@@ -209,7 +209,7 @@ plugins {
 }
 
 dependencies {
-    "githubCompileOnly"("Slimefun5:SlimefunAdvancements:v1.0.1.8")
+    "githubCompileOnly"("Slimefun5:SlimefunAdvancements:v1.0.1.9")
 }
 ```
 
