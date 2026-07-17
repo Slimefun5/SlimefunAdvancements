@@ -7,12 +7,10 @@ import me.char321.sfadvancements.api.criteria.InventoryCriterion;
 import me.char321.sfadvancements.util.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.inventory.Inventory;
@@ -31,14 +29,6 @@ public class InventoryCriterionCompleter implements CriterionCompleter, Listener
 
     public InventoryCriterionCompleter() {
         Bukkit.getPluginManager().registerEvents(this, SFAdvancements.instance());
-    }
-
-    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
-    public void onInventory(EntityPickupItemEvent e) {
-        Entity entity = e.getEntity();
-        if (entity instanceof Player) {
-            Utils.runLater(() -> onInventory1((Player) entity), 1L);
-        }
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
