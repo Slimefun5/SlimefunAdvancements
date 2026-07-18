@@ -1,6 +1,7 @@
 package me.char321.sfadvancements.util;
 
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import me.char321.sfadvancements.SFAdvancements;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -9,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author char321
@@ -74,6 +76,16 @@ public class ConfigUtils {
         }
         
         Material material = Material.getMaterial(id);
+        if (material == null) {
+            // The bukkit enum name may be a modern (1.13+) name that doesn't exist
+            // on this (older) server, e.g. CRAFTING_TABLE/GUNPOWDER/ENDER_EYE on 1.8.
+            // Resolve it via XMaterial so it maps to the legacy equivalent instead
+            // of logging a spurious "invalid item type" warning.
+            Optional<XMaterial> xMaterial = XMaterial.matchXMaterial(id);
+            if (xMaterial.isPresent()) {
+                material = MaterialCompat.safe(xMaterial.get());
+            }
+        }
         if (material != null) {
             return new ItemStack(material);
         }
