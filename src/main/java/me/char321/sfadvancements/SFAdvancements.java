@@ -84,9 +84,10 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
         info("Starting auto-save task...");
         Bukkit.getScheduler().runTaskTimerAsynchronously(this, new AutoSaveTask(), 6000L, 6000L);
 
-        if (!testing) {
-            Metrics metrics = new Metrics(this, 31436);
-                    }
+        // Consolidated metrics: only start our own bStats if the server opted out (metrics.disable-addon-metrics = false).
+        if (!testing && Slimefun.getCfg().contains("metrics.disable-addon-metrics") && !Slimefun.getCfg().getBoolean("metrics.disable-addon-metrics")) {
+            new Metrics(this, 31436);
+        }
 
         //allow other plugins to register their criteria completers
         info("Waiting for server start...");
