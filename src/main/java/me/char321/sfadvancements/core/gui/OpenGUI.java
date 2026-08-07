@@ -72,7 +72,6 @@ public class OpenGUI {
             scroll--;
         } else if (slot == 53) {
             AdvancementGroup group = registry.getAdvancementGroups().get(groupIndex);
-            //make better
             int size = group.getVisibleAdvancements(playerUUID).size();
             int maxScroll = (size - 1) / 8 - 4;
             if (scroll + 1 <= maxScroll) {

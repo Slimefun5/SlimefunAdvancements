@@ -145,7 +145,6 @@ public class VanillaHook {
         String advKey = advancement.getKey().toString();
         String parentKey = advancement.getParent().toString();
         if (manager.getAdvancements().stream().anyMatch(vadv -> vadv.getKey().toString().equals(advKey))) return;
-        //do i even need to do this?
         if (manager.getAdvancements().stream().noneMatch(vadv -> vadv.getKey().toString().equals(parentKey))) {
             Advancement parent = Utils.fromKey(advancement.getParent());
             if (parent != null) {

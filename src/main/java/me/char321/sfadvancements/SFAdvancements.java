@@ -70,14 +70,11 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
 
         getCommand("sfadvancements").setExecutor(new SFACommand(this));
 
-        // init gui
         Bukkit.getPluginManager().registerEvents(guiManager, this);
 
-        // init sf
         AdvancementsItemGroup.init(this);
         Slimefun.getItemTranslationService().registerTranslations(this);
 
-        // init core
         DefaultCompleters.registerDefaultCompleters();
         CriteriaTypes.loadDefaultCriteria();
 
@@ -89,7 +86,6 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
             new Metrics(this, 31436);
         }
 
-        //allow other plugins to register their criteria completers
         info("Waiting for server start...");
         Utils.runLater(() -> {
             info("Loading groups from config...");
