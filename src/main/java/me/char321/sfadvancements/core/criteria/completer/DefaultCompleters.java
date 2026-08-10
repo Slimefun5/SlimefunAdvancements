@@ -30,9 +30,10 @@ public class DefaultCompleters {
         }
     }
 
-    // EntityPickupItemEvent only exists on MC 1.12+. Register the pickup handler in its own class
-    // guarded by Class.forName so item-pickup tracking works where the event exists and is skipped
-    // on older versions instead of failing the whole completer's event registration.
+    /**
+     * @implNote {@link PickupCriterionListener} is registered behind a {@code Class.forName} guard so the
+     * 1.12+-only pickup event cannot fail the completer's event registration on older versions.
+     */
     private static void registerPickupListener(InventoryCriterionCompleter completer) {
         try {
             Class.forName("org.bukkit.event.entity.EntityPickupItemEvent");

@@ -64,9 +64,7 @@ public class VanillaHook {
         }
 
         try {
-            // Constructing the manager triggers AdvancementAPI's ObjectSerializer static init,
-            // which registers BungeeCord chat serializers that no longer have public constructors
-            // on newer Paper. Catch Throwable so a NoSuchMethodError there cannot abort enable.
+            // Manager construction runs AdvancementAPI's ObjectSerializer static init, which can NoSuchMethodError on newer Paper; catch Throwable so enable survives.
             this.vanillaManager = new AdvancementManager(SFAdvancements.instance());
         } catch (Throwable t) {
             vanillaUnavailable = true;
