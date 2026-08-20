@@ -77,10 +77,7 @@ public class ConfigUtils {
         
         Material material = Material.getMaterial(id);
         if (material == null) {
-            // The bukkit enum name may be a modern (1.13+) name that doesn't exist
-            // on this (older) server, e.g. CRAFTING_TABLE/GUNPOWDER/ENDER_EYE on 1.8.
-            // Resolve it via XMaterial so it maps to the legacy equivalent instead
-            // of logging a spurious "invalid item type" warning.
+            // Modern (1.13+) enum name absent on this server; map to its legacy equivalent via XMaterial.
             Optional<XMaterial> xMaterial = XMaterial.matchXMaterial(id);
             if (xMaterial.isPresent()) {
                 material = MaterialCompat.safe(xMaterial.get());
