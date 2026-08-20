@@ -229,4 +229,4 @@ You can find Slimefun's community on Discord! Click the badge below to join the 
 
 ## License
 
-This project is open-source and licensed under the MIT License.
+This project is open-source and licensed under the GNU General Public License v3.0.
