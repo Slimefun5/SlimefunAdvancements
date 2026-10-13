@@ -38,3 +38,6 @@ gui:
   completed: "Realizări finalizate: "
   scroll-up: "Derulează în sus"
   scroll-down: "Derulează în jos"
+guide:
+  widgets:
+    advancements: '&9Realizări'

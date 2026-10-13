@@ -38,3 +38,6 @@ gui:
   completed: "Teljesített fejlesztések: "
   scroll-up: "Felfelé görgetés"
   scroll-down: "Lefelé görgetés"
+guide:
+  widgets:
+    advancements: '&9Fejlesztések'

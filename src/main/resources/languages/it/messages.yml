@@ -38,3 +38,6 @@ gui:
   completed: "Progressi completati: "
   scroll-up: "Scorri su"
   scroll-down: "Scorri giù"
+guide:
+  widgets:
+    advancements: '&9Progressi'

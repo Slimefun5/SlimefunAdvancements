@@ -16,14 +16,18 @@ public final class AdvancementsItemGroup {
 
     private AdvancementsItemGroup() {}
 
+    private static final String DEFAULT_NAME = "&9Advancements";
+
     public static void init(SFAdvancements plugin) {
         if (SFAdvancements.getMainConfig().getConfiguration().getBoolean("add-advancements-to-guide")) {
             Slimefun.getGuideWidgets().register(new GuideWidget(
                     "advancements",
-                    "&9Advancements",
+                    DEFAULT_NAME,
                     XMaterial.FILLED_MAP,
                     -1,
-                    (p, profile) -> SFAdvancements.getGuiManager().displayGUI(p)));
+                    (p, profile) -> SFAdvancements.getGuiManager().displayGUI(p))
+                .setNameResolver(viewer -> Slimefun.getAddonMessageService()
+                    .getMessage(viewer, plugin, "guide.widgets.advancements", DEFAULT_NAME)));
         }
     }
 }

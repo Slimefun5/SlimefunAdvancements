@@ -38,3 +38,6 @@ gui:
   completed: "已完成進度："
   scroll-up: "向上捲動"
   scroll-down: "向下捲動"
+guide:
+  widgets:
+    advancements: '&9進度'

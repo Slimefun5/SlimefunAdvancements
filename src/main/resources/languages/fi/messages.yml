@@ -38,3 +38,6 @@ gui:
   completed: "Suoritetut saavutukset: "
   scroll-up: "Vieritä ylös"
   scroll-down: "Vieritä alas"
+guide:
+  widgets:
+    advancements: '&9Saavutukset'

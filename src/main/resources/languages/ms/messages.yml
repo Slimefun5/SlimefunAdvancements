@@ -38,3 +38,6 @@ gui:
   completed: "Pencapaian selesai: "
   scroll-up: "Tatal ke atas"
   scroll-down: "Tatal ke bawah"
+guide:
+  widgets:
+    advancements: '&9Pencapaian'

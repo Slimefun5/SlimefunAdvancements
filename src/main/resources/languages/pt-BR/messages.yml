@@ -38,3 +38,6 @@ gui:
   completed: "Conquistas concluídas: "
   scroll-up: "Rolar para cima"
   scroll-down: "Rolar para baixo"
+guide:
+  widgets:
+    advancements: '&9Conquistas'

@@ -38,3 +38,6 @@ gui:
   completed: "Dokončené pokroky: "
   scroll-up: "Posunúť nahor"
   scroll-down: "Posunúť nadol"
+guide:
+  widgets:
+    advancements: '&9Pokroky'

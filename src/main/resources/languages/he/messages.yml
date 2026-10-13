@@ -38,3 +38,6 @@ gui:
   completed: "הישגים שהושלמו: "
   scroll-up: "גלול למעלה"
   scroll-down: "גלול למטה"
+guide:
+  widgets:
+    advancements: '&9הישגים'

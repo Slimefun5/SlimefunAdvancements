@@ -38,3 +38,6 @@ gui:
   completed: "Fuldførte fremskridt: "
   scroll-up: "Rul op"
   scroll-down: "Rul ned"
+guide:
+  widgets:
+    advancements: '&9Fremskridt'

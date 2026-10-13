@@ -38,3 +38,6 @@ gui:
   completed: "Proezas concluídas: "
   scroll-up: "Deslocar para cima"
   scroll-down: "Deslocar para baixo"
+guide:
+  widgets:
+    advancements: '&9Proezas'

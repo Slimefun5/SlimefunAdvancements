@@ -38,3 +38,6 @@ gui:
   completed: "Завршена достигнућа: "
   scroll-up: "Помери горе"
   scroll-down: "Помери доле"
+guide:
+  widgets:
+    advancements: '&9Достигнућа'

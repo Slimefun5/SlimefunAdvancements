@@ -38,3 +38,6 @@ gui:
   completed: "Выкананыя дасягненні: "
   scroll-up: "Пракруціць уверх"
   scroll-down: "Пракруціць уніз"
+guide:
+  widgets:
+    advancements: '&9Дасягненні'

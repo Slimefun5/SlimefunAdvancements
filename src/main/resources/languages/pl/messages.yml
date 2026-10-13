@@ -38,3 +38,6 @@ gui:
   completed: "Ukończone osiągnięcia: "
   scroll-up: "Przewiń w górę"
   scroll-down: "Przewiń w dół"
+guide:
+  widgets:
+    advancements: '&9Osiągnięcia'

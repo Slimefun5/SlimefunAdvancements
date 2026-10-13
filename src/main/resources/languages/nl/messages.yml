@@ -38,3 +38,6 @@ gui:
   completed: "Voltooide prestaties: "
   scroll-up: "Omhoog scrollen"
   scroll-down: "Omlaag scrollen"
+guide:
+  widgets:
+    advancements: '&9Prestaties'

@@ -38,3 +38,6 @@ gui:
   completed: "已完成成就："
   scroll-up: "向上滚动"
   scroll-down: "向下滚动"
+guide:
+  widgets:
+    advancements: '&9成就'

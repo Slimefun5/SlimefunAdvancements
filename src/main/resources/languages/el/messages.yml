@@ -38,3 +38,6 @@ gui:
   completed: "Ολοκληρωμένα επιτεύγματα: "
   scroll-up: "Κύλιση προς τα πάνω"
   scroll-down: "Κύλιση προς τα κάτω"
+guide:
+  widgets:
+    advancements: '&9Επιτεύγματα'

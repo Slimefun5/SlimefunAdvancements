@@ -38,3 +38,6 @@ gui:
   completed: "완료한 발전 과제: "
   scroll-up: "위로 스크롤"
   scroll-down: "아래로 스크롤"
+guide:
+  widgets:
+    advancements: '&9발전 과제'

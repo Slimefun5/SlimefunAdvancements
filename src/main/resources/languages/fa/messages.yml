@@ -38,3 +38,6 @@ gui:
   completed: "دستاوردهای کامل‌شده: "
   scroll-up: "پیمایش به بالا"
   scroll-down: "پیمایش به پایین"
+guide:
+  widgets:
+    advancements: '&9دستاوردها'

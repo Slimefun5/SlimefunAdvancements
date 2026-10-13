@@ -38,3 +38,6 @@ gui:
   completed: "Thành tựu đã hoàn thành: "
   scroll-up: "Cuộn lên"
   scroll-down: "Cuộn xuống"
+guide:
+  widgets:
+    advancements: '&9Thành tựu'

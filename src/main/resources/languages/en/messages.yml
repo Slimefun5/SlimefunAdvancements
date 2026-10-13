@@ -36,3 +36,6 @@ gui:
   completed: "Completed Advancements: "
   scroll-up: "Scroll Up"
   scroll-down: "Scroll Down"
+guide:
+  widgets:
+    advancements: '&9Advancements'

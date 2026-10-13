@@ -38,3 +38,6 @@ gui:
   completed: "Avklarade framsteg: "
   scroll-up: "Rulla upp"
   scroll-down: "Rulla ned"
+guide:
+  widgets:
+    advancements: '&9Framsteg'

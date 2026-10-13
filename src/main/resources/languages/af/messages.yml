@@ -38,3 +38,6 @@ gui:
   completed: "Voltooide prestasies: "
   scroll-up: "Rol op"
   scroll-down: "Rol af"
+guide:
+  widgets:
+    advancements: '&9Prestasies'

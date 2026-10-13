@@ -38,3 +38,6 @@ gui:
   completed: "Logros completados: "
   scroll-up: "Desplazar arriba"
   scroll-down: "Desplazar abajo"
+guide:
+  widgets:
+    advancements: '&9Logros'

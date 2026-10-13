@@ -38,3 +38,6 @@ gui:
   completed: "Abgeschlossene Fortschritte: "
   scroll-up: "Nach oben scrollen"
   scroll-down: "Nach unten scrollen"
+guide:
+  widgets:
+    advancements: '&9Fortschritte'

@@ -38,3 +38,6 @@ gui:
   completed: "Виконані досягнення: "
   scroll-up: "Прокрутити вгору"
   scroll-down: "Прокрутити вниз"
+guide:
+  widgets:
+    advancements: '&9Досягнення'

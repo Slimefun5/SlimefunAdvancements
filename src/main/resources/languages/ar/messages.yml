@@ -38,3 +38,6 @@ gui:
   completed: "الإنجازات المكتملة: "
   scroll-up: "تمرير لأعلى"
   scroll-down: "تمرير لأسفل"
+guide:
+  widgets:
+    advancements: '&9الإنجازات'

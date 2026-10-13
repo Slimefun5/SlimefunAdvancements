@@ -38,3 +38,6 @@ gui:
   completed: "Tamamlanan başarımlar: "
   scroll-up: "Yukarı kaydır"
   scroll-down: "Aşağı kaydır"
+guide:
+  widgets:
+    advancements: '&9Başarımlar'

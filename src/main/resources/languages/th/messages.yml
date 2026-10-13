@@ -38,3 +38,6 @@ gui:
   completed: "ความสำเร็จที่ทำได้: "
   scroll-up: "เลื่อนขึ้น"
   scroll-down: "เลื่อนลง"
+guide:
+  widgets:
+    advancements: '&9ความสำเร็จ'

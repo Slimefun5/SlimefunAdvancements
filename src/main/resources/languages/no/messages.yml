@@ -38,3 +38,6 @@ gui:
   completed: "Fullført framgang: "
   scroll-up: "Rull opp"
   scroll-down: "Rull ned"
+guide:
+  widgets:
+    advancements: '&9Framgang'

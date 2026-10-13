@@ -38,3 +38,6 @@ gui:
   completed: "සම්පූර්ණ කළ ජයග්‍රහණ: "
   scroll-up: "ඉහළට අනුචලනය"
   scroll-down: "පහළට අනුචලනය"
+guide:
+  widgets:
+    advancements: '&9ජයග්‍රහණ'

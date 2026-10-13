@@ -38,3 +38,6 @@ gui:
   completed: "Užbaigti pasiekimai: "
   scroll-up: "Slinkti aukštyn"
   scroll-down: "Slinkti žemyn"
+guide:
+  widgets:
+    advancements: '&9Pasiekimai'

@@ -38,3 +38,6 @@ gui:
   completed: "Pabeigtie sasniegumi: "
   scroll-up: "Ritināt uz augšu"
   scroll-down: "Ritināt uz leju"
+guide:
+  widgets:
+    advancements: '&9Sasniegumi'
