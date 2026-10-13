@@ -2,6 +2,7 @@ package me.char321.sfadvancements.core.command;
 
 import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.Advancement;
+import me.char321.sfadvancements.util.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
@@ -21,13 +22,15 @@ public class GrantCommand implements SubCommand {
     @Override
     public boolean onExecute(CommandSender sender, Command command, String label, String[] args) {
         if (args.length < 3) {
-            sender.sendMessage(ChatColor.RED + "Usage: /" + label + " grant <player> <advancement>");
+            Messages.send(sender, ChatColor.RED, "command.grant-usage", "Usage: /%label% grant <player> <advancement>",
+                    line -> line.replace("%label%", label));
             return false;
         }
 
         Player p = Bukkit.getPlayer(args[1]);
         if (p == null) {
-            sender.sendMessage(ChatColor.RED + "Could not find player " + args[1]);
+            Messages.send(sender, ChatColor.RED, "command.player-not-found", "Could not find player %player%",
+                    line -> line.replace("%player%", args[1]));
             return false;
         }
 
@@ -35,18 +38,20 @@ public class GrantCommand implements SubCommand {
             for (Advancement adv : SFAdvancements.getRegistry().getAdvancements().values()) {
                 adv.complete(p);
             }
-            sender.sendMessage("Successfully granted all advancements!");
+            Messages.send(sender, "command.granted-all", "Successfully granted all advancements!");
             return true;
         }
 
         Advancement adv = SFAdvancements.getRegistry().getAdvancement(NamespacedKey.fromString(args[2]));
         if (adv == null) {
-            sender.sendMessage(ChatColor.RED + "Could not find advancement " + args[2]);
+            Messages.send(sender, ChatColor.RED, "command.advancement-not-found", "Could not find advancement %advancement%",
+                    line -> line.replace("%advancement%", args[2]));
             return false;
         }
 
         adv.complete(p);
-        sender.sendMessage("Successfully granted advancement " + adv.getKey() + " to player " + p.getName());
+        Messages.send(sender, "command.granted", "Successfully granted advancement %advancement% to player %player%",
+                line -> line.replace("%advancement%", adv.getKey().toString()).replace("%player%", p.getName()));
         return true;
     }
 

@@ -4,6 +4,7 @@ import me.char321.sfadvancements.SFAdvancements;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 
+import me.char321.sfadvancements.util.Messages;
 import javax.annotation.Nonnull;
 import java.io.IOException;
 import java.util.Collections;
@@ -19,11 +20,11 @@ public class SaveCommand implements SubCommand {
     public boolean onExecute(CommandSender sender, Command command, String label, String[] args) {
         try {
             SFAdvancements.getAdvManager().save();
-            sender.sendMessage("Successfully saved advancements.");
+            Messages.send(sender, "command.saved", "Successfully saved advancements.");
             return true;
         } catch (IOException e) {
-            sender.sendMessage("An error occured while saving advancements!");
-            sender.sendMessage("Check the console for details.");
+            Messages.send(sender, "command.save-failed", "An error occurred while saving advancements!");
+            Messages.send(sender, "command.check-console", "Check the console for details.");
             SFAdvancements.logger().log(Level.SEVERE, e, () -> "Could not save advancements");
             return false;
         }

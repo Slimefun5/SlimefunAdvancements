@@ -1,6 +1,7 @@
 package me.char321.sfadvancements.core.command;
 
 import me.char321.sfadvancements.SFAdvancements;
+import me.char321.sfadvancements.util.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -29,35 +30,40 @@ public class ImportCommand implements SubCommand {
     @Override
     public boolean onExecute(CommandSender sender, Command command, String label, String[] args) {
         if (args.length < 2) {
-            sender.sendMessage(ChatColor.RED + "Usage: /" + label + " import <plugin>");
+            Messages.send(sender, ChatColor.RED, "command.import-usage", "Usage: /%label% import <plugin>",
+                    line -> line.replace("%label%", label));
             return false;
         }
 
         Plugin pl = Bukkit.getPluginManager().getPlugin(args[1]);
         if (pl == null) {
-            sender.sendMessage(ChatColor.RED + "Plugin " + args[1] + " not found.");
+            Messages.send(sender, ChatColor.RED, "command.plugin-not-found", "Plugin %plugin% not found.",
+                    line -> line.replace("%plugin%", args[1]));
             return false;
         }
 
-        sender.sendMessage("Importing advancements from " + pl.getName());
+        Messages.send(sender, "command.importing", "Importing advancements from %plugin%",
+                line -> line.replace("%plugin%", pl.getName()));
 
         InputStream advInputStream = pl.getResource("sfadvancements.yml");
         if (advInputStream == null) {
-            sender.sendMessage(ChatColor.RED + "Plugin " + pl.getName() + " does not have default advancements.");
+            Messages.send(sender, ChatColor.RED, "command.no-default-advancements", "Plugin %plugin% does not have default advancements.",
+                    line -> line.replace("%plugin%", pl.getName()));
             return false;
         }
 
         InputStream groupInputStream = pl.getResource("sfagroups.yml");
         if (groupInputStream == null) {
-            sender.sendMessage(ChatColor.YELLOW + "Plugin " + pl.getName() + " does not specify default groups.");
-            sender.sendMessage(ChatColor.YELLOW + "Any imported advancements may have unknown groups.");
+            Messages.send(sender, ChatColor.YELLOW, "command.no-default-groups", "Plugin %plugin% does not specify default groups.",
+                    line -> line.replace("%plugin%", pl.getName()));
+            Messages.send(sender, ChatColor.YELLOW, "command.unknown-groups-warning", "Any imported advancements may have unknown groups.");
         }
 
         saveBackups();
         importGroups(pl, groupInputStream);
         importAdvancements(pl, advInputStream);
 
-        sender.sendMessage("Done! Restart the server or use /sfa reload to apply the changes.");
+        Messages.send(sender, "command.import-done", "Done! Restart the server or use /sfa reload to apply the changes.");
         return true;
     }
 

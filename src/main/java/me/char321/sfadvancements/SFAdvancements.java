@@ -74,6 +74,7 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
 
         AdvancementsItemGroup.init(this);
         Slimefun.getItemTranslationService().registerTranslations(this);
+        Slimefun.getAddonMessageService().registerTranslations(this);
 
         DefaultCompleters.registerDefaultCompleters();
         CriteriaTypes.loadDefaultCriteria();

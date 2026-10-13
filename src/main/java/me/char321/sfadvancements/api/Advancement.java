@@ -4,8 +4,8 @@ import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.api.reward.Reward;
 import me.char321.sfadvancements.util.ComponentCompat;
+import me.char321.sfadvancements.util.Messages;
 import me.char321.sfadvancements.util.Utils;
-import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
@@ -156,10 +156,16 @@ public class Advancement {
         }
     }
 
+    /**
+     * @implNote The component is rebuilt for each recipient rather than once for the broadcast: the
+     *           announcement resolves in the reader's own language, so a single shared component could
+     *           only ever be right for one of them.
+     */
     private void broadcastMessage(Player p) {
-        BaseComponent component = ComponentCompat.buildAdvancementMessage(p.getName() + " has made the advancement ", getName(), getDescription());
         for (Player online : Bukkit.getOnlinePlayers()) {
-            ComponentCompat.send(online, component);
+            String prefix = Messages.get(online, "advancement.announce", "%player% has made the advancement")
+                    .replace("%player%", p.getName());
+            ComponentCompat.send(online, ComponentCompat.buildAdvancementMessage(prefix + " ", getName(), getDescription()));
         }
     }
 

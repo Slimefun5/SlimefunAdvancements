@@ -13,6 +13,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import me.char321.sfadvancements.util.Messages;
 import javax.annotation.Nonnull;
 import java.util.Collections;
 import java.util.List;
@@ -25,13 +26,13 @@ public class DumpItemCommand implements SubCommand {
     @Override
     public boolean onExecute(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage("you must be a player to execute this command");
+            Messages.send(sender, "command.players-only", "You must be a player to execute this command");
             return false;
         }
 
         Player p = (Player) sender;
 
-        sender.sendMessage("Representing the item in your hand in yml...");
+        Messages.send(sender, "command.dump-start", "Representing the item in your hand in yml...");
         ItemStack item = p.getInventory().getItemInHand();
         SFAdvancements.info("Representing " + item);
 
@@ -67,7 +68,7 @@ public class DumpItemCommand implements SubCommand {
         configuration.set("item", item);
         SFAdvancements.info("Full yml representation: \n" + configuration.saveToString());
 
-        sender.sendMessage("Done! Check the console for details.");
+        Messages.send(sender, "command.dump-done", "Done! Check the console for details.");
         return true;
     }
 

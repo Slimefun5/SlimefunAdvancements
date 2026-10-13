@@ -1,6 +1,7 @@
 package me.char321.sfadvancements.core.command;
 
 import me.char321.sfadvancements.SFAdvancements;
+import me.char321.sfadvancements.util.Messages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -35,15 +36,17 @@ public class SFACommand implements CommandExecutor {
                     if (sender.hasPermission("sfa.command."+subcmd.getCommandName())) {
                         return subcmd.onExecute(sender, command, label, args);
                     } else {
-                        sender.sendMessage("You do not have permission to use this command.");
+                        Messages.send(sender, "command.no-permission", "You do not have permission to use this command.");
                         return false;
                     }
                 }
             }
-            sender.sendMessage("Unknown subcommand! Available subcommands are: " + subcommands.stream().map(SubCommand::getCommandName).collect(Collectors.joining(", ")));
+            Messages.send(sender, "command.unknown-subcommand", "Unknown subcommand! Available subcommands are: %subcommands%",
+                    line -> line.replace("%subcommands%", subcommands.stream().map(SubCommand::getCommandName).collect(Collectors.joining(", "))));
             return false;
         }
-        sender.sendMessage("SFAdvancements version " + SFAdvancements.instance().getDescription().getVersion());
+        Messages.send(sender, "command.version", "SFAdvancements version %version%",
+                line -> line.replace("%version%", SFAdvancements.instance().getDescription().getVersion()));
         return true;
     }
 

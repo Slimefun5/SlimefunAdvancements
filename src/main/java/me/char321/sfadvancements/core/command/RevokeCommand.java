@@ -2,6 +2,7 @@ package me.char321.sfadvancements.core.command;
 
 import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.core.criteria.progress.PlayerProgress;
+import me.char321.sfadvancements.util.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
@@ -21,13 +22,15 @@ public class RevokeCommand implements SubCommand {
     @Override
     public boolean onExecute(CommandSender sender, Command command, String label, String[] args) {
         if (args.length < 3) {
-            sender.sendMessage(ChatColor.RED + "Usage: /" + label + " revoke <player> <advancement>");
+            Messages.send(sender, ChatColor.RED, "command.revoke-usage", "Usage: /%label% revoke <player> <advancement>",
+                    line -> line.replace("%label%", label));
             return false;
         }
 
         Player p = Bukkit.getPlayer(args[1]);
         if (p == null) {
-            sender.sendMessage(ChatColor.RED + "Could not find player " + args[1]);
+            Messages.send(sender, ChatColor.RED, "command.player-not-found", "Could not find player %player%",
+                    line -> line.replace("%player%", args[1]));
             return false;
         }
 
@@ -36,15 +39,16 @@ public class RevokeCommand implements SubCommand {
             for (NamespacedKey adv : progress.getCompletedAdvancements()) {
                 progress.revokeAdvancement(adv);
             }
-            sender.sendMessage("Successfully revoked all achievements!");
+            Messages.send(sender, "command.revoked-all", "Successfully revoked all advancements!");
             return true;
         }
 
         if (!progress.revokeAdvancement(NamespacedKey.fromString(args[2]))) {
-            sender.sendMessage(ChatColor.RED + "Could not revoke advancement " + args[2] + " from player " + args[1]);
+            Messages.send(sender, ChatColor.RED, "command.revoke-failed", "Could not revoke advancement %advancement% from player %player%",
+                    line -> line.replace("%advancement%", args[2]).replace("%player%", args[1]));
             return false;
         } else {
-            sender.sendMessage("Successfully revoked!");
+            Messages.send(sender, "command.revoked", "Successfully revoked!");
             return true;
         }
     }
