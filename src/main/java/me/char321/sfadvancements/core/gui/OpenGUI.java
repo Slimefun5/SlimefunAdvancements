@@ -11,6 +11,8 @@ import me.char321.sfadvancements.api.Advancement;
 import me.char321.sfadvancements.api.AdvancementGroup;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.core.registry.AdvancementsRegistry;
+import me.char321.sfadvancements.util.AdvancementContent;
+import me.char321.sfadvancements.util.Messages;
 import me.char321.sfadvancements.util.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -22,6 +24,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -42,9 +45,20 @@ public class OpenGUI {
     }
 
     public OpenGUI(UUID playerUUID) {
-        this.inventory = Bukkit.createInventory(null, 54, ChatColor.BLUE + "Advancements");
         this.playerUUID = playerUUID;
+        this.inventory = Bukkit.createInventory(null, 54,
+                ChatColor.BLUE + Messages.get(viewer(), "gui.title", "Advancements"));
         refresh();
+    }
+
+    /**
+     * @implNote An {@link OpenGUI} outlives the session that created it (it is cached per uuid), so the
+     *           viewer is looked up per refresh rather than held: a stale {@link Player} would resolve
+     *           every label against a language the reader may since have changed.
+     */
+    @Nullable
+    private Player viewer() {
+        return Bukkit.getPlayer(playerUUID);
     }
 
     public Inventory getInventory() {
@@ -91,16 +105,18 @@ public class OpenGUI {
     }
 
     private void refreshBackButton() {
-        inventory.setItem(0, MenuItems.BACK_ITEM);
+        inventory.setItem(0, MenuItems.backItem(viewer()));
     }
 
     private void refreshStats() {
+        Player viewer = viewer();
         ItemStack head = MaterialCompat.stack(XMaterial.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) head.getItemMeta();
         setOwningPlayer(meta, Bukkit.getOfflinePlayer(playerUUID));
-        meta.setDisplayName(ChatColor.YELLOW + "Stats");
+        meta.setDisplayName(ChatColor.YELLOW + Messages.get(viewer, "gui.stats", "Stats"));
         StringBuilder completedadvancements = new StringBuilder();
-        completedadvancements.append(ChatColor.GRAY).append("Completed Advancements: ");
+        completedadvancements.append(ChatColor.GRAY)
+                .append(Messages.get(viewer, "gui.completed", "Completed Advancements: "));
         int completed = SFAdvancements.getAdvManager().getProgress(playerUUID).getCompletedAdvancements().size();
         int total = SFAdvancements.getRegistry().getAdvancements().size();
         if (completed == total) {
@@ -117,24 +133,21 @@ public class OpenGUI {
     }
 
     private void refreshArrows() {
+        Player viewer = viewer();
         int maxPage = (registry.getAdvancementGroups().size() - 1) / 5 + 1;
         String pageLore = "&7(" + page + " / " + maxPage + ")";
+        String previous = MenuItems.coreMessage(viewer, "guide.pages.previous");
+        String next = MenuItems.coreMessage(viewer, "guide.pages.next");
 
-        ItemStack leftArrow;
-        if (page == 1) {
-            leftArrow = CustomItemStack.create(MaterialCompat.safe(XMaterial.BLACK_STAINED_GLASS_PANE), "&7Previous Page", pageLore);
-        } else {
-            leftArrow = CustomItemStack.create(MaterialCompat.safe(XMaterial.LIME_STAINED_GLASS_PANE), "&ePrevious Page", pageLore);
-        }
-        inventory.setItem(1, leftArrow);
+        inventory.setItem(1, pageArrow(page == 1, previous, pageLore));
+        inventory.setItem(7, pageArrow(page == maxPage, next, pageLore));
+    }
 
-        ItemStack rightArrow;
-        if (page == maxPage) {
-            rightArrow = CustomItemStack.create(MaterialCompat.safe(XMaterial.BLACK_STAINED_GLASS_PANE), "&7Next Page", pageLore);
-        } else {
-            rightArrow = CustomItemStack.create(MaterialCompat.safe(XMaterial.LIME_STAINED_GLASS_PANE), "&eNext Page", pageLore);
-        }
-        inventory.setItem(7, rightArrow);
+    /** A page arrow, greyed out when the page it would turn to does not exist. */
+    private static ItemStack pageArrow(boolean exhausted, String label, String pageLore) {
+        XMaterial material = exhausted ? XMaterial.BLACK_STAINED_GLASS_PANE : XMaterial.LIME_STAINED_GLASS_PANE;
+        String colour = exhausted ? "&7" : "&e";
+        return CustomItemStack.create(MaterialCompat.safe(material), colour + label, pageLore);
     }
 
     private void refreshGroups() {
@@ -143,7 +156,7 @@ public class OpenGUI {
             int dispIndex = 5 * (page - 1) + i;
             ItemStack display;
             if (registry.getAdvancementGroups().size() > dispIndex) {
-                display = registry.getAdvancementGroups().get(dispIndex).getDisplayItem();
+                display = AdvancementContent.groupDisplay(viewer(), registry.getAdvancementGroups().get(dispIndex));
                 if (dispIndex == groupIndex) {
                     display = Utils.makeShiny(display);
                 }
@@ -160,11 +173,14 @@ public class OpenGUI {
         inventory.setItem(35, MenuItems.YELLOW);
         inventory.setItem(44, MenuItems.YELLOW);
 
+        Player viewer = viewer();
+
         ItemStack scrollUp;
         if (scroll == 0) {
             scrollUp = MenuItems.YELLOW;
         } else {
-            scrollUp = CustomItemStack.create(MaterialCompat.safe(XMaterial.ARROW), "&eScroll Up");
+            scrollUp = CustomItemStack.create(MaterialCompat.safe(XMaterial.ARROW),
+                    "&e" + Messages.get(viewer, "gui.scroll-up", "Scroll Up"));
         }
         inventory.setItem(17, scrollUp);
 
@@ -174,7 +190,8 @@ public class OpenGUI {
         if (scroll >= maxScroll) {
             scrollDown = MenuItems.YELLOW;
         } else {
-            scrollDown = CustomItemStack.create(MaterialCompat.safe(XMaterial.ARROW), "&eScroll Down");
+            scrollDown = CustomItemStack.create(MaterialCompat.safe(XMaterial.ARROW),
+                    "&e" + Messages.get(viewer, "gui.scroll-down", "Scroll Down"));
         }
         inventory.setItem(53, scrollDown);
     }
@@ -199,7 +216,7 @@ public class OpenGUI {
     }
 
     private ItemStack getDisplayfor (Advancement adv) {
-        ItemStack display = adv.getDisplay().clone();
+        ItemStack display = AdvancementContent.display(viewer(), adv);
         ItemMeta displayim = display.getItemMeta();
         if (displayim == null) {
             throw new IllegalArgumentException("display item meta is null");
@@ -246,8 +263,9 @@ public class OpenGUI {
 
     private List<String> getCriteriaLore(Advancement adv) {
         List<String> res = new ArrayList<>();
+        Player viewer = viewer();
         for (Criterion criterion : adv.getCriteria()) {
-            String criterionName = criterion.getName();
+            String criterionName = AdvancementContent.criterionName(viewer, adv, criterion);
             int progress = SFAdvancements.getAdvManager().getCriterionProgress(playerUUID, criterion);
             int max = criterion.getCount();
             boolean cridone = progress >= max;

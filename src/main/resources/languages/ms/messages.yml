@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% telah mencapai pencapaian:"
+
+gui:
+  title: "Pencapaian"
+  stats: "Statistik"
+  completed: "Pencapaian selesai: "
+  scroll-up: "Tatal ke atas"
+  scroll-down: "Tatal ke bawah"

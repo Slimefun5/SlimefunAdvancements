@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Портативное ремесло]"
+    display-name: "&aПортативное ремесло"
+    lore:
+      - "Используйте портативный верстак"
+    criteria:
+      interact: "Использовать портативный верстак"
+  dust:
+    name: "&a[В пыль обращается]"
+    display-name: "&aВ пыль обращается"
+    lore:
+      - "Измельчите руду рудодробилкой"
+    criteria:
+      inventory: "Использовать рудодробилку"
+  electricity:
+    name: "&a[Электричество!!!]"
+    display-name: "&aЭлектричество!!!"
+    lore:
+      - "Поставьте регулятор энергии"
+    criteria:
+      build: "Поставить регулятор энергии"
+  gapple_juice:
+    name: "&a[На вкус как выдержанное вино]"
+    display-name: "&aНа вкус как выдержанное вино"
+    lore:
+      - "Выпейте сок золотого яблока"
+    criteria:
+      consume: "Выпить сок золотого яблока"
+  industrial_revolution:
+    name: "&a[Промышленная революция]"
+    display-name: "&aПромышленная революция"
+    lore:
+      - "Получите следующие предметы:"
+      - "рудодробилка, золотой лоток, промыватель пыли, фабрика слитков"
+    criteria:
+      oregrinder: "Получить электрическую рудодробилку"
+      goldpan: "Получить электрический золотой лоток"
+      dustwasher: "Получить электрический промыватель пыли"
+      ingotfactory: "Получить электрическую фабрику слитков"
+  exploding_tools:
+    name: "&a[Взрывные инструменты]"
+    display-name: "&aВзрывные инструменты"
+    lore:
+      - "Получите взрывную кирку и лопату"
+    criteria:
+      pickaxe: "Получить взрывную кирку"
+      shovel: "Получить взрывную лопату"
+  fake_diamond:
+    name: "&a[Алмазы, созданные человеком]"
+    display-name: "&aАлмазы, созданные человеком"
+    lore:
+      - "Создайте синтетический алмаз"
+    criteria:
+      diamond: "Получить синтетический алмаз"
+  carbonado:
+    name: "&a[Блестящая тьма]"
+    display-name: "&aБлестящая тьма"
+    lore:
+      - "Создайте алмаз карбонадо"
+    criteria:
+      carbonado: "Получить карбонадо"
+  black_gold:
+    name: "&a[Чёрное золото]"
+    display-name: "&aЧёрное золото"
+    lore:
+      - "Добудьте нефть"
+    criteria:
+      oil: "Получить нефть"
+  ender_charms:
+    name: "&a[Эндер-амулеты]"
+    display-name: "&aЭндер-амулеты"
+    lore:
+      - "Изучите Эндер-талисманы"
+    criteria:
+      research: "Изучить Эндер-талисманы"
+  who_asked:
+    name: "&a[Кто спрашивал?]"
+    display-name: "&aКто спрашивал?"
+    lore:
+      - "Найдите \"who asked\""
+    criteria:
+      ask: "Найти \"who asked\""
+groups:
+  basic:
+    display-name: "&fОсновы"
+    lore:
+      - "&7&oСама суть Slimefun."
+  electric:
+    display-name: "&eЭлектричество"
+    lore:
+      - "&7&oЦентр цивилизации."
+  cargo:
+    display-name: "&6Грузы"
+    lore:
+      - "&7&oНачало чего-то великолепного."
+  technical:
+    display-name: "&4Техника"
+    lore:
+      - "&7&oхаха мотор крутится ньюуум"
+  magical:
+    display-name: "&dМагия"
+    lore:
+      - "&7&oМастерство — дело времени."
+  other:
+    display-name: "&7Прочее"
+    lore:
+      - "&7&oРазные достижения"

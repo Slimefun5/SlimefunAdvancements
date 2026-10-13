@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Draagbare vervaardiging]"
+    display-name: "&aDraagbare vervaardiging"
+    lore:
+      - "Gebruik 'n draagbare vervaardiger"
+    criteria:
+      interact: "Draagbare vervaardiger gebruik"
+  dust:
+    name: "&a[Tot stof verander dit]"
+    display-name: "&aTot stof verander dit"
+    lore:
+      - "Vergruis 'n erts met 'n ertsvergruiser"
+    criteria:
+      inventory: "Ertsvergruiser gebruik"
+  electricity:
+    name: "&a[Elektrisiteit!!!]"
+    display-name: "&aElektrisiteit!!!"
+    lore:
+      - "Plaas 'n energiereguleerder"
+    criteria:
+      build: "Energiereguleerder plaas"
+  gapple_juice:
+    name: "&a[Smaak soos verouderde wyn]"
+    display-name: "&aSmaak soos verouderde wyn"
+    lore:
+      - "Drink goue appelsap"
+    criteria:
+      consume: "Goue appelsap drink"
+  industrial_revolution:
+    name: "&a[Industriële revolusie]"
+    display-name: "&aIndustriële revolusie"
+    lore:
+      - "Verkry die volgende voorwerpe:"
+      - "ertsmeuler, goudpan, stofwasser, staaffabriek"
+    criteria:
+      oregrinder: "Elektriese ertsmeuler verkry"
+      goldpan: "Elektriese goudpan verkry"
+      dustwasher: "Elektriese stofwasser verkry"
+      ingotfactory: "Elektriese staaffabriek verkry"
+  exploding_tools:
+    name: "&a[Ontploffende gereedskap]"
+    display-name: "&aOntploffende gereedskap"
+    lore:
+      - "Verkry 'n ontploffende pikhouer en graaf"
+    criteria:
+      pickaxe: "Ontploffende pikhouer verkry"
+      shovel: "Ontploffende graaf verkry"
+  fake_diamond:
+    name: "&a[Mensgemaakte diamante]"
+    display-name: "&aMensgemaakte diamante"
+    lore:
+      - "Skep 'n sintetiese diamant"
+    criteria:
+      diamond: "Sintetiese diamant verkry"
+  carbonado:
+    name: "&a[Glansende duisternis]"
+    display-name: "&aGlansende duisternis"
+    lore:
+      - "Skep 'n karbonado-diamant"
+    criteria:
+      carbonado: "Karbonado verkry"
+  black_gold:
+    name: "&a[Swart goud]"
+    display-name: "&aSwart goud"
+    lore:
+      - "Myn vir olie"
+    criteria:
+      oil: "Olie verkry"
+  ender_charms:
+    name: "&a[Ender-amulette]"
+    display-name: "&aEnder-amulette"
+    lore:
+      - "Navors Ender-talismanne"
+    criteria:
+      research: "Ender-talismanne navors"
+  who_asked:
+    name: "&a[Wie het gevra?]"
+    display-name: "&aWie het gevra?"
+    lore:
+      - "Soek vir \"who asked\""
+    criteria:
+      ask: "Vir \"who asked\" soek"
+groups:
+  basic:
+    display-name: "&fBasies"
+    lore:
+      - "&7&oDie kerngees van Slimefun."
+  electric:
+    display-name: "&eElektries"
+    lore:
+      - "&7&oDie middelpunt van die beskawing."
+  cargo:
+    display-name: "&6Vrag"
+    lore:
+      - "&7&oDie begin van iets manjifiek."
+  technical:
+    display-name: "&4Tegnies"
+    lore:
+      - "&7&ohaha die motor draai nyooom"
+  magical:
+    display-name: "&dMagies"
+    lore:
+      - "&7&oMeesterskap is die werk van tyd."
+  other:
+    display-name: "&7Ander"
+    lore:
+      - "&7&oAllerlei prestasies"

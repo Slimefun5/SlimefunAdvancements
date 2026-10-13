@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player%님이 발전 과제를 달성했습니다:"
+
+gui:
+  title: "발전 과제"
+  stats: "통계"
+  completed: "완료한 발전 과제: "
+  scroll-up: "위로 스크롤"
+  scroll-down: "아래로 스크롤"

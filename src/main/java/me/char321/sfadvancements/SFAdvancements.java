@@ -14,6 +14,7 @@ import me.char321.sfadvancements.core.criteria.completer.DefaultCompleters;
 import me.char321.sfadvancements.core.gui.AdvGUIManager;
 import me.char321.sfadvancements.core.registry.AdvancementsRegistry;
 import me.char321.sfadvancements.core.tasks.AutoSaveTask;
+import me.char321.sfadvancements.util.AdvancementContent;
 import me.char321.sfadvancements.util.ConfigUtils;
 import me.char321.sfadvancements.util.Utils;
 import me.char321.sfadvancements.vanilla.VanillaHook;
@@ -75,6 +76,7 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
         AdvancementsItemGroup.init(this);
         Slimefun.getItemTranslationService().registerTranslations(this);
         Slimefun.getAddonMessageService().registerTranslations(this);
+        Slimefun.getAddonMessageService().registerTranslations(this, "advancements.yml");
 
         DefaultCompleters.registerDefaultCompleters();
         CriteriaTypes.loadDefaultCriteria();
@@ -93,6 +95,7 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
             loadGroups();
             info("Loading advancements from config...");
             loadAdvancements();
+            AdvancementContent.reload();
 
             if (!testing && config.getBoolean("use-advancements-api")) {
                 vanillaHook.init();
@@ -129,6 +132,7 @@ public final class SFAdvancements extends JavaPlugin implements SlimefunAddon {
 
         loadGroups();
         loadAdvancements();
+        AdvancementContent.reload();
 
         if (!testing && config.getBoolean("use-advancements-api")) {
             vanillaHook.reload();

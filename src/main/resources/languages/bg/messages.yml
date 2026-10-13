@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% получи постижението:"
+
+gui:
+  title: "Постижения"
+  stats: "Статистика"
+  completed: "Завършени постижения: "
+  scroll-up: "Превъртане нагоре"
+  scroll-down: "Превъртане надолу"

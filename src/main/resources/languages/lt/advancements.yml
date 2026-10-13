@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Nešiojamas gaminimas]"
+    display-name: "&aNešiojamas gaminimas"
+    lore:
+      - "Naudok nešiojamą gamintoją"
+    criteria:
+      interact: "Nešiojamo gamintojo naudojimas"
+  dust:
+    name: "&a[Į dulkes pavirsta]"
+    display-name: "&aĮ dulkes pavirsta"
+    lore:
+      - "Sutraiškyk rūdą rūdų traiškytuvu"
+    criteria:
+      inventory: "Rūdų traiškytuvo naudojimas"
+  electricity:
+    name: "&a[Elektra!!!]"
+    display-name: "&aElektra!!!"
+    lore:
+      - "Padėk energijos reguliatorių"
+    criteria:
+      build: "Energijos reguliatoriaus padėjimas"
+  gapple_juice:
+    name: "&a[Skonis kaip išlaikyto vyno]"
+    display-name: "&aSkonis kaip išlaikyto vyno"
+    lore:
+      - "Išgerk auksinių obuolių sulčių"
+    criteria:
+      consume: "Auksinių obuolių sulčių išgėrimas"
+  industrial_revolution:
+    name: "&a[Pramonės revoliucija]"
+    display-name: "&aPramonės revoliucija"
+    lore:
+      - "Įsigyk šiuos daiktus:"
+      - "rūdos šlifuoklis, aukso sietas, dulkių plovyklė, luitų gamykla"
+    criteria:
+      oregrinder: "Elektrinio rūdos šlifuoklio įsigijimas"
+      goldpan: "Elektrinio aukso sieto įsigijimas"
+      dustwasher: "Elektrinės dulkių plovyklės įsigijimas"
+      ingotfactory: "Elektrinės luitų gamyklos įsigijimas"
+  exploding_tools:
+    name: "&a[Sprogstamieji įrankiai]"
+    display-name: "&aSprogstamieji įrankiai"
+    lore:
+      - "Įsigyk sprogstamąjį kirtiklį ir kastuvą"
+    criteria:
+      pickaxe: "Sprogstamojo kirtiklio įsigijimas"
+      shovel: "Sprogstamojo kastuvo įsigijimas"
+  fake_diamond:
+    name: "&a[Žmogaus sukurti deimantai]"
+    display-name: "&aŽmogaus sukurti deimantai"
+    lore:
+      - "Sukurk sintetinį deimantą"
+    criteria:
+      diamond: "Sintetinio deimanto įsigijimas"
+  carbonado:
+    name: "&a[Žibanti tamsa]"
+    display-name: "&aŽibanti tamsa"
+    lore:
+      - "Sukurk karbonado deimantą"
+    criteria:
+      carbonado: "Karbonado įsigijimas"
+  black_gold:
+    name: "&a[Juodasis auksas]"
+    display-name: "&aJuodasis auksas"
+    lore:
+      - "Išgauk naftos"
+    criteria:
+      oil: "Naftos įsigijimas"
+  ender_charms:
+    name: "&a[Enderio amuletai]"
+    display-name: "&aEnderio amuletai"
+    lore:
+      - "Ištyrink Enderinius talismanus"
+    criteria:
+      research: "Enderinių talismanų ištyrimas"
+  who_asked:
+    name: "&a[Kas klausė?]"
+    display-name: "&aKas klausė?"
+    lore:
+      - "Ieškok \"who asked\""
+    criteria:
+      ask: "\"who asked\" paieška"
+groups:
+  basic:
+    display-name: "&fPagrindai"
+    lore:
+      - "&7&oPati Slimefun esmė."
+  electric:
+    display-name: "&eElektra"
+    lore:
+      - "&7&oCivilizacijos centras."
+  cargo:
+    display-name: "&6Krovinys"
+    lore:
+      - "&7&oKažko didingo pradžia."
+  technical:
+    display-name: "&4Technika"
+    lore:
+      - "&7&oracha motoras sukasi njuuum"
+  magical:
+    display-name: "&dMagija"
+    lore:
+      - "&7&oMeistriškumas yra laiko darbas."
+  other:
+    display-name: "&7Kita"
+    lore:
+      - "&7&oĮvairūs pasiekimai"

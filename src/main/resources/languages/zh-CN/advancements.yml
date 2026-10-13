@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[便携合成]"
+    display-name: "&a便携合成"
+    lore:
+      - "使用便携式工作台"
+    criteria:
+      interact: "使用便携式工作台"
+  dust:
+    name: "&a[化为尘土]"
+    display-name: "&a化为尘土"
+    lore:
+      - "用矿石粉碎机粉碎矿石"
+    criteria:
+      inventory: "使用矿石粉碎机"
+  electricity:
+    name: "&a[通电了！！！]"
+    display-name: "&a通电了！！！"
+    lore:
+      - "放置能量调节器"
+    criteria:
+      build: "放置能量调节器"
+  gapple_juice:
+    name: "&a[尝起来像陈年佳酿]"
+    display-name: "&a尝起来像陈年佳酿"
+    lore:
+      - "喝下金苹果汁"
+    criteria:
+      consume: "饮用金苹果汁"
+  industrial_revolution:
+    name: "&a[工业革命]"
+    display-name: "&a工业革命"
+    lore:
+      - "获得以下物品："
+      - "矿石研磨机、淘金盘、粉末洗涤机、锭工厂"
+    criteria:
+      oregrinder: "获得电力矿石研磨机"
+      goldpan: "获得电力淘金盘"
+      dustwasher: "获得电力粉末洗涤机"
+      ingotfactory: "获得电力锭工厂"
+  exploding_tools:
+    name: "&a[爆炸工具]"
+    display-name: "&a爆炸工具"
+    lore:
+      - "获得爆炸镐和爆炸锹"
+    criteria:
+      pickaxe: "获得爆炸镐"
+      shovel: "获得爆炸锹"
+  fake_diamond:
+    name: "&a[人造钻石]"
+    display-name: "&a人造钻石"
+    lore:
+      - "制作合成钻石"
+    criteria:
+      diamond: "获得合成钻石"
+  carbonado:
+    name: "&a[闪耀的黑暗]"
+    display-name: "&a闪耀的黑暗"
+    lore:
+      - "制作黑金刚石"
+    criteria:
+      carbonado: "获得黑金刚石"
+  black_gold:
+    name: "&a[黑色黄金]"
+    display-name: "&a黑色黄金"
+    lore:
+      - "开采石油"
+    criteria:
+      oil: "获得石油"
+  ender_charms:
+    name: "&a[末影护符]"
+    display-name: "&a末影护符"
+    lore:
+      - "研究末影护身符"
+    criteria:
+      research: "研究末影护身符"
+  who_asked:
+    name: "&a[谁问了？]"
+    display-name: "&a谁问了？"
+    lore:
+      - "搜索 \"who asked\""
+    criteria:
+      ask: "搜索 \"who asked\""
+groups:
+  basic:
+    display-name: "&f基础"
+    lore:
+      - "&7&oSlimefun 的核心精神。"
+  electric:
+    display-name: "&e电力"
+    lore:
+      - "&7&o文明的中心。"
+  cargo:
+    display-name: "&6物流"
+    lore:
+      - "&7&o宏伟事业的开端。"
+  technical:
+    display-name: "&4机械"
+    lore:
+      - "&7&o哈哈马达转起来 嗡嗡嗡"
+  magical:
+    display-name: "&d魔法"
+    lore:
+      - "&7&o精通是时间的造物。"
+  other:
+    display-name: "&7其他"
+    lore:
+      - "&7&o杂项成就"

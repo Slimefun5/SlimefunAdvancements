@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% ได้รับความสำเร็จ:"
+
+gui:
+  title: "ความสำเร็จ"
+  stats: "สถิติ"
+  completed: "ความสำเร็จที่ทำได้: "
+  scroll-up: "เลื่อนขึ้น"
+  scroll-down: "เลื่อนลง"

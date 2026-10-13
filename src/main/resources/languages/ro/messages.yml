@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% a obținut realizarea:"
+
+gui:
+  title: "Realizări"
+  stats: "Statistici"
+  completed: "Realizări finalizate: "
+  scroll-up: "Derulează în sus"
+  scroll-down: "Derulează în jos"

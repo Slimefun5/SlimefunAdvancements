@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Портативне ремесло]"
+    display-name: "&aПортативне ремесло"
+    lore:
+      - "Скористайтеся портативним крафтером"
+    criteria:
+      interact: "Скористатися портативним крафтером"
+  dust:
+    name: "&a[На пил обертається]"
+    display-name: "&aНа пил обертається"
+    lore:
+      - "Подрібніть руду подрібнювачем руди"
+    criteria:
+      inventory: "Скористатися подрібнювачем руди"
+  electricity:
+    name: "&a[Електрика!!!]"
+    display-name: "&aЕлектрика!!!"
+    lore:
+      - "Поставте регулятор енергії"
+    criteria:
+      build: "Поставити регулятор енергії"
+  gapple_juice:
+    name: "&a[На смак як витримане вино]"
+    display-name: "&aНа смак як витримане вино"
+    lore:
+      - "Випийте сік із золотого яблука"
+    criteria:
+      consume: "Випити сік із золотого яблука"
+  industrial_revolution:
+    name: "&a[Промислова революція]"
+    display-name: "&aПромислова революція"
+    lore:
+      - "Отримайте такі предмети:"
+      - "подрібнювач руди, рудопромивочний лоток, промивач пилу, завод злитків"
+    criteria:
+      oregrinder: "Отримати електричний подрібнювач руди"
+      goldpan: "Отримати електричний рудопромивочний лоток"
+      dustwasher: "Отримати електричний промивач пилу"
+      ingotfactory: "Отримати електричний завод злитків"
+  exploding_tools:
+    name: "&a[Вибухові інструменти]"
+    display-name: "&aВибухові інструменти"
+    lore:
+      - "Отримайте вибухове кайло та лопату"
+    criteria:
+      pickaxe: "Отримати вибухове кайло"
+      shovel: "Отримати вибухову лопату"
+  fake_diamond:
+    name: "&a[Алмази, створені людиною]"
+    display-name: "&aАлмази, створені людиною"
+    lore:
+      - "Створіть синтетичний алмаз"
+    criteria:
+      diamond: "Отримати синтетичний алмаз"
+  carbonado:
+    name: "&a[Блискуча темрява]"
+    display-name: "&aБлискуча темрява"
+    lore:
+      - "Створіть алмаз карбонадо"
+    criteria:
+      carbonado: "Отримати карбонадо"
+  black_gold:
+    name: "&a[Чорне золото]"
+    display-name: "&aЧорне золото"
+    lore:
+      - "Видобудьте нафту"
+    criteria:
+      oil: "Отримати нафту"
+  ender_charms:
+    name: "&a[Ендер-амулети]"
+    display-name: "&aЕндер-амулети"
+    lore:
+      - "Дослідіть Ендер-талісмани"
+    criteria:
+      research: "Дослідити Ендер-талісмани"
+  who_asked:
+    name: "&a[Хто питав?]"
+    display-name: "&aХто питав?"
+    lore:
+      - "Знайдіть \"who asked\""
+    criteria:
+      ask: "Знайти \"who asked\""
+groups:
+  basic:
+    display-name: "&fОснови"
+    lore:
+      - "&7&oСама суть Slimefun."
+  electric:
+    display-name: "&eЕлектрика"
+    lore:
+      - "&7&oЦентр цивілізації."
+  cargo:
+    display-name: "&6Вантажі"
+    lore:
+      - "&7&oПочаток чогось величного."
+  technical:
+    display-name: "&4Техніка"
+    lore:
+      - "&7&oхаха мотор крутиться ньюуум"
+  magical:
+    display-name: "&dМагія"
+    lore:
+      - "&7&oМайстерність — справа часу."
+  other:
+    display-name: "&7Інше"
+    lore:
+      - "&7&oРізні досягнення"

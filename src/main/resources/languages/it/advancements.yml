@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Artigianato portatile]"
+    display-name: "&aArtigianato portatile"
+    lore:
+      - "Usa un banco da lavoro portatile"
+    criteria:
+      interact: "Usare il banco da lavoro portatile"
+  dust:
+    name: "&a[In polvere si trasforma]"
+    display-name: "&aIn polvere si trasforma"
+    lore:
+      - "Frantuma un minerale con un frantoio per minerali"
+    criteria:
+      inventory: "Usare il frantoio per minerali"
+  electricity:
+    name: "&a[Elettricità!!!]"
+    display-name: "&aElettricità!!!"
+    lore:
+      - "Posiziona un regolatore di energia"
+    criteria:
+      build: "Posizionare il regolatore di energia"
+  gapple_juice:
+    name: "&a[Sa di vino invecchiato]"
+    display-name: "&aSa di vino invecchiato"
+    lore:
+      - "Bevi succo di mela dorata"
+    criteria:
+      consume: "Bere succo di mela dorata"
+  industrial_revolution:
+    name: "&a[Rivoluzione industriale]"
+    display-name: "&aRivoluzione industriale"
+    lore:
+      - "Ottieni i seguenti oggetti:"
+      - "macinatore di minerali, setaccio per l'oro, lavatrice per polvere, fabbrica di lingotti"
+    criteria:
+      oregrinder: "Ottenere un macinatore di minerali elettrico"
+      goldpan: "Ottenere un setaccio per l'oro elettrico"
+      dustwasher: "Ottenere una lavatrice per polvere elettrica"
+      ingotfactory: "Ottenere una fabbrica di lingotti elettrica"
+  exploding_tools:
+    name: "&a[Strumenti esplosivi]"
+    display-name: "&aStrumenti esplosivi"
+    lore:
+      - "Ottieni un piccone e una pala esplosivi"
+    criteria:
+      pickaxe: "Ottenere un piccone esplosivo"
+      shovel: "Ottenere una pala esplosiva"
+  fake_diamond:
+    name: "&a[Diamanti fatti dall'uomo]"
+    display-name: "&aDiamanti fatti dall'uomo"
+    lore:
+      - "Crea un diamante sintetico"
+    criteria:
+      diamond: "Ottenere un diamante sintetico"
+  carbonado:
+    name: "&a[Oscurità lucente]"
+    display-name: "&aOscurità lucente"
+    lore:
+      - "Crea un diamante carbonado"
+    criteria:
+      carbonado: "Ottenere carbonado"
+  black_gold:
+    name: "&a[Oro nero]"
+    display-name: "&aOro nero"
+    lore:
+      - "Estrai il petrolio"
+    criteria:
+      oil: "Ottenere petrolio"
+  ender_charms:
+    name: "&a[Amuleti dell'End]"
+    display-name: "&aAmuleti dell'End"
+    lore:
+      - "Ricerca i talismani dell'End"
+    criteria:
+      research: "Ricercare i talismani dell'End"
+  who_asked:
+    name: "&a[Chi ha chiesto?]"
+    display-name: "&aChi ha chiesto?"
+    lore:
+      - "Cerca \"who asked\""
+    criteria:
+      ask: "Cercare \"who asked\""
+groups:
+  basic:
+    display-name: "&fBase"
+    lore:
+      - "&7&oL'anima stessa di Slimefun."
+  electric:
+    display-name: "&eElettrico"
+    lore:
+      - "&7&oIl centro della civiltà."
+  cargo:
+    display-name: "&6Trasporto"
+    lore:
+      - "&7&oL'inizio di qualcosa di magnifico."
+  technical:
+    display-name: "&4Tecnico"
+    lore:
+      - "&7&oahah il motore gira nyooom"
+  magical:
+    display-name: "&dMagico"
+    lore:
+      - "&7&oLa maestria è opera del tempo."
+  other:
+    display-name: "&7Altro"
+    lore:
+      - "&7&oProgressi vari"

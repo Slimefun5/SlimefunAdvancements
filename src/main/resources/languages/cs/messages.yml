@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% získal pokrok:"
+
+gui:
+  title: "Pokroky"
+  stats: "Statistiky"
+  completed: "Dokončené pokroky: "
+  scroll-up: "Posunout nahoru"
+  scroll-down: "Posunout dolů"

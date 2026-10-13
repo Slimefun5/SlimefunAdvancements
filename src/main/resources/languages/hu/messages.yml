@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% elérte a fejlesztést:"
+
+gui:
+  title: "Fejlesztések"
+  stats: "Statisztika"
+  completed: "Teljesített fejlesztések: "
+  scroll-up: "Felfelé görgetés"
+  scroll-down: "Lefelé görgetés"

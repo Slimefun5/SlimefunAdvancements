@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[휴대용 제작]"
+    display-name: "&a휴대용 제작"
+    lore:
+      - "휴대용 작업대를 사용하세요"
+    criteria:
+      interact: "휴대용 작업대 사용"
+  dust:
+    name: "&a[먼지로 돌아가다]"
+    display-name: "&a먼지로 돌아가다"
+    lore:
+      - "광석 분쇄기로 광석을 분쇄하세요"
+    criteria:
+      inventory: "광석 분쇄기 사용"
+  electricity:
+    name: "&a[전기다!!!]"
+    display-name: "&a전기다!!!"
+    lore:
+      - "에너지 레귤레이터를 설치하세요"
+    criteria:
+      build: "에너지 레귤레이터 설치"
+  gapple_juice:
+    name: "&a[숙성된 와인 맛이 난다]"
+    display-name: "&a숙성된 와인 맛이 난다"
+    lore:
+      - "황금 사과 주스를 마시세요"
+    criteria:
+      consume: "황금 사과 주스 마시기"
+  industrial_revolution:
+    name: "&a[산업 혁명]"
+    display-name: "&a산업 혁명"
+    lore:
+      - "다음 아이템을 획득하세요:"
+      - "광석 그라인더, 골드팬, 광물 세척기, 주괴 공장"
+    criteria:
+      oregrinder: "전기 광석 그라인더 획득"
+      goldpan: "전기 골드팬 획득"
+      dustwasher: "전기 광물 세척기 획득"
+      ingotfactory: "전기 주괴 공장 획득"
+  exploding_tools:
+    name: "&a[폭발하는 도구]"
+    display-name: "&a폭발하는 도구"
+    lore:
+      - "폭발의 곡괭이와 삽을 획득하세요"
+    criteria:
+      pickaxe: "폭발의 곡괭이 획득"
+      shovel: "폭발의 삽 획득"
+  fake_diamond:
+    name: "&a[사람이 만든 다이아몬드]"
+    display-name: "&a사람이 만든 다이아몬드"
+    lore:
+      - "인조 다이아몬드를 만드세요"
+    criteria:
+      diamond: "인조 다이아몬드 획득"
+  carbonado:
+    name: "&a[빛나는 어둠]"
+    display-name: "&a빛나는 어둠"
+    lore:
+      - "카보나도 다이아몬드를 만드세요"
+    criteria:
+      carbonado: "카보나도 획득"
+  black_gold:
+    name: "&a[검은 황금]"
+    display-name: "&a검은 황금"
+    lore:
+      - "석유를 채굴하세요"
+    criteria:
+      oil: "석유 획득"
+  ender_charms:
+    name: "&a[엔더 부적]"
+    display-name: "&a엔더 부적"
+    lore:
+      - "엔더 부적을 연구하세요"
+    criteria:
+      research: "엔더 부적 연구"
+  who_asked:
+    name: "&a[누가 물어봤어?]"
+    display-name: "&a누가 물어봤어?"
+    lore:
+      - "\"who asked\"를 검색하세요"
+    criteria:
+      ask: "\"who asked\" 검색"
+groups:
+  basic:
+    display-name: "&f기본"
+    lore:
+      - "&7&o슬라임펀의 핵심 정신."
+  electric:
+    display-name: "&e전기"
+    lore:
+      - "&7&o문명의 중심."
+  cargo:
+    display-name: "&6화물"
+    lore:
+      - "&7&o위대한 무언가의 시작."
+  technical:
+    display-name: "&4기술"
+    lore:
+      - "&7&o하하 모터가 빙글빙글 뉴우움"
+  magical:
+    display-name: "&d마법"
+    lore:
+      - "&7&o숙련은 시간이 만든 결과."
+  other:
+    display-name: "&7기타"
+    lore:
+      - "&7&o여러 가지 발전 과제"

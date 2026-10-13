@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Bärbar tillverkning]"
+    display-name: "&aBärbar tillverkning"
+    lore:
+      - "Använd en bärbar tillverkare"
+    criteria:
+      interact: "Använd bärbar tillverkare"
+  dust:
+    name: "&a[Till stoft blir det]"
+    display-name: "&aTill stoft blir det"
+    lore:
+      - "Krossa en malm med en malmkross"
+    criteria:
+      inventory: "Använd malmkross"
+  electricity:
+    name: "&a[Elektricitet!!!]"
+    display-name: "&aElektricitet!!!"
+    lore:
+      - "Placera en energiregulator"
+    criteria:
+      build: "Placera energiregulator"
+  gapple_juice:
+    name: "&a[Smakar som lagrat vin]"
+    display-name: "&aSmakar som lagrat vin"
+    lore:
+      - "Drick gyllene äppeljuice"
+    criteria:
+      consume: "Drick gyllene äppeljuice"
+  industrial_revolution:
+    name: "&a[Den industriella revolutionen]"
+    display-name: "&aDen industriella revolutionen"
+    lore:
+      - "Skaffa följande föremål:"
+      - "malmkvarn, sil, dammtvättare, tackfabrik"
+    criteria:
+      oregrinder: "Skaffa en elektrisk malmkvarn"
+      goldpan: "Skaffa en elektrisk sil"
+      dustwasher: "Skaffa en elektrisk dammtvättare"
+      ingotfactory: "Skaffa en elektrisk tackfabrik"
+  exploding_tools:
+    name: "&a[Explosiva verktyg]"
+    display-name: "&aExplosiva verktyg"
+    lore:
+      - "Skaffa en explosiv hacka och spade"
+    criteria:
+      pickaxe: "Skaffa explosiv hacka"
+      shovel: "Skaffa explosiv spade"
+  fake_diamond:
+    name: "&a[Människoskapta diamanter]"
+    display-name: "&aMänniskoskapta diamanter"
+    lore:
+      - "Skapa en syntetisk diamant"
+    criteria:
+      diamond: "Skaffa syntetisk diamant"
+  carbonado:
+    name: "&a[Glänsande mörker]"
+    display-name: "&aGlänsande mörker"
+    lore:
+      - "Skapa en carbonado-diamant"
+    criteria:
+      carbonado: "Skaffa carbonado"
+  black_gold:
+    name: "&a[Svart guld]"
+    display-name: "&aSvart guld"
+    lore:
+      - "Utvinn olja"
+    criteria:
+      oil: "Skaffa olja"
+  ender_charms:
+    name: "&a[Ender-amuletter]"
+    display-name: "&aEnder-amuletter"
+    lore:
+      - "Forska fram Ender Talismaner"
+    criteria:
+      research: "Forska fram Ender Talismaner"
+  who_asked:
+    name: "&a[Vem frågade?]"
+    display-name: "&aVem frågade?"
+    lore:
+      - "Sök efter \"who asked\""
+    criteria:
+      ask: "Sök efter \"who asked\""
+groups:
+  basic:
+    display-name: "&fGrundläggande"
+    lore:
+      - "&7&oSlimefuns innersta väsen."
+  electric:
+    display-name: "&eElektrisk"
+    lore:
+      - "&7&oCivilisationens medelpunkt."
+  cargo:
+    display-name: "&6Frakt"
+    lore:
+      - "&7&oBörjan på något storartat."
+  technical:
+    display-name: "&4Teknisk"
+    lore:
+      - "&7&ohaha motorn snurrar nyooom"
+  magical:
+    display-name: "&dMagisk"
+    lore:
+      - "&7&oMästerskap är tidens verk."
+  other:
+    display-name: "&7Övrigt"
+    lore:
+      - "&7&oDiverse framsteg"

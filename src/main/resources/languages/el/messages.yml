@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% κέρδισε το επίτευγμα:"
+
+gui:
+  title: "Επιτεύγματα"
+  stats: "Στατιστικά"
+  completed: "Ολοκληρωμένα επιτεύγματα: "
+  scroll-up: "Κύλιση προς τα πάνω"
+  scroll-down: "Κύλιση προς τα κάτω"

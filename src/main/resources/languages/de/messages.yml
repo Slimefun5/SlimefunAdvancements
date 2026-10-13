@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% hat einen Fortschritt erreicht:"
+
+gui:
+  title: "Fortschritte"
+  stats: "Statistik"
+  completed: "Abgeschlossene Fortschritte: "
+  scroll-up: "Nach oben scrollen"
+  scroll-down: "Nach unten scrollen"

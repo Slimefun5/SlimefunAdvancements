@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Tragbares Handwerken]"
+    display-name: "&aTragbares Handwerken"
+    lore:
+      - "Benutze einen tragbaren Handwerkstisch"
+    criteria:
+      interact: "Tragbaren Handwerkstisch benutzen"
+  dust:
+    name: "&a[Zu Staub wird es]"
+    display-name: "&aZu Staub wird es"
+    lore:
+      - "Zerkleinere ein Erz mit einem Erzbrecher"
+    criteria:
+      inventory: "Erzbrecher benutzen"
+  electricity:
+    name: "&a[Elektrizität!!!]"
+    display-name: "&aElektrizität!!!"
+    lore:
+      - "Platziere einen Energieregler"
+    criteria:
+      build: "Energieregler platzieren"
+  gapple_juice:
+    name: "&a[Schmeckt wie gereifter Wein]"
+    display-name: "&aSchmeckt wie gereifter Wein"
+    lore:
+      - "Trinke goldenen Apfelsaft"
+    criteria:
+      consume: "Goldenen Apfelsaft trinken"
+  industrial_revolution:
+    name: "&a[Industrielle Revolution]"
+    display-name: "&aIndustrielle Revolution"
+    lore:
+      - "Erhalte die folgenden Gegenstände:"
+      - "Erzmühle, Goldpfanne, Staubwäscher, Barrenfabrik"
+    criteria:
+      oregrinder: "Elektrische Erzmühle erhalten"
+      goldpan: "Elektrische Goldpfanne erhalten"
+      dustwasher: "Elektrischen Staubwäscher erhalten"
+      ingotfactory: "Elektrische Barrenfabrik erhalten"
+  exploding_tools:
+    name: "&a[Explodierende Werkzeuge]"
+    display-name: "&aExplodierende Werkzeuge"
+    lore:
+      - "Erhalte eine explosive Spitzhacke und Schaufel"
+    criteria:
+      pickaxe: "Explosive Spitzhacke erhalten"
+      shovel: "Explosive Schaufel erhalten"
+  fake_diamond:
+    name: "&a[Diamanten aus Menschenhand]"
+    display-name: "&aDiamanten aus Menschenhand"
+    lore:
+      - "Erschaffe einen synthetischen Diamanten"
+    criteria:
+      diamond: "Synthetischen Diamanten erhalten"
+  carbonado:
+    name: "&a[Glänzende Dunkelheit]"
+    display-name: "&aGlänzende Dunkelheit"
+    lore:
+      - "Erschaffe einen Carbonado-Diamanten"
+    criteria:
+      carbonado: "Carbonado erhalten"
+  black_gold:
+    name: "&a[Schwarzes Gold]"
+    display-name: "&aSchwarzes Gold"
+    lore:
+      - "Fördere Öl"
+    criteria:
+      oil: "Öl erhalten"
+  ender_charms:
+    name: "&a[Ender-Amulette]"
+    display-name: "&aEnder-Amulette"
+    lore:
+      - "Erforsche Ender-Talismane"
+    criteria:
+      research: "Ender-Talismane erforschen"
+  who_asked:
+    name: "&a[Wer hat gefragt?]"
+    display-name: "&aWer hat gefragt?"
+    lore:
+      - "Suche nach \"who asked\""
+    criteria:
+      ask: "Nach \"who asked\" suchen"
+groups:
+  basic:
+    display-name: "&fGrundlagen"
+    lore:
+      - "&7&oDer Kerngeist von Slimefun."
+  electric:
+    display-name: "&eElektrisch"
+    lore:
+      - "&7&oDas Zentrum der Zivilisation."
+  cargo:
+    display-name: "&6Fracht"
+    lore:
+      - "&7&oDer Anfang von etwas Großartigem."
+  technical:
+    display-name: "&4Technik"
+    lore:
+      - "&7&ohaha Motor dreht sich nyooom"
+  magical:
+    display-name: "&dMagie"
+    lore:
+      - "&7&oMeisterschaft ist das Werk der Zeit."
+  other:
+    display-name: "&7Sonstiges"
+    lore:
+      - "&7&oVerschiedene Fortschritte"

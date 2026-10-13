@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% 达成了成就："
+
+gui:
+  title: "成就"
+  stats: "统计"
+  completed: "已完成成就："
+  scroll-up: "向上滚动"
+  scroll-down: "向下滚动"

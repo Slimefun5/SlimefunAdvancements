@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Bærbar fremstilling]"
+    display-name: "&aBærbar fremstilling"
+    lore:
+      - "Brug en bærbar fremstiller"
+    criteria:
+      interact: "Brug bærbar fremstiller"
+  dust:
+    name: "&a[Til støv bliver det]"
+    display-name: "&aTil støv bliver det"
+    lore:
+      - "Knus en malm med en malmknuser"
+    criteria:
+      inventory: "Brug malmknuser"
+  electricity:
+    name: "&a[Elektricitet!!!]"
+    display-name: "&aElektricitet!!!"
+    lore:
+      - "Placér en energiregulator"
+    criteria:
+      build: "Placér energiregulator"
+  gapple_juice:
+    name: "&a[Smager som lagret vin]"
+    display-name: "&aSmager som lagret vin"
+    lore:
+      - "Drik gylden æblejuice"
+    criteria:
+      consume: "Drik gylden æblejuice"
+  industrial_revolution:
+    name: "&a[Den industrielle revolution]"
+    display-name: "&aDen industrielle revolution"
+    lore:
+      - "Få følgende genstande:"
+      - "malmknuser, guldpande, støvvasker, barrefabrik"
+    criteria:
+      oregrinder: "Få en elektrisk malmknuser"
+      goldpan: "Få en elektrisk guldpande"
+      dustwasher: "Få en elektrisk støvvasker"
+      ingotfactory: "Få en elektrisk barrefabrik"
+  exploding_tools:
+    name: "&a[Eksplosive værktøjer]"
+    display-name: "&aEksplosive værktøjer"
+    lore:
+      - "Få en eksplosiv hakke og skovl"
+    criteria:
+      pickaxe: "Få eksplosiv hakke"
+      shovel: "Få eksplosiv skovl"
+  fake_diamond:
+    name: "&a[Menneskeskabte diamanter]"
+    display-name: "&aMenneskeskabte diamanter"
+    lore:
+      - "Skab en syntetisk diamant"
+    criteria:
+      diamond: "Få syntetisk diamant"
+  carbonado:
+    name: "&a[Skinnende mørke]"
+    display-name: "&aSkinnende mørke"
+    lore:
+      - "Skab en carbonado-diamant"
+    criteria:
+      carbonado: "Få carbonado"
+  black_gold:
+    name: "&a[Sort guld]"
+    display-name: "&aSort guld"
+    lore:
+      - "Udvind olie"
+    criteria:
+      oil: "Få olie"
+  ender_charms:
+    name: "&a[Ender-amuletter]"
+    display-name: "&aEnder-amuletter"
+    lore:
+      - "Forsk i Ender-talismaner"
+    criteria:
+      research: "Forsk i Ender-talismaner"
+  who_asked:
+    name: "&a[Hvem spurgte?]"
+    display-name: "&aHvem spurgte?"
+    lore:
+      - "Søg efter \"who asked\""
+    criteria:
+      ask: "Søg efter \"who asked\""
+groups:
+  basic:
+    display-name: "&fGrundlæggende"
+    lore:
+      - "&7&oSlimefuns inderste væsen."
+  electric:
+    display-name: "&eElektrisk"
+    lore:
+      - "&7&oCivilisationens midtpunkt."
+  cargo:
+    display-name: "&6Fragt"
+    lore:
+      - "&7&oBegyndelsen på noget storslået."
+  technical:
+    display-name: "&4Teknisk"
+    lore:
+      - "&7&ohaha motoren spinner nyooom"
+  magical:
+    display-name: "&dMagisk"
+    lore:
+      - "&7&oMesterskab er tidens værk."
+  other:
+    display-name: "&7Andet"
+    lore:
+      - "&7&oDiverse fremskridt"

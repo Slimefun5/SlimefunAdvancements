@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% đã đạt được thành tựu:"
+
+gui:
+  title: "Thành tựu"
+  stats: "Thống kê"
+  completed: "Thành tựu đã hoàn thành: "
+  scroll-up: "Cuộn lên"
+  scroll-down: "Cuộn xuống"

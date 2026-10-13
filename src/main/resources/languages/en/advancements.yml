@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Portable Crafting]"
+    display-name: "&aPortable Crafting"
+    lore:
+      - "Use a portable crafting table"
+    criteria:
+      interact: "Use portable crafting table"
+  dust:
+    name: "&a[Into dust it turns]"
+    display-name: "&aInto dust it turns"
+    lore:
+      - "Crush an ore using an ore crusher"
+    criteria:
+      inventory: "Use ore crusher"
+  electricity:
+    name: "&a[Electricity!!!]"
+    display-name: "&aElectricity!!!"
+    lore:
+      - "Place an energy regulator"
+    criteria:
+      build: "Place energy regulator"
+  gapple_juice:
+    name: "&a[Tastes like aged wine]"
+    display-name: "&aTastes like aged wine"
+    lore:
+      - "Drink golden apple juice"
+    criteria:
+      consume: "Consume golden apple juice"
+  industrial_revolution:
+    name: "&a[Industrial Revolution]"
+    display-name: "&aIndustrial Revolution"
+    lore:
+      - "Obtain the following items:"
+      - "ore grinder, gold pan, dust washer, ingot factory"
+    criteria:
+      oregrinder: "Obtain an electric ore grinder"
+      goldpan: "Obtain an electric gold pan"
+      dustwasher: "Obtain an electric dust washer"
+      ingotfactory: "Obtain an electric ingot factory"
+  exploding_tools:
+    name: "&a[Exploding Tools]"
+    display-name: "&aExploding Tools"
+    lore:
+      - "Obtain an explosive pickaxe and shovel"
+    criteria:
+      pickaxe: "Obtain explosive pickaxe"
+      shovel: "Obtain explosive shovel"
+  fake_diamond:
+    name: "&a[Man-made diamonds]"
+    display-name: "&aMan-made diamonds"
+    lore:
+      - "Create a synthetic diamond"
+    criteria:
+      diamond: "Obtain synthetic diamond"
+  carbonado:
+    name: "&a[Shiny darkness]"
+    display-name: "&aShiny darkness"
+    lore:
+      - "Create a carbonado diamond"
+    criteria:
+      carbonado: "Obtain carbonado"
+  black_gold:
+    name: "&a[Black Gold]"
+    display-name: "&aBlack Gold"
+    lore:
+      - "Mine for oil"
+    criteria:
+      oil: "Obtain oil"
+  ender_charms:
+    name: "&a[Ender Charms]"
+    display-name: "&aEnder Charms"
+    lore:
+      - "Research ender talismans"
+    criteria:
+      research: "Research ender talismans"
+  who_asked:
+    name: "&a[Who Asked?]"
+    display-name: "&aWho Asked?"
+    lore:
+      - "Search for who asked"
+    criteria:
+      ask: "Search for who asked"
+groups:
+  basic:
+    display-name: "&fBasic"
+    lore:
+      - "&7&oThe core spirit of Slimefun."
+  electric:
+    display-name: "&eElectric"
+    lore:
+      - "&7&oThe center of civilization."
+  cargo:
+    display-name: "&6Cargo"
+    lore:
+      - "&7&oThe beginnings of something magnificent."
+  technical:
+    display-name: "&4Technical"
+    lore:
+      - "&7&ohaha spinny motor go nyooom"
+  magical:
+    display-name: "&dMagical"
+    lore:
+      - "&7&oMastery is the product of time."
+  other:
+    display-name: "&7Other"
+    lore:
+      - "&7&oMiscellaneous advancements"

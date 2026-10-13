@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Pembuatan mudah alih]"
+    display-name: "&aPembuatan mudah alih"
+    lore:
+      - "Guna pembuat mudah alih"
+    criteria:
+      interact: "Menggunakan pembuat mudah alih"
+  dust:
+    name: "&a[Menjadi habuk]"
+    display-name: "&aMenjadi habuk"
+    lore:
+      - "Hancurkan bijih dengan penghancur bijih"
+    criteria:
+      inventory: "Menggunakan penghancur bijih"
+  electricity:
+    name: "&a[Elektrik!!!]"
+    display-name: "&aElektrik!!!"
+    lore:
+      - "Letakkan pengatur tenaga"
+    criteria:
+      build: "Meletakkan pengatur tenaga"
+  gapple_juice:
+    name: "&a[Rasanya seperti wain lama]"
+    display-name: "&aRasanya seperti wain lama"
+    lore:
+      - "Minum jus epal emas"
+    criteria:
+      consume: "Meminum jus epal emas"
+  industrial_revolution:
+    name: "&a[Revolusi industri]"
+    display-name: "&aRevolusi industri"
+    lore:
+      - "Dapatkan barang berikut:"
+      - "pengisar bijih, pendulang emas, pembasuh habuk, kilang jongkong"
+    criteria:
+      oregrinder: "Mendapatkan pengisar bijih elektrik"
+      goldpan: "Mendapatkan pendulang emas elektrik"
+      dustwasher: "Mendapatkan pembasuh habuk elektrik"
+      ingotfactory: "Mendapatkan kilang jongkong elektrik"
+  exploding_tools:
+    name: "&a[Alat peledak]"
+    display-name: "&aAlat peledak"
+    lore:
+      - "Dapatkan beliung dan penyodok peledak"
+    criteria:
+      pickaxe: "Mendapatkan beliung peledak"
+      shovel: "Mendapatkan penyodok peledak"
+  fake_diamond:
+    name: "&a[Berlian buatan manusia]"
+    display-name: "&aBerlian buatan manusia"
+    lore:
+      - "Buat berlian sintetik"
+    criteria:
+      diamond: "Mendapatkan berlian sintetik"
+  carbonado:
+    name: "&a[Kegelapan yang berkilau]"
+    display-name: "&aKegelapan yang berkilau"
+    lore:
+      - "Buat berlian carbonado"
+    criteria:
+      carbonado: "Mendapatkan carbonado"
+  black_gold:
+    name: "&a[Emas hitam]"
+    display-name: "&aEmas hitam"
+    lore:
+      - "Lombong minyak"
+    criteria:
+      oil: "Mendapatkan minyak"
+  ender_charms:
+    name: "&a[Azimat Ender]"
+    display-name: "&aAzimat Ender"
+    lore:
+      - "Selidik Azimat Ender"
+    criteria:
+      research: "Menyelidik Azimat Ender"
+  who_asked:
+    name: "&a[Siapa yang tanya?]"
+    display-name: "&aSiapa yang tanya?"
+    lore:
+      - "Cari \"who asked\""
+    criteria:
+      ask: "Mencari \"who asked\""
+groups:
+  basic:
+    display-name: "&fAsas"
+    lore:
+      - "&7&oInti semangat Slimefun."
+  electric:
+    display-name: "&eElektrik"
+    lore:
+      - "&7&oPusat peradaban."
+  cargo:
+    display-name: "&6Kargo"
+    lore:
+      - "&7&oPermulaan sesuatu yang hebat."
+  technical:
+    display-name: "&4Teknikal"
+    lore:
+      - "&7&ohaha motor berpusing nguuung"
+  magical:
+    display-name: "&dSihir"
+    lore:
+      - "&7&oKemahiran ialah hasil masa."
+  other:
+    display-name: "&7Lain-lain"
+    lore:
+      - "&7&oPencapaian lain"

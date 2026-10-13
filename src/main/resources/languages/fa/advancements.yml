@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[ساخت قابل حمل]"
+    display-name: "&aساخت قابل حمل"
+    lore:
+      - "از یک میز ساخت قابل حمل استفاده کن"
+    criteria:
+      interact: "استفاده از میز ساخت قابل حمل"
+  dust:
+    name: "&a[به گرد تبدیل می‌شود]"
+    display-name: "&aبه گرد تبدیل می‌شود"
+    lore:
+      - "سنگ معدنی را با خردکن سنگ معدن خرد کن"
+    criteria:
+      inventory: "استفاده از خردکن سنگ معدن"
+  electricity:
+    name: "&a[برق!!!]"
+    display-name: "&aبرق!!!"
+    lore:
+      - "یک رگولاتور انرژی بگذار"
+    criteria:
+      build: "گذاشتن رگولاتور انرژی"
+  gapple_juice:
+    name: "&a[طعمی مثل شراب کهنه]"
+    display-name: "&aطعمی مثل شراب کهنه"
+    lore:
+      - "آب سیب طلایی بنوش"
+    criteria:
+      consume: "نوشیدن آب سیب طلایی"
+  industrial_revolution:
+    name: "&a[انقلاب صنعتی]"
+    display-name: "&aانقلاب صنعتی"
+    lore:
+      - "این وسایل را به دست بیاور:"
+      - "آسیاب سنگ معدن، تشت طلاشویی، شوینده گرد، کارخانه شمش"
+    criteria:
+      oregrinder: "به دست آوردن آسیاب سنگ معدن برقی"
+      goldpan: "به دست آوردن تشت طلاشویی برقی"
+      dustwasher: "به دست آوردن شوینده گرد برقی"
+      ingotfactory: "به دست آوردن کارخانه شمش برقی"
+  exploding_tools:
+    name: "&a[ابزارهای انفجاری]"
+    display-name: "&aابزارهای انفجاری"
+    lore:
+      - "یک کلنگ و بیل انفجاری به دست بیاور"
+    criteria:
+      pickaxe: "به دست آوردن کلنگ انفجاری"
+      shovel: "به دست آوردن بیل انفجاری"
+  fake_diamond:
+    name: "&a[الماس‌های ساخت دست بشر]"
+    display-name: "&aالماس‌های ساخت دست بشر"
+    lore:
+      - "یک الماس مصنوعی بساز"
+    criteria:
+      diamond: "به دست آوردن الماس مصنوعی"
+  carbonado:
+    name: "&a[تاریکی درخشان]"
+    display-name: "&aتاریکی درخشان"
+    lore:
+      - "یک الماس کربونادو بساز"
+    criteria:
+      carbonado: "به دست آوردن کربونادو"
+  black_gold:
+    name: "&a[طلای سیاه]"
+    display-name: "&aطلای سیاه"
+    lore:
+      - "نفت استخراج کن"
+    criteria:
+      oil: "به دست آوردن نفت"
+  ender_charms:
+    name: "&a[طلسم‌های اندر]"
+    display-name: "&aطلسم‌های اندر"
+    lore:
+      - "طلسم‌های اندر را تحقیق کن"
+    criteria:
+      research: "تحقیق طلسم‌های اندر"
+  who_asked:
+    name: "&a[کی پرسید؟]"
+    display-name: "&aکی پرسید؟"
+    lore:
+      - "\"who asked\" را جست‌وجو کن"
+    criteria:
+      ask: "جست‌وجوی \"who asked\""
+groups:
+  basic:
+    display-name: "&fپایه"
+    lore:
+      - "&7&oروح اصلی Slimefun."
+  electric:
+    display-name: "&eبرقی"
+    lore:
+      - "&7&oمرکز تمدن."
+  cargo:
+    display-name: "&6بار"
+    lore:
+      - "&7&oآغاز چیزی باشکوه."
+  technical:
+    display-name: "&4فنی"
+    lore:
+      - "&7&oهاها موتور می‌چرخد نیووم"
+  magical:
+    display-name: "&dجادویی"
+    lore:
+      - "&7&oاستادی ساخته‌ی زمان است."
+  other:
+    display-name: "&7سایر"
+    lore:
+      - "&7&oدستاوردهای گوناگون"

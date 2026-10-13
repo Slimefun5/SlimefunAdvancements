@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Fabrico portátil]"
+    display-name: "&aFabrico portátil"
+    lore:
+      - "Usa um fabricador portátil"
+    criteria:
+      interact: "Usar o fabricador portátil"
+  dust:
+    name: "&a[Em pó se desfaz]"
+    display-name: "&aEm pó se desfaz"
+    lore:
+      - "Tritura um minério com um triturador de minério"
+    criteria:
+      inventory: "Usar o triturador de minério"
+  electricity:
+    name: "&a[Eletricidade!!!]"
+    display-name: "&aEletricidade!!!"
+    lore:
+      - "Coloca um regulador de energia"
+    criteria:
+      build: "Colocar o regulador de energia"
+  gapple_juice:
+    name: "&a[Sabe a vinho envelhecido]"
+    display-name: "&aSabe a vinho envelhecido"
+    lore:
+      - "Bebe sumo de maçã dourada"
+    criteria:
+      consume: "Beber sumo de maçã dourada"
+  industrial_revolution:
+    name: "&a[Revolução industrial]"
+    display-name: "&aRevolução industrial"
+    lore:
+      - "Obtém os seguintes itens:"
+      - "triturador de minério, bateia de ouro, lavador de pó, fábrica de lingotes"
+    criteria:
+      oregrinder: "Obter um triturador elétrico de minério"
+      goldpan: "Obter uma bateia de ouro elétrica"
+      dustwasher: "Obter um lavador de pó elétrico"
+      ingotfactory: "Obter uma fábrica elétrica de lingotes"
+  exploding_tools:
+    name: "&a[Ferramentas explosivas]"
+    display-name: "&aFerramentas explosivas"
+    lore:
+      - "Obtém uma picareta e uma pá explosivas"
+    criteria:
+      pickaxe: "Obter uma picareta explosiva"
+      shovel: "Obter uma pá explosiva"
+  fake_diamond:
+    name: "&a[Diamantes feitos pelo homem]"
+    display-name: "&aDiamantes feitos pelo homem"
+    lore:
+      - "Cria um diamante sintético"
+    criteria:
+      diamond: "Obter um diamante sintético"
+  carbonado:
+    name: "&a[Escuridão brilhante]"
+    display-name: "&aEscuridão brilhante"
+    lore:
+      - "Cria um diamante carbonado"
+    criteria:
+      carbonado: "Obter carbonado"
+  black_gold:
+    name: "&a[Ouro negro]"
+    display-name: "&aOuro negro"
+    lore:
+      - "Extrai petróleo"
+    criteria:
+      oil: "Obter petróleo"
+  ender_charms:
+    name: "&a[Amuletos do Ender]"
+    display-name: "&aAmuletos do Ender"
+    lore:
+      - "Investiga os talismãs do Ender"
+    criteria:
+      research: "Investigar os talismãs do Ender"
+  who_asked:
+    name: "&a[Quem perguntou?]"
+    display-name: "&aQuem perguntou?"
+    lore:
+      - "Procura \"who asked\""
+    criteria:
+      ask: "Procurar \"who asked\""
+groups:
+  basic:
+    display-name: "&fBásico"
+    lore:
+      - "&7&oA essência do Slimefun."
+  electric:
+    display-name: "&eElétrico"
+    lore:
+      - "&7&oO centro da civilização."
+  cargo:
+    display-name: "&6Carga"
+    lore:
+      - "&7&oO início de algo magnífico."
+  technical:
+    display-name: "&4Técnico"
+    lore:
+      - "&7&ohaha o motor gira nyooom"
+  magical:
+    display-name: "&dMágico"
+    lore:
+      - "&7&oO domínio é obra do tempo."
+  other:
+    display-name: "&7Outros"
+    lore:
+      - "&7&oProezas variadas"

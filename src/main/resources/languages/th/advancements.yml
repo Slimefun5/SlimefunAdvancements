@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[การคราฟพกพา]"
+    display-name: "&aการคราฟพกพา"
+    lore:
+      - "ใช้ที่คราฟพกพา"
+    criteria:
+      interact: "ใช้ที่คราฟพกพา"
+  dust:
+    name: "&a[กลายเป็นผงธุลี]"
+    display-name: "&aกลายเป็นผงธุลี"
+    lore:
+      - "บดแร่ด้วยเครื่องบดแร่"
+    criteria:
+      inventory: "ใช้เครื่องบดแร่"
+  electricity:
+    name: "&a[ไฟฟ้า!!!]"
+    display-name: "&aไฟฟ้า!!!"
+    lore:
+      - "วางตัวควบคุมพลังงาน"
+    criteria:
+      build: "วางตัวควบคุมพลังงาน"
+  gapple_juice:
+    name: "&a[รสชาติเหมือนไวน์บ่ม]"
+    display-name: "&aรสชาติเหมือนไวน์บ่ม"
+    lore:
+      - "ดื่มน้ำแอปเปิ้ลทองคำ"
+    criteria:
+      consume: "ดื่มน้ำแอปเปิ้ลทองคำ"
+  industrial_revolution:
+    name: "&a[การปฏิวัติอุตสาหกรรม]"
+    display-name: "&aการปฏิวัติอุตสาหกรรม"
+    lore:
+      - "รับไอเทมต่อไปนี้:"
+      - "เครื่องบดแร่, ที่ร่อนทอง, เครื่องล้างผงแร่, โรงงานผลิตแท่งโลหะ"
+    criteria:
+      oregrinder: "รับเครื่องบดแร่ไฟฟ้า"
+      goldpan: "รับที่ร่อนทองไฟฟ้า"
+      dustwasher: "รับเครื่องล้างผงแร่ไฟฟ้า"
+      ingotfactory: "รับโรงงานผลิตแท่งโลหะไฟฟ้า"
+  exploding_tools:
+    name: "&a[เครื่องมือระเบิด]"
+    display-name: "&aเครื่องมือระเบิด"
+    lore:
+      - "รับอีเต้าและพลั่วระเบิด"
+    criteria:
+      pickaxe: "รับอีเต้าระเบิด"
+      shovel: "รับพลั่วระเบิด"
+  fake_diamond:
+    name: "&a[เพชรที่มนุษย์สร้าง]"
+    display-name: "&aเพชรที่มนุษย์สร้าง"
+    lore:
+      - "สร้างเพชรสังเคราะห์"
+    criteria:
+      diamond: "รับเพชรสังเคราะห์"
+  carbonado:
+    name: "&a[ความมืดที่เปล่งประกาย]"
+    display-name: "&aความมืดที่เปล่งประกาย"
+    lore:
+      - "สร้างเพชรคาร์บอนาโด"
+    criteria:
+      carbonado: "รับคาร์บอนาโด"
+  black_gold:
+    name: "&a[ทองคำสีดำ]"
+    display-name: "&aทองคำสีดำ"
+    lore:
+      - "ขุดหาน้ำมัน"
+    criteria:
+      oil: "รับน้ำมัน"
+  ender_charms:
+    name: "&a[เครื่องรางเอนเดอร์]"
+    display-name: "&aเครื่องรางเอนเดอร์"
+    lore:
+      - "วิจัยเครื่องรางเอนเดอร์"
+    criteria:
+      research: "วิจัยเครื่องรางเอนเดอร์"
+  who_asked:
+    name: "&a[ใครถาม?]"
+    display-name: "&aใครถาม?"
+    lore:
+      - "ค้นหา \"who asked\""
+    criteria:
+      ask: "ค้นหา \"who asked\""
+groups:
+  basic:
+    display-name: "&fพื้นฐาน"
+    lore:
+      - "&7&oแก่นแท้ของ Slimefun"
+  electric:
+    display-name: "&eไฟฟ้า"
+    lore:
+      - "&7&oศูนย์กลางของอารยธรรม"
+  cargo:
+    display-name: "&6ขนส่ง"
+    lore:
+      - "&7&oจุดเริ่มต้นของสิ่งที่ยิ่งใหญ่"
+  technical:
+    display-name: "&4เครื่องกล"
+    lore:
+      - "&7&oฮ่าๆ มอเตอร์หมุนติ้ว หวิ่วววว"
+  magical:
+    display-name: "&dเวทมนตร์"
+    lore:
+      - "&7&oความชำนาญคือผลงานของเวลา"
+  other:
+    display-name: "&7อื่นๆ"
+    lore:
+      - "&7&oความสำเร็จเบ็ดเตล็ด"

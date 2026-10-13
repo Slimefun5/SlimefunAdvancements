@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Hordozható barkácsolás]"
+    display-name: "&aHordozható barkácsolás"
+    lore:
+      - "Használj hordozható barkácsolót"
+    criteria:
+      interact: "Hordozható barkácsoló használata"
+  dust:
+    name: "&a[Porrá lesz]"
+    display-name: "&aPorrá lesz"
+    lore:
+      - "Zúzz össze egy ércet érczúzóval"
+    criteria:
+      inventory: "Érczúzó használata"
+  electricity:
+    name: "&a[Elektromosság!!!]"
+    display-name: "&aElektromosság!!!"
+    lore:
+      - "Helyezz le egy energiaszabályzót"
+    criteria:
+      build: "Energiaszabályzó lehelyezése"
+  gapple_juice:
+    name: "&a[Óbor íze van]"
+    display-name: "&aÓbor íze van"
+    lore:
+      - "Igyál aranyalma-levet"
+    criteria:
+      consume: "Aranyalma-lé elfogyasztása"
+  industrial_revolution:
+    name: "&a[Ipari forradalom]"
+    display-name: "&aIpari forradalom"
+    lore:
+      - "Szerezd meg a következő tárgyakat:"
+      - "érc-őrlő, aranymosó tál, pormosó, rúdgyár"
+    criteria:
+      oregrinder: "Elektromos érc-őrlő megszerzése"
+      goldpan: "Elektromos aranymosó tál megszerzése"
+      dustwasher: "Elektromos pormosó megszerzése"
+      ingotfactory: "Elektromos rúdgyár megszerzése"
+  exploding_tools:
+    name: "&a[Robbanó szerszámok]"
+    display-name: "&aRobbanó szerszámok"
+    lore:
+      - "Szerezz robbanó csákányt és ásót"
+    criteria:
+      pickaxe: "Robbanó csákány megszerzése"
+      shovel: "Robbanó ásó megszerzése"
+  fake_diamond:
+    name: "&a[Ember alkotta gyémántok]"
+    display-name: "&aEmber alkotta gyémántok"
+    lore:
+      - "Készíts mesterséges gyémántot"
+    criteria:
+      diamond: "Mesterséges gyémánt megszerzése"
+  carbonado:
+    name: "&a[Fénylő sötétség]"
+    display-name: "&aFénylő sötétség"
+    lore:
+      - "Készíts carbonado gyémántot"
+    criteria:
+      carbonado: "Carbonado megszerzése"
+  black_gold:
+    name: "&a[Fekete arany]"
+    display-name: "&aFekete arany"
+    lore:
+      - "Bányássz olajat"
+    criteria:
+      oil: "Olaj megszerzése"
+  ender_charms:
+    name: "&a[Ender-amulettek]"
+    display-name: "&aEnder-amulettek"
+    lore:
+      - "Kutasd ki az Ender talizmánokat"
+    criteria:
+      research: "Ender talizmánok kikutatása"
+  who_asked:
+    name: "&a[Ki kérdezte?]"
+    display-name: "&aKi kérdezte?"
+    lore:
+      - "Keress rá: \"who asked\""
+    criteria:
+      ask: "Rákeresés: \"who asked\""
+groups:
+  basic:
+    display-name: "&fAlapok"
+    lore:
+      - "&7&oA Slimefun lényege."
+  electric:
+    display-name: "&eElektromos"
+    lore:
+      - "&7&oA civilizáció középpontja."
+  cargo:
+    display-name: "&6Teher"
+    lore:
+      - "&7&oValami nagyszerű kezdete."
+  technical:
+    display-name: "&4Műszaki"
+    lore:
+      - "&7&ohaha a motor pörög nyooom"
+  magical:
+    display-name: "&dMágikus"
+    lore:
+      - "&7&oA mesterség az idő műve."
+  other:
+    display-name: "&7Egyéb"
+    lore:
+      - "&7&oVegyes fejlesztések"

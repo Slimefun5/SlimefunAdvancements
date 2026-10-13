@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Chế tạo di động]"
+    display-name: "&aChế tạo di động"
+    lore:
+      - "Dùng bàn chế tạo di động"
+    criteria:
+      interact: "Dùng bàn chế tạo di động"
+  dust:
+    name: "&a[Hóa thành cát bụi]"
+    display-name: "&aHóa thành cát bụi"
+    lore:
+      - "Nghiền một quặng bằng máy nghiền quặng"
+    criteria:
+      inventory: "Dùng máy nghiền quặng"
+  electricity:
+    name: "&a[Có điện!!!]"
+    display-name: "&aCó điện!!!"
+    lore:
+      - "Đặt một bộ điều chỉnh năng lượng"
+    criteria:
+      build: "Đặt bộ điều chỉnh năng lượng"
+  gapple_juice:
+    name: "&a[Vị như vang lâu năm]"
+    display-name: "&aVị như vang lâu năm"
+    lore:
+      - "Uống nước ép táo vàng"
+    criteria:
+      consume: "Uống nước ép táo vàng"
+  industrial_revolution:
+    name: "&a[Cách mạng công nghiệp]"
+    display-name: "&aCách mạng công nghiệp"
+    lore:
+      - "Sở hữu những vật phẩm sau:"
+      - "máy nghiền quặng, sàng vàng, máy rửa bụi, máy chế tạo thỏi"
+    criteria:
+      oregrinder: "Sở hữu máy nghiền quặng điện"
+      goldpan: "Sở hữu sàng vàng điện"
+      dustwasher: "Sở hữu máy rửa bụi điện"
+      ingotfactory: "Sở hữu máy chế tạo thỏi điện"
+  exploding_tools:
+    name: "&a[Dụng cụ phát nổ]"
+    display-name: "&aDụng cụ phát nổ"
+    lore:
+      - "Sở hữu cuốc nổ và xẻng nổ"
+    criteria:
+      pickaxe: "Sở hữu cuốc nổ"
+      shovel: "Sở hữu xẻng nổ"
+  fake_diamond:
+    name: "&a[Kim cương do con người tạo ra]"
+    display-name: "&aKim cương do con người tạo ra"
+    lore:
+      - "Tạo một kim cương nhân tạo"
+    criteria:
+      diamond: "Sở hữu kim cương nhân tạo"
+  carbonado:
+    name: "&a[Bóng tối lấp lánh]"
+    display-name: "&aBóng tối lấp lánh"
+    lore:
+      - "Tạo một kim cương carbonado"
+    criteria:
+      carbonado: "Sở hữu carbonado"
+  black_gold:
+    name: "&a[Vàng đen]"
+    display-name: "&aVàng đen"
+    lore:
+      - "Khai thác dầu"
+    criteria:
+      oil: "Sở hữu dầu"
+  ender_charms:
+    name: "&a[Bùa Ender]"
+    display-name: "&aBùa Ender"
+    lore:
+      - "Nghiên cứu Bùa hộ mệnh Ender"
+    criteria:
+      research: "Nghiên cứu Bùa hộ mệnh Ender"
+  who_asked:
+    name: "&a[Ai hỏi vậy?]"
+    display-name: "&aAi hỏi vậy?"
+    lore:
+      - "Tìm kiếm \"who asked\""
+    criteria:
+      ask: "Tìm kiếm \"who asked\""
+groups:
+  basic:
+    display-name: "&fCơ bản"
+    lore:
+      - "&7&oTinh thần cốt lõi của Slimefun."
+  electric:
+    display-name: "&eĐiện"
+    lore:
+      - "&7&oTrung tâm của văn minh."
+  cargo:
+    display-name: "&6Vận tải"
+    lore:
+      - "&7&oKhởi đầu của một điều vĩ đại."
+  technical:
+    display-name: "&4Kỹ thuật"
+    lore:
+      - "&7&ohaha động cơ quay vù vù"
+  magical:
+    display-name: "&dPhép thuật"
+    lore:
+      - "&7&oSự tinh thông là tác phẩm của thời gian."
+  other:
+    display-name: "&7Khác"
+    lore:
+      - "&7&oThành tựu khác"

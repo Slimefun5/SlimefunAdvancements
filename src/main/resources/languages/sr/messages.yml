@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% је остварио достигнуће:"
+
+gui:
+  title: "Достигнућа"
+  stats: "Статистика"
+  completed: "Завршена достигнућа: "
+  scroll-up: "Помери горе"
+  scroll-down: "Помери доле"

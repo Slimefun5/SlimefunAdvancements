@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Prenosné vyrábanie]"
+    display-name: "&aPrenosné vyrábanie"
+    lore:
+      - "Použi prenosný crafter"
+    criteria:
+      interact: "Použitie prenosného craftera"
+  dust:
+    name: "&a[Na prach sa obracia]"
+    display-name: "&aNa prach sa obracia"
+    lore:
+      - "Rozdrv rudu drvičom rudy"
+    criteria:
+      inventory: "Použitie drviča rudy"
+  electricity:
+    name: "&a[Elektrina!!!]"
+    display-name: "&aElektrina!!!"
+    lore:
+      - "Postav regulátor energie"
+    criteria:
+      build: "Postavenie regulátora energie"
+  gapple_juice:
+    name: "&a[Chutí ako zrelé vino]"
+    display-name: "&aChutí ako zrelé vino"
+    lore:
+      - "Vypi šťavu zo zlatého jablka"
+    criteria:
+      consume: "Vypitie šťavy zo zlatého jablka"
+  industrial_revolution:
+    name: "&a[Priemyselná revolúcia]"
+    display-name: "&aPriemyselná revolúcia"
+    lore:
+      - "Získaj nasledujúce predmety:"
+      - "drvička rudy, panvica na zlato, práčka prachu, továreň na ingoty"
+    criteria:
+      oregrinder: "Získanie elektrickej drvičky rudy"
+      goldpan: "Získanie elektrickej panvice na zlato"
+      dustwasher: "Získanie elektrickej práčky prachu"
+      ingotfactory: "Získanie elektrickej továrne na ingoty"
+  exploding_tools:
+    name: "&a[Výbušné nástroje]"
+    display-name: "&aVýbušné nástroje"
+    lore:
+      - "Získaj výbušný krompáč a lopatu"
+    criteria:
+      pickaxe: "Získanie výbušného krompáča"
+      shovel: "Získanie výbušnej lopaty"
+  fake_diamond:
+    name: "&a[Diamanty vyrobené človekom]"
+    display-name: "&aDiamanty vyrobené človekom"
+    lore:
+      - "Vytvor syntetický diamant"
+    criteria:
+      diamond: "Získanie syntetického diamantu"
+  carbonado:
+    name: "&a[Lesklá temnota]"
+    display-name: "&aLesklá temnota"
+    lore:
+      - "Vytvor diamant karbonádo"
+    criteria:
+      carbonado: "Získanie karbonáda"
+  black_gold:
+    name: "&a[Čierne zlato]"
+    display-name: "&aČierne zlato"
+    lore:
+      - "Vytež ropu"
+    criteria:
+      oil: "Získanie ropy"
+  ender_charms:
+    name: "&a[Enderové amulety]"
+    display-name: "&aEnderové amulety"
+    lore:
+      - "Preskúmaj Talizmany endu"
+    criteria:
+      research: "Preskúmanie Talizmanov endu"
+  who_asked:
+    name: "&a[Kto sa pýtal?]"
+    display-name: "&aKto sa pýtal?"
+    lore:
+      - "Vyhľadaj \"who asked\""
+    criteria:
+      ask: "Vyhľadanie \"who asked\""
+groups:
+  basic:
+    display-name: "&fZáklady"
+    lore:
+      - "&7&oSamotná podstata Slimefunu."
+  electric:
+    display-name: "&eElektrina"
+    lore:
+      - "&7&oStred civilizácie."
+  cargo:
+    display-name: "&6Náklad"
+    lore:
+      - "&7&oZačiatok niečoho veľkolepého."
+  technical:
+    display-name: "&4Technika"
+    lore:
+      - "&7&ohaha motor sa krúti ňúúúm"
+  magical:
+    display-name: "&dMagia"
+    lore:
+      - "&7&oMajstrovstvo je dielom času."
+  other:
+    display-name: "&7Ostatné"
+    lore:
+      - "&7&oRôzne pokroky"

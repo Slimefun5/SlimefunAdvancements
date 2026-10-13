@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "Nakamit ni %player% ang tagumpay na:"
+
+gui:
+  title: "Mga tagumpay"
+  stats: "Estadistika"
+  completed: "Mga natapos na tagumpay: "
+  scroll-up: "Mag-scroll pataas"
+  scroll-down: "Mag-scroll pababa"

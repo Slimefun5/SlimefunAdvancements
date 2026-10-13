@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% şu başarımı kazandı:"
+
+gui:
+  title: "Başarımlar"
+  stats: "İstatistikler"
+  completed: "Tamamlanan başarımlar: "
+  scroll-up: "Yukarı kaydır"
+  scroll-down: "Aşağı kaydır"

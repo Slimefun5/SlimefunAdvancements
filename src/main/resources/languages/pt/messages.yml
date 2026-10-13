@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% alcançou a proeza:"
+
+gui:
+  title: "Proezas"
+  stats: "Estatísticas"
+  completed: "Proezas concluídas: "
+  scroll-up: "Deslocar para cima"
+  scroll-down: "Deslocar para baixo"

@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Kannettava askartelu]"
+    display-name: "&aKannettava askartelu"
+    lore:
+      - "Käytä kannettavaa askartelijaa"
+    criteria:
+      interact: "Käytä kannettavaa askartelijaa"
+  dust:
+    name: "&a[Tomuksi se muuttuu]"
+    display-name: "&aTomuksi se muuttuu"
+    lore:
+      - "Murskaa malmi malminmurskaimella"
+    criteria:
+      inventory: "Käytä malminmurskainta"
+  electricity:
+    name: "&a[Sähköä!!!]"
+    display-name: "&aSähköä!!!"
+    lore:
+      - "Aseta energiasäädin"
+    criteria:
+      build: "Aseta energiasäädin"
+  gapple_juice:
+    name: "&a[Maistuu vanhennetulta viinilta]"
+    display-name: "&aMaistuu vanhennetulta viinilta"
+    lore:
+      - "Juo kultaomenamehua"
+    criteria:
+      consume: "Juo kultaomenamehua"
+  industrial_revolution:
+    name: "&a[Teollinen vallankumous]"
+    display-name: "&aTeollinen vallankumous"
+    lore:
+      - "Hanki seuraavat esineet:"
+      - "malminjauhin, kultavati, pölynpesuri, harkkotehdas"
+    criteria:
+      oregrinder: "Hanki sähköinen malminjauhin"
+      goldpan: "Hanki sähköinen kultavati"
+      dustwasher: "Hanki sähköinen pölynpesuri"
+      ingotfactory: "Hanki sähköinen harkkotehdas"
+  exploding_tools:
+    name: "&a[Räjähtävät työkalut]"
+    display-name: "&aRäjähtävät työkalut"
+    lore:
+      - "Hanki räjähtävä hakku ja lapio"
+    criteria:
+      pickaxe: "Hanki räjähtävä hakku"
+      shovel: "Hanki räjähtävä lapio"
+  fake_diamond:
+    name: "&a[Ihmisen tekemät timantit]"
+    display-name: "&aIhmisen tekemät timantit"
+    lore:
+      - "Luo synteettinen timantti"
+    criteria:
+      diamond: "Hanki synteettinen timantti"
+  carbonado:
+    name: "&a[Hohtava pimeys]"
+    display-name: "&aHohtava pimeys"
+    lore:
+      - "Luo carbonado-timantti"
+    criteria:
+      carbonado: "Hanki carbonado"
+  black_gold:
+    name: "&a[Musta kulta]"
+    display-name: "&aMusta kulta"
+    lore:
+      - "Louhi öljyä"
+    criteria:
+      oil: "Hanki öljyä"
+  ender_charms:
+    name: "&a[Ender-amuletit]"
+    display-name: "&aEnder-amuletit"
+    lore:
+      - "Tutki Ender-talismaanit"
+    criteria:
+      research: "Tutki Ender-talismaanit"
+  who_asked:
+    name: "&a[Kuka kysyi?]"
+    display-name: "&aKuka kysyi?"
+    lore:
+      - "Etsi \"who asked\""
+    criteria:
+      ask: "Etsi \"who asked\""
+groups:
+  basic:
+    display-name: "&fPerusteet"
+    lore:
+      - "&7&oSlimefunin ydinhenki."
+  electric:
+    display-name: "&eSähköinen"
+    lore:
+      - "&7&oSivilisaation keskus."
+  cargo:
+    display-name: "&6Rahti"
+    lore:
+      - "&7&oJonkin suurenmoisen alku."
+  technical:
+    display-name: "&4Tekninen"
+    lore:
+      - "&7&ohaha moottori pyörii nyooom"
+  magical:
+    display-name: "&dMaaginen"
+    lore:
+      - "&7&oMestaruus on ajan työtä."
+  other:
+    display-name: "&7Muut"
+    lore:
+      - "&7&oSekalaisia saavutuksia"

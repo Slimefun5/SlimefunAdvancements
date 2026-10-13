@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% har opnået fremskridtet:"
+
+gui:
+  title: "Fremskridt"
+  stats: "Statistik"
+  completed: "Fuldførte fremskridt: "
+  scroll-up: "Rul op"
+  scroll-down: "Rul ned"

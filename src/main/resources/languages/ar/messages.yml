@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "حقق %player% الإنجاز:"
+
+gui:
+  title: "الإنجازات"
+  stats: "الإحصائيات"
+  completed: "الإنجازات المكتملة: "
+  scroll-up: "تمرير لأعلى"
+  scroll-down: "تمرير لأسفل"

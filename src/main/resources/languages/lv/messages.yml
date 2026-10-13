@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% sasniedza:"
+
+gui:
+  title: "Sasniegumi"
+  stats: "Statistika"
+  completed: "Pabeigtie sasniegumi: "
+  scroll-up: "Ritināt uz augšu"
+  scroll-down: "Ritināt uz leju"

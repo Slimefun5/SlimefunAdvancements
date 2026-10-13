@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Taşınabilir üretim]"
+    display-name: "&aTaşınabilir üretim"
+    lore:
+      - "Taşınabilir bir zanaatkar kullan"
+    criteria:
+      interact: "Taşınabilir zanaatkar kullanmak"
+  dust:
+    name: "&a[Toza dönüşür]"
+    display-name: "&aToza dönüşür"
+    lore:
+      - "Bir cevheri maden kırıcıyla ez"
+    criteria:
+      inventory: "Maden kırıcı kullanmak"
+  electricity:
+    name: "&a[Elektrik!!!]"
+    display-name: "&aElektrik!!!"
+    lore:
+      - "Bir enerji regülatörü yerleştir"
+    criteria:
+      build: "Enerji regülatörü yerleştirmek"
+  gapple_juice:
+    name: "&a[Yıllanmış şarap tadında]"
+    display-name: "&aYıllanmış şarap tadında"
+    lore:
+      - "Altın elma suyu iç"
+    criteria:
+      consume: "Altın elma suyu içmek"
+  industrial_revolution:
+    name: "&a[Sanayi devrimi]"
+    display-name: "&aSanayi devrimi"
+    lore:
+      - "Şu eşyaları edin:"
+      - "cevher öğütücü, altın tavası, toz yıkayıcı, külçe fabrikası"
+    criteria:
+      oregrinder: "Elektrikli cevher öğütücü edinmek"
+      goldpan: "Elektrikli altın tavası edinmek"
+      dustwasher: "Elektrikli toz yıkayıcı edinmek"
+      ingotfactory: "Elektrikli külçe fabrikası edinmek"
+  exploding_tools:
+    name: "&a[Patlayıcı aletler]"
+    display-name: "&aPatlayıcı aletler"
+    lore:
+      - "Patlayıcı bir kazma ve kürek edin"
+    criteria:
+      pickaxe: "Patlayıcı kazma edinmek"
+      shovel: "Patlayıcı kürek edinmek"
+  fake_diamond:
+    name: "&a[İnsan yapımı elmaslar]"
+    display-name: "&aİnsan yapımı elmaslar"
+    lore:
+      - "Sentetik bir elmas yap"
+    criteria:
+      diamond: "Sentetik elmas edinmek"
+  carbonado:
+    name: "&a[Parlayan karanlık]"
+    display-name: "&aParlayan karanlık"
+    lore:
+      - "Bir carbonado elması yap"
+    criteria:
+      carbonado: "Carbonado edinmek"
+  black_gold:
+    name: "&a[Siyah altın]"
+    display-name: "&aSiyah altın"
+    lore:
+      - "Petrol çıkar"
+    criteria:
+      oil: "Petrol edinmek"
+  ender_charms:
+    name: "&a[Ender muskaları]"
+    display-name: "&aEnder muskaları"
+    lore:
+      - "Ender Tılsımlarını araştır"
+    criteria:
+      research: "Ender Tılsımlarını araştırmak"
+  who_asked:
+    name: "&a[Kim sordu?]"
+    display-name: "&aKim sordu?"
+    lore:
+      - "\"who asked\" ara"
+    criteria:
+      ask: "\"who asked\" aramak"
+groups:
+  basic:
+    display-name: "&fTemel"
+    lore:
+      - "&7&oSlimefun'ın özü."
+  electric:
+    display-name: "&eElektrik"
+    lore:
+      - "&7&oMedeniyetin merkezi."
+  cargo:
+    display-name: "&6Kargo"
+    lore:
+      - "&7&oMuhteşem bir şeyin başlangıcı."
+  technical:
+    display-name: "&4Teknik"
+    lore:
+      - "&7&ohaha motor dönüyor nyuuum"
+  magical:
+    display-name: "&dBüyü"
+    lore:
+      - "&7&oUstalık zamanın eseridir."
+  other:
+    display-name: "&7Diğer"
+    lore:
+      - "&7&oÇeşitli başarımlar"

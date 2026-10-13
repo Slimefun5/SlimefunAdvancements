@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Преносиво израђивање]"
+    display-name: "&aПреносиво израђивање"
+    lore:
+      - "Користи преносиви израђивач"
+    criteria:
+      interact: "Коришћење преносивог израђивача"
+  dust:
+    name: "&a[У прах се претвара]"
+    display-name: "&aУ прах се претвара"
+    lore:
+      - "Здроби руду дробилицом руде"
+    criteria:
+      inventory: "Коришћење дробилице руде"
+  electricity:
+    name: "&a[Електрична енергија!!!]"
+    display-name: "&aЕлектрична енергија!!!"
+    lore:
+      - "Постави енергетски регулатор"
+    criteria:
+      build: "Постављање енергетског регулатора"
+  gapple_juice:
+    name: "&a[Има укус старог вина]"
+    display-name: "&aИма укус старог вина"
+    lore:
+      - "Попиј сок од златне јабуке"
+    criteria:
+      consume: "Испијање сока од златне јабуке"
+  industrial_revolution:
+    name: "&a[Индустријска револуција]"
+    display-name: "&aИндустријска револуција"
+    lore:
+      - "Добави следеће предмете:"
+      - "млин за руду, испирач злата, перач прашине, фабрика полуга"
+    criteria:
+      oregrinder: "Добављање електричног млина за руду"
+      goldpan: "Добављање електричног испирача злата"
+      dustwasher: "Добављање електричног перача прашине"
+      ingotfactory: "Добављање електричне фабрике полуга"
+  exploding_tools:
+    name: "&a[Експлозивни алати]"
+    display-name: "&aЕксплозивни алати"
+    lore:
+      - "Добави експлозивни пијук и лопату"
+    criteria:
+      pickaxe: "Добављање експлозивног пијука"
+      shovel: "Добављање експлозивне лопате"
+  fake_diamond:
+    name: "&a[Дијаманти створени људском руком]"
+    display-name: "&aДијаманти створени људском руком"
+    lore:
+      - "Створи синтетички дијамант"
+    criteria:
+      diamond: "Добављање синтетичког дијаманта"
+  carbonado:
+    name: "&a[Сјајна тама]"
+    display-name: "&aСјајна тама"
+    lore:
+      - "Створи дијамант карбонадо"
+    criteria:
+      carbonado: "Добављање карбонада"
+  black_gold:
+    name: "&a[Црно злато]"
+    display-name: "&aЦрно злато"
+    lore:
+      - "Ископај нафту"
+    criteria:
+      oil: "Добављање нафте"
+  ender_charms:
+    name: "&a[Ендер амајлије]"
+    display-name: "&aЕндер амајлије"
+    lore:
+      - "Истражи Ендер талисмане"
+    criteria:
+      research: "Истраживање Ендер талисмана"
+  who_asked:
+    name: "&a[Ко је питао?]"
+    display-name: "&aКо је питао?"
+    lore:
+      - "Потражи \"who asked\""
+    criteria:
+      ask: "Тражење \"who asked\""
+groups:
+  basic:
+    display-name: "&fОснове"
+    lore:
+      - "&7&oСама суштина Slimefun-а."
+  electric:
+    display-name: "&eЕлектрика"
+    lore:
+      - "&7&oСредиште цивилизације."
+  cargo:
+    display-name: "&6Товар"
+    lore:
+      - "&7&oПочетак нечег величанственог."
+  technical:
+    display-name: "&4Техника"
+    lore:
+      - "&7&oхаха мотор се врти њууум"
+  magical:
+    display-name: "&dМагија"
+    lore:
+      - "&7&oМајсторство је дело времена."
+  other:
+    display-name: "&7Остало"
+    lore:
+      - "&7&oРазна достигнућа"

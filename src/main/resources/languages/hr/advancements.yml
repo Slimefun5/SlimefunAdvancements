@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Prijenosna izrada]"
+    display-name: "&aPrijenosna izrada"
+    lore:
+      - "Koristi prijenosni radni stol"
+    criteria:
+      interact: "Korištenje prijenosnog radnog stola"
+  dust:
+    name: "&a[U prah se pretvara]"
+    display-name: "&aU prah se pretvara"
+    lore:
+      - "Zdrobi rudu drobilicom rude"
+    criteria:
+      inventory: "Korištenje drobilice rude"
+  electricity:
+    name: "&a[Elektricitet!!!]"
+    display-name: "&aElektricitet!!!"
+    lore:
+      - "Postavi energetski regulator"
+    criteria:
+      build: "Postavljanje energetskog regulatora"
+  gapple_juice:
+    name: "&a[Ima ukus starog vina]"
+    display-name: "&aIma ukus starog vina"
+    lore:
+      - "Popij sok od zlatne jabuke"
+    criteria:
+      consume: "Ispijanje soka od zlatne jabuke"
+  industrial_revolution:
+    name: "&a[Industrijska revolucija]"
+    display-name: "&aIndustrijska revolucija"
+    lore:
+      - "Nabavi sljedeće predmete:"
+      - "mlin za rudu, posuda za ispiranje zlata, perač praha, tvornica poluga"
+    criteria:
+      oregrinder: "Nabava električnog mlina za rudu"
+      goldpan: "Nabava električne posude za ispiranje zlata"
+      dustwasher: "Nabava električnog perača praha"
+      ingotfactory: "Nabava električne tvornice poluga"
+  exploding_tools:
+    name: "&a[Eksplozivni alati]"
+    display-name: "&aEksplozivni alati"
+    lore:
+      - "Nabavi eksplozivni pijuk i lopatu"
+    criteria:
+      pickaxe: "Nabava eksplozivnog pijuka"
+      shovel: "Nabava eksplozivne lopate"
+  fake_diamond:
+    name: "&a[Dijamanti stvoreni ljudskom rukom]"
+    display-name: "&aDijamanti stvoreni ljudskom rukom"
+    lore:
+      - "Stvori sintetički dijamant"
+    criteria:
+      diamond: "Nabava sintetičkog dijamanta"
+  carbonado:
+    name: "&a[Sjajna tama]"
+    display-name: "&aSjajna tama"
+    lore:
+      - "Stvori dijamant karbonado"
+    criteria:
+      carbonado: "Nabava karbonada"
+  black_gold:
+    name: "&a[Crno zlato]"
+    display-name: "&aCrno zlato"
+    lore:
+      - "Iskopaj naftu"
+    criteria:
+      oil: "Nabava nafte"
+  ender_charms:
+    name: "&a[Ender amajlije]"
+    display-name: "&aEnder amajlije"
+    lore:
+      - "Istraži Ender talismane"
+    criteria:
+      research: "Istraživanje Ender talismana"
+  who_asked:
+    name: "&a[Ko je pitao?]"
+    display-name: "&aKo je pitao?"
+    lore:
+      - "Potraži \"who asked\""
+    criteria:
+      ask: "Traženje \"who asked\""
+groups:
+  basic:
+    display-name: "&fOsnove"
+    lore:
+      - "&7&oSama srž Slimefuna."
+  electric:
+    display-name: "&eElektrika"
+    lore:
+      - "&7&oSredište civilizacije."
+  cargo:
+    display-name: "&6Teret"
+    lore:
+      - "&7&oPočetak nečeg veličanstvenog."
+  technical:
+    display-name: "&4Tehnika"
+    lore:
+      - "&7&ohaha motor se vrti njuuum"
+  magical:
+    display-name: "&dMagija"
+    lore:
+      - "&7&oMajstorstvo je djelo vremena."
+  other:
+    display-name: "&7Ostalo"
+    lore:
+      - "&7&oRazna postignuća"

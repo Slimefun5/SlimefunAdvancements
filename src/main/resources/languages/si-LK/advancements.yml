@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[අතේ ගෙන යා හැකි තැනීම]"
+    display-name: "&aඅතේ ගෙන යා හැකි තැනීම"
+    lore:
+      - "අතේ ගෙන යා හැකි තැනුම්කරුවක් භාවිත කරන්න"
+    criteria:
+      interact: "අතේ ගෙන යා හැකි තැනුම්කරු භාවිතය"
+  dust:
+    name: "&a[දූවිලි බවට පත් වේ]"
+    display-name: "&aදූවිලි බවට පත් වේ"
+    lore:
+      - "ලෝපස් පොඩිකරුවකින් ලෝපස් පොඩි කරන්න"
+    criteria:
+      inventory: "ලෝපස් පොඩිකරු භාවිතය"
+  electricity:
+    name: "&a[විදුලිය!!!]"
+    display-name: "&aවිදුලිය!!!"
+    lore:
+      - "ශක්ති නියාමකයක් තබන්න"
+    criteria:
+      build: "ශක්ති නියාමකය තැබීම"
+  gapple_juice:
+    name: "&a[පැරණි වයින් රසයි]"
+    display-name: "&aපැරණි වයින් රසයි"
+    lore:
+      - "රන් ඇපල් යුෂ බොන්න"
+    criteria:
+      consume: "රන් ඇපල් යුෂ පානය"
+  industrial_revolution:
+    name: "&a[කාර්මික විප්ලවය]"
+    display-name: "&aකාර්මික විප්ලවය"
+    lore:
+      - "පහත භාණ්ඩ ලබා ගන්න:"
+      - "ලෝපස් ඇඹරුම, රන් තලිය, දූවිලි සෝදනය, කැටි කර්මාන්තශාලාව"
+    criteria:
+      oregrinder: "විදුලි ලෝපස් ඇඹරුම ලබා ගැනීම"
+      goldpan: "විදුලි රන් තලිය ලබා ගැනීම"
+      dustwasher: "විදුලි දූවිලි සෝදනය ලබා ගැනීම"
+      ingotfactory: "විදුලි කැටි කර්මාන්තශාලාව ලබා ගැනීම"
+  exploding_tools:
+    name: "&a[පිපිරෙන උපකරණ]"
+    display-name: "&aපිපිරෙන උපකරණ"
+    lore:
+      - "පිපිරුම් පිකෑසක් සහ සවලක් ලබා ගන්න"
+    criteria:
+      pickaxe: "පිපිරුම් පිකෑස ලබා ගැනීම"
+      shovel: "පිපිරුම් සවලය ලබා ගැනීම"
+  fake_diamond:
+    name: "&a[මිනිසා විසින් සාදන ලද දියමන්ති]"
+    display-name: "&aමිනිසා විසින් සාදන ලද දියමන්ති"
+    lore:
+      - "කෘත්‍රිම දියමන්තියක් සාදන්න"
+    criteria:
+      diamond: "කෘත්‍රිම දියමන්තිය ලබා ගැනීම"
+  carbonado:
+    name: "&a[දිදුලන අඳුර]"
+    display-name: "&aදිදුලන අඳුර"
+    lore:
+      - "කාබනාඩෝ දියමන්තියක් සාදන්න"
+    criteria:
+      carbonado: "කාබනාඩෝ ලබා ගැනීම"
+  black_gold:
+    name: "&a[කළු රන්]"
+    display-name: "&aකළු රන්"
+    lore:
+      - "තෙල් හාරන්න"
+    criteria:
+      oil: "තෙල් ලබා ගැනීම"
+  ender_charms:
+    name: "&a[Ender රැකවරණ]"
+    display-name: "&aEnder රැකවරණ"
+    lore:
+      - "Ender තලිස්මාන පිළිබඳ පර්යේෂණ කරන්න"
+    criteria:
+      research: "Ender තලිස්මාන පර්යේෂණය"
+  who_asked:
+    name: "&a[කවුද ඇහුවේ?]"
+    display-name: "&aකවුද ඇහුවේ?"
+    lore:
+      - "\"who asked\" සොයන්න"
+    criteria:
+      ask: "\"who asked\" සෙවීම"
+groups:
+  basic:
+    display-name: "&fමූලික"
+    lore:
+      - "&7&oSlimefun හි මූලික ආත්මය."
+  electric:
+    display-name: "&eවිදුලි"
+    lore:
+      - "&7&oශිෂ්ටාචාරයේ කේන්ද්‍රය."
+  cargo:
+    display-name: "&6භාණ්ඩ"
+    lore:
+      - "&7&oඅතිවිශිෂ්ට දෙයක ආරම්භය."
+  technical:
+    display-name: "&4තාක්ෂණික"
+    lore:
+      - "&7&oහාහා මෝටරය කැරකෙනවා ඉඳුඳුම්"
+  magical:
+    display-name: "&dමායා"
+    lore:
+      - "&7&oප්‍රවීණත්වය කාලයේ නිර්මාණයකි."
+  other:
+    display-name: "&7වෙනත්"
+    lore:
+      - "&7&oවිවිධ ජයග්‍රහණ"

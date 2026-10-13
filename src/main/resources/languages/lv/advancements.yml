@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Pārnēsājamā izgatavošana]"
+    display-name: "&aPārnēsājamā izgatavošana"
+    lore:
+      - "Izmanto pārnēsājamo darbagaldu"
+    criteria:
+      interact: "Pārnēsājamā darbagalda izmantošana"
+  dust:
+    name: "&a[Putekļos tas pārvēršas]"
+    display-name: "&aPutekļos tas pārvēršas"
+    lore:
+      - "Sasmalcini rūdu ar rūdas smalcinātāju"
+    criteria:
+      inventory: "Rūdas smalcinātāja izmantošana"
+  electricity:
+    name: "&a[Elektrība!!!]"
+    display-name: "&aElektrība!!!"
+    lore:
+      - "Novieto enerģijas regulatoru"
+    criteria:
+      build: "Enerģijas regulatora novietošana"
+  gapple_juice:
+    name: "&a[Garša kā nogatavinātam vīnam]"
+    display-name: "&aGarša kā nogatavinātam vīnam"
+    lore:
+      - "Izdzer zelta ābolu sulu"
+    criteria:
+      consume: "Zelta ābolu sulas izdzeršana"
+  industrial_revolution:
+    name: "&a[Industriālā revolūcija]"
+    display-name: "&aIndustriālā revolūcija"
+    lore:
+      - "Iegūsti šādus priekšmetus:"
+      - "rūdu dzirnavas, zelta panna, putekļu mazgātājs, lietņu rūpnīca"
+    criteria:
+      oregrinder: "Elektrisko rūdu dzirnavu iegūšana"
+      goldpan: "Elektriskās zelta pannas iegūšana"
+      dustwasher: "Elektriskā putekļu mazgātāja iegūšana"
+      ingotfactory: "Elektriskās lietņu rūpnīcas iegūšana"
+  exploding_tools:
+    name: "&a[Sprādzienbīstamie darbarīki]"
+    display-name: "&aSprādzienbīstamie darbarīki"
+    lore:
+      - "Iegūsti sprādzienbīstamo cirtni un lāpstu"
+    criteria:
+      pickaxe: "Sprādzienbīstamā cirtņa iegūšana"
+      shovel: "Sprādzienbīstamās lāpstas iegūšana"
+  fake_diamond:
+    name: "&a[Cilvēka radīti dimanti]"
+    display-name: "&aCilvēka radīti dimanti"
+    lore:
+      - "Izveido sintētisko dimantu"
+    criteria:
+      diamond: "Sintētiskā dimanta iegūšana"
+  carbonado:
+    name: "&a[Mirdzoša tumsa]"
+    display-name: "&aMirdzoša tumsa"
+    lore:
+      - "Izveido karbonado dimantu"
+    criteria:
+      carbonado: "Karbonado iegūšana"
+  black_gold:
+    name: "&a[Melnais zelts]"
+    display-name: "&aMelnais zelts"
+    lore:
+      - "Iegūsti naftu"
+    criteria:
+      oil: "Naftas iegūšana"
+  ender_charms:
+    name: "&a[Ender amuleti]"
+    display-name: "&aEnder amuleti"
+    lore:
+      - "Izpēti Ender talismanus"
+    criteria:
+      research: "Ender talismanu izpēte"
+  who_asked:
+    name: "&a[Kas jautāja?]"
+    display-name: "&aKas jautāja?"
+    lore:
+      - "Meklē \"who asked\""
+    criteria:
+      ask: "\"who asked\" meklēšana"
+groups:
+  basic:
+    display-name: "&fPamati"
+    lore:
+      - "&7&oPati Slimefun būtība."
+  electric:
+    display-name: "&eElektrība"
+    lore:
+      - "&7&oCivilizācijas centrs."
+  cargo:
+    display-name: "&6Krava"
+    lore:
+      - "&7&oKaut kā grandioza sākums."
+  technical:
+    display-name: "&4Tehnika"
+    lore:
+      - "&7&ohaha motors griežas ņūūūm"
+  magical:
+    display-name: "&dMaģija"
+    lore:
+      - "&7&oMeistarība ir laika darbs."
+  other:
+    display-name: "&7Citi"
+    lore:
+      - "&7&oDažādi sasniegumi"

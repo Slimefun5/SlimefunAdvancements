@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Przenośne wytwarzanie]"
+    display-name: "&aPrzenośne wytwarzanie"
+    lore:
+      - "Użyj przenośnego stołu rzemieślniczego"
+    criteria:
+      interact: "Użycie przenośnego stołu rzemieślniczego"
+  dust:
+    name: "&a[W pył się obraca]"
+    display-name: "&aW pył się obraca"
+    lore:
+      - "Rozdrobnij rudę kruszarką rudy"
+    criteria:
+      inventory: "Użycie kruszarki rudy"
+  electricity:
+    name: "&a[Elektryczność!!!]"
+    display-name: "&aElektryczność!!!"
+    lore:
+      - "Postaw regulator energii"
+    criteria:
+      build: "Postawienie regulatora energii"
+  gapple_juice:
+    name: "&a[Smakuje jak leżakowane wino]"
+    display-name: "&aSmakuje jak leżakowane wino"
+    lore:
+      - "Wypij sok ze złotego jabłka"
+    criteria:
+      consume: "Wypicie soku ze złotego jabłka"
+  industrial_revolution:
+    name: "&a[Rewolucja przemysłowa]"
+    display-name: "&aRewolucja przemysłowa"
+    lore:
+      - "Zdobądź następujące przedmioty:"
+      - "młyn do rudy, patelnia do płukania złota, płuczka pyłu, fabryka sztabek"
+    criteria:
+      oregrinder: "Zdobycie elektrycznego młyna do rudy"
+      goldpan: "Zdobycie elektrycznej patelni do płukania złota"
+      dustwasher: "Zdobycie elektrycznej płuczki pyłu"
+      ingotfactory: "Zdobycie elektrycznej fabryki sztabek"
+  exploding_tools:
+    name: "&a[Wybuchowe narzędzia]"
+    display-name: "&aWybuchowe narzędzia"
+    lore:
+      - "Zdobądź wybuchowy kilof i łopatę"
+    criteria:
+      pickaxe: "Zdobycie wybuchowego kilofa"
+      shovel: "Zdobycie wybuchowej łopaty"
+  fake_diamond:
+    name: "&a[Diamenty stworzone ludzką ręką]"
+    display-name: "&aDiamenty stworzone ludzką ręką"
+    lore:
+      - "Stwórz syntetyczny diament"
+    criteria:
+      diamond: "Zdobycie syntetycznego diamentu"
+  carbonado:
+    name: "&a[Lśniąca ciemność]"
+    display-name: "&aLśniąca ciemność"
+    lore:
+      - "Stwórz diament carbonado"
+    criteria:
+      carbonado: "Zdobycie carbonado"
+  black_gold:
+    name: "&a[Czarne złoto]"
+    display-name: "&aCzarne złoto"
+    lore:
+      - "Wydobądź ropę"
+    criteria:
+      oil: "Zdobycie ropy"
+  ender_charms:
+    name: "&a[Amulety Enderu]"
+    display-name: "&aAmulety Enderu"
+    lore:
+      - "Zbadaj Talizmany Endera"
+    criteria:
+      research: "Zbadanie Talizmanów Endera"
+  who_asked:
+    name: "&a[Kto pytał?]"
+    display-name: "&aKto pytał?"
+    lore:
+      - "Wyszukaj \"who asked\""
+    criteria:
+      ask: "Wyszukanie \"who asked\""
+groups:
+  basic:
+    display-name: "&fPodstawy"
+    lore:
+      - "&7&oSama istota Slimefuna."
+  electric:
+    display-name: "&eElektryczność"
+    lore:
+      - "&7&oŚrodek cywilizacji."
+  cargo:
+    display-name: "&6Transport"
+    lore:
+      - "&7&oPoczątek czegoś wspaniałego."
+  technical:
+    display-name: "&4Technika"
+    lore:
+      - "&7&ohaha silnik się kręci nyłuuum"
+  magical:
+    display-name: "&dMagia"
+    lore:
+      - "&7&oMistrzostwo jest dziełem czasu."
+  other:
+    display-name: "&7Inne"
+    lore:
+      - "&7&oRóżne osiągnięcia"

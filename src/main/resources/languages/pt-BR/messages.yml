@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% conquistou a conquista:"
+
+gui:
+  title: "Conquistas"
+  stats: "Estatísticas"
+  completed: "Conquistas concluídas: "
+  scroll-up: "Rolar para cima"
+  scroll-down: "Rolar para baixo"

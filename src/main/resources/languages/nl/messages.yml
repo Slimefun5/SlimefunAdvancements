@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% heeft de prestatie behaald:"
+
+gui:
+  title: "Prestaties"
+  stats: "Statistieken"
+  completed: "Voltooide prestaties: "
+  scroll-up: "Omhoog scrollen"
+  scroll-down: "Omlaag scrollen"

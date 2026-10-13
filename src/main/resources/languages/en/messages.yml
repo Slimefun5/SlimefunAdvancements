@@ -30,3 +30,9 @@ command:
   dump-done: "Done! Check the console for details."
 advancement:
   announce: "%player% has made the advancement"
+gui:
+  title: "Advancements"
+  stats: "Stats"
+  completed: "Completed Advancements: "
+  scroll-up: "Scroll Up"
+  scroll-down: "Scroll Down"

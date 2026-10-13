@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% saavutti:"
+
+gui:
+  title: "Saavutukset"
+  stats: "Tilastot"
+  completed: "Suoritetut saavutukset: "
+  scroll-up: "Vieritä ylös"
+  scroll-down: "Vieritä alas"

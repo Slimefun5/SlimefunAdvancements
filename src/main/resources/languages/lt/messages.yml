@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% pasiekė:"
+
+gui:
+  title: "Pasiekimai"
+  stats: "Statistika"
+  completed: "Užbaigti pasiekimai: "
+  scroll-up: "Slinkti aukštyn"
+  scroll-down: "Slinkti žemyn"

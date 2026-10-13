@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Bærbar krafting]"
+    display-name: "&aBærbar krafting"
+    lore:
+      - "Bruk en bærbar arbeidsbenk"
+    criteria:
+      interact: "Bruk bærbar arbeidsbenk"
+  dust:
+    name: "&a[Til støv blir det]"
+    display-name: "&aTil støv blir det"
+    lore:
+      - "Knus en malm med en malmknuser"
+    criteria:
+      inventory: "Bruk malmknuser"
+  electricity:
+    name: "&a[Elektrisitet!!!]"
+    display-name: "&aElektrisitet!!!"
+    lore:
+      - "Plasser en energiregulator"
+    criteria:
+      build: "Plasser energiregulator"
+  gapple_juice:
+    name: "&a[Smaker som lagret vin]"
+    display-name: "&aSmaker som lagret vin"
+    lore:
+      - "Drikk gyllen eplejuice"
+    criteria:
+      consume: "Drikk gyllen eplejuice"
+  industrial_revolution:
+    name: "&a[Den industrielle revolusjonen]"
+    display-name: "&aDen industrielle revolusjonen"
+    lore:
+      - "Skaff følgende gjenstander:"
+      - "malmkvern, gullvaskepanne, støvvasker, barrefabrikk"
+    criteria:
+      oregrinder: "Skaff en elektrisk malmkvern"
+      goldpan: "Skaff en elektrisk gullvaskepanne"
+      dustwasher: "Skaff en elektrisk støvvasker"
+      ingotfactory: "Skaff en elektrisk barrefabrikk"
+  exploding_tools:
+    name: "&a[Eksplosive verktøy]"
+    display-name: "&aEksplosive verktøy"
+    lore:
+      - "Skaff en eksplosiv hakke og spade"
+    criteria:
+      pickaxe: "Skaff eksplosiv hakke"
+      shovel: "Skaff eksplosiv spade"
+  fake_diamond:
+    name: "&a[Menneskeskapte diamanter]"
+    display-name: "&aMenneskeskapte diamanter"
+    lore:
+      - "Lag en syntetisk diamant"
+    criteria:
+      diamond: "Skaff syntetisk diamant"
+  carbonado:
+    name: "&a[Skinnende mørke]"
+    display-name: "&aSkinnende mørke"
+    lore:
+      - "Lag en karbonado-diamant"
+    criteria:
+      carbonado: "Skaff karbonado"
+  black_gold:
+    name: "&a[Svart gull]"
+    display-name: "&aSvart gull"
+    lore:
+      - "Utvinn olje"
+    criteria:
+      oil: "Skaff olje"
+  ender_charms:
+    name: "&a[Ender-amuletter]"
+    display-name: "&aEnder-amuletter"
+    lore:
+      - "Forsk på Ender-talismaner"
+    criteria:
+      research: "Forsk på Ender-talismaner"
+  who_asked:
+    name: "&a[Hvem spurte?]"
+    display-name: "&aHvem spurte?"
+    lore:
+      - "Søk etter \"who asked\""
+    criteria:
+      ask: "Søk etter \"who asked\""
+groups:
+  basic:
+    display-name: "&fGrunnleggende"
+    lore:
+      - "&7&oSlimefuns innerste vesen."
+  electric:
+    display-name: "&eElektrisk"
+    lore:
+      - "&7&oSivilisasjonens midtpunkt."
+  cargo:
+    display-name: "&6Frakt"
+    lore:
+      - "&7&oBegynnelsen på noe storslått."
+  technical:
+    display-name: "&4Teknisk"
+    lore:
+      - "&7&ohaha motoren spinner nyooom"
+  magical:
+    display-name: "&dMagisk"
+    lore:
+      - "&7&oMesterskap er tidens verk."
+  other:
+    display-name: "&7Annet"
+    lore:
+      - "&7&oDiverse framgang"

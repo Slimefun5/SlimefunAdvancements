@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% دستاورد را به دست آورد:"
+
+gui:
+  title: "دستاوردها"
+  stats: "آمار"
+  completed: "دستاوردهای کامل‌شده: "
+  scroll-up: "پیمایش به بالا"
+  scroll-down: "پیمایش به پایین"

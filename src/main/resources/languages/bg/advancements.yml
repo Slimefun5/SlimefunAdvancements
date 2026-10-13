@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Преносимо изработване]"
+    display-name: "&aПреносимо изработване"
+    lore:
+      - "Използвай преносима работна маса"
+    criteria:
+      interact: "Използване на преносима работна маса"
+  dust:
+    name: "&a[В прах се превръща]"
+    display-name: "&aВ прах се превръща"
+    lore:
+      - "Натроши руда с трошачка за руда"
+    criteria:
+      inventory: "Използване на трошачка за руда"
+  electricity:
+    name: "&a[Електричество!!!]"
+    display-name: "&aЕлектричество!!!"
+    lore:
+      - "Постави енергиен регулатор"
+    criteria:
+      build: "Поставяне на енергиен регулатор"
+  gapple_juice:
+    name: "&a[На вкус като отлежало вино]"
+    display-name: "&aНа вкус като отлежало вино"
+    lore:
+      - "Изпий сок от златна ябълка"
+    criteria:
+      consume: "Изпиване на сок от златна ябълка"
+  industrial_revolution:
+    name: "&a[Индустриална революция]"
+    display-name: "&aИндустриална революция"
+    lore:
+      - "Придобий следните предмети:"
+      - "мелачка за руда, златна тава, перачка за прах, фабрика за слитъци"
+    criteria:
+      oregrinder: "Придобиване на електрическа мелачка за руда"
+      goldpan: "Придобиване на електрическа златна тава"
+      dustwasher: "Придобиване на електрическа перачка за прах"
+      ingotfactory: "Придобиване на електрическа фабрика за слитъци"
+  exploding_tools:
+    name: "&a[Взривни инструменти]"
+    display-name: "&aВзривни инструменти"
+    lore:
+      - "Придобий взривна кирка и лопата"
+    criteria:
+      pickaxe: "Придобиване на взривна кирка"
+      shovel: "Придобиване на взривна лопата"
+  fake_diamond:
+    name: "&a[Диаманти, създадени от човека]"
+    display-name: "&aДиаманти, създадени от човека"
+    lore:
+      - "Създай синтетичен диамант"
+    criteria:
+      diamond: "Придобиване на синтетичен диамант"
+  carbonado:
+    name: "&a[Блестящ мрак]"
+    display-name: "&aБлестящ мрак"
+    lore:
+      - "Създай диамант карбонадо"
+    criteria:
+      carbonado: "Придобиване на карбонадо"
+  black_gold:
+    name: "&a[Черно злато]"
+    display-name: "&aЧерно злато"
+    lore:
+      - "Добий нефт"
+    criteria:
+      oil: "Придобиване на нефт"
+  ender_charms:
+    name: "&a[Амулети от Края]"
+    display-name: "&aАмулети от Края"
+    lore:
+      - "Проучи Талисманите от Края"
+    criteria:
+      research: "Проучване на Талисманите от Края"
+  who_asked:
+    name: "&a[Кой попита?]"
+    display-name: "&aКой попита?"
+    lore:
+      - "Потърси \"who asked\""
+    criteria:
+      ask: "Търсене на \"who asked\""
+groups:
+  basic:
+    display-name: "&fОснови"
+    lore:
+      - "&7&oСамата същност на Slimefun."
+  electric:
+    display-name: "&eЕлектричество"
+    lore:
+      - "&7&oЦентърът на цивилизацията."
+  cargo:
+    display-name: "&6Товари"
+    lore:
+      - "&7&oНачалото на нещо великолепно."
+  technical:
+    display-name: "&4Техника"
+    lore:
+      - "&7&oхаха моторът се върти нюууум"
+  magical:
+    display-name: "&dМагия"
+    lore:
+      - "&7&oМайсторството е дело на времето."
+  other:
+    display-name: "&7Други"
+    lore:
+      - "&7&oРазни постижения"

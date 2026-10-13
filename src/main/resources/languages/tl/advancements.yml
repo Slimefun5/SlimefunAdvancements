@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Bitbit na paggawa]"
+    display-name: "&aBitbit na paggawa"
+    lore:
+      - "Gumamit ng bitbit na tagagawa"
+    criteria:
+      interact: "Paggamit ng bitbit na tagagawa"
+  dust:
+    name: "&a[Naging alikabok]"
+    display-name: "&aNaging alikabok"
+    lore:
+      - "Durugin ang ore sa durugan ng ore"
+    criteria:
+      inventory: "Paggamit ng durugan ng ore"
+  electricity:
+    name: "&a[Kuryente!!!]"
+    display-name: "&aKuryente!!!"
+    lore:
+      - "Maglagay ng regulador ng enerhiya"
+    criteria:
+      build: "Paglalagay ng regulador ng enerhiya"
+  gapple_juice:
+    name: "&a[Lasang inedad na alak]"
+    display-name: "&aLasang inedad na alak"
+    lore:
+      - "Uminom ng juice ng golden apple"
+    criteria:
+      consume: "Pag-inom ng juice ng golden apple"
+  industrial_revolution:
+    name: "&a[Rebolusyong industriyal]"
+    display-name: "&aRebolusyong industriyal"
+    lore:
+      - "Kunin ang mga sumusunod na bagay:"
+      - "ore grinder, gold pan, dust washer, ingot factory"
+    criteria:
+      oregrinder: "Pagkuha ng elektrikong ore grinder"
+      goldpan: "Pagkuha ng elektrikong gold pan"
+      dustwasher: "Pagkuha ng elektrikong dust washer"
+      ingotfactory: "Pagkuha ng elektrikong ingot factory"
+  exploding_tools:
+    name: "&a[Mga pasabog na kasangkapan]"
+    display-name: "&aMga pasabog na kasangkapan"
+    lore:
+      - "Kunin ang pasabog na pickaxe at shovel"
+    criteria:
+      pickaxe: "Pagkuha ng pasabog na pickaxe"
+      shovel: "Pagkuha ng pasabog na shovel"
+  fake_diamond:
+    name: "&a[Mga diyamanteng gawa ng tao]"
+    display-name: "&aMga diyamanteng gawa ng tao"
+    lore:
+      - "Gumawa ng sintetikong diamond"
+    criteria:
+      diamond: "Pagkuha ng sintetikong diamond"
+  carbonado:
+    name: "&a[Makintab na kadiliman]"
+    display-name: "&aMakintab na kadiliman"
+    lore:
+      - "Gumawa ng diamond na carbonado"
+    criteria:
+      carbonado: "Pagkuha ng carbonado"
+  black_gold:
+    name: "&a[Itim na ginto]"
+    display-name: "&aItim na ginto"
+    lore:
+      - "Maghukay ng langis"
+    criteria:
+      oil: "Pagkuha ng langis"
+  ender_charms:
+    name: "&a[Mga anting-anting na Ender]"
+    display-name: "&aMga anting-anting na Ender"
+    lore:
+      - "Pag-aralan ang Mga Anting-anting na Ender"
+    criteria:
+      research: "Pag-aaral ng Mga Anting-anting na Ender"
+  who_asked:
+    name: "&a[Sino ang nagtanong?]"
+    display-name: "&aSino ang nagtanong?"
+    lore:
+      - "Hanapin ang \"who asked\""
+    criteria:
+      ask: "Paghahanap ng \"who asked\""
+groups:
+  basic:
+    display-name: "&fPangunahin"
+    lore:
+      - "&7&oAng pinakadiwa ng Slimefun."
+  electric:
+    display-name: "&eKuryente"
+    lore:
+      - "&7&oAng sentro ng sibilisasyon."
+  cargo:
+    display-name: "&6Kargamento"
+    lore:
+      - "&7&oAng simula ng isang dakilang bagay."
+  technical:
+    display-name: "&4Teknikal"
+    lore:
+      - "&7&ohaha umiikot ang motor nguuum"
+  magical:
+    display-name: "&dMahika"
+    lore:
+      - "&7&oAng kahusayan ay gawa ng panahon."
+  other:
+    display-name: "&7Iba pa"
+    lore:
+      - "&7&oSari-saring tagumpay"

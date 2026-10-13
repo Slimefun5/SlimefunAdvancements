@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[Meșteșug portabil]"
+    display-name: "&aMeșteșug portabil"
+    lore:
+      - "Folosește o masă de lucru portabilă"
+    criteria:
+      interact: "Folosirea mesei de lucru portabile"
+  dust:
+    name: "&a[În praf se preface]"
+    display-name: "&aÎn praf se preface"
+    lore:
+      - "Zdrobește un minereu cu un zdrobitor de minereu"
+    criteria:
+      inventory: "Folosirea zdrobitorului de minereu"
+  electricity:
+    name: "&a[Electricitate!!!]"
+    display-name: "&aElectricitate!!!"
+    lore:
+      - "Plasează un regulator de energie"
+    criteria:
+      build: "Plasarea regulatorului de energie"
+  gapple_juice:
+    name: "&a[Are gust de vin învechit]"
+    display-name: "&aAre gust de vin învechit"
+    lore:
+      - "Bea suc de mere aurii"
+    criteria:
+      consume: "Băutul sucului de mere aurii"
+  industrial_revolution:
+    name: "&a[Revoluția industrială]"
+    display-name: "&aRevoluția industrială"
+    lore:
+      - "Obține următoarele obiecte:"
+      - "măcinător de minereu, tavă de aur, spălător de praf, fabrică de lingouri"
+    criteria:
+      oregrinder: "Obținerea unui măcinător electric de minereu"
+      goldpan: "Obținerea unei tăvi de aur electrice"
+      dustwasher: "Obținerea unui spălător electric de praf"
+      ingotfactory: "Obținerea unei fabrici electrice de lingouri"
+  exploding_tools:
+    name: "&a[Unelte explozive]"
+    display-name: "&aUnelte explozive"
+    lore:
+      - "Obține un târnăcop și o lopată explozive"
+    criteria:
+      pickaxe: "Obținerea târnăcopului exploziv"
+      shovel: "Obținerea lopeții explozive"
+  fake_diamond:
+    name: "&a[Diamante făcute de om]"
+    display-name: "&aDiamante făcute de om"
+    lore:
+      - "Creează un diamant sintetic"
+    criteria:
+      diamond: "Obținerea unui diamant sintetic"
+  carbonado:
+    name: "&a[Întuneric strălucitor]"
+    display-name: "&aÎntuneric strălucitor"
+    lore:
+      - "Creează un diamant carbonado"
+    criteria:
+      carbonado: "Obținerea carbonado"
+  black_gold:
+    name: "&a[Aur negru]"
+    display-name: "&aAur negru"
+    lore:
+      - "Extrage petrol"
+    criteria:
+      oil: "Obținerea petrolului"
+  ender_charms:
+    name: "&a[Amulete Ender]"
+    display-name: "&aAmulete Ender"
+    lore:
+      - "Cercetează Talismanele Ender"
+    criteria:
+      research: "Cercetarea Talismanelor Ender"
+  who_asked:
+    name: "&a[Cine a întrebat?]"
+    display-name: "&aCine a întrebat?"
+    lore:
+      - "Caută \"who asked\""
+    criteria:
+      ask: "Căutarea \"who asked\""
+groups:
+  basic:
+    display-name: "&fBază"
+    lore:
+      - "&7&oÎnsuși spiritul Slimefun."
+  electric:
+    display-name: "&eElectric"
+    lore:
+      - "&7&oCentrul civilizației."
+  cargo:
+    display-name: "&6Marfă"
+    lore:
+      - "&7&oÎnceputul a ceva măreț."
+  technical:
+    display-name: "&4Tehnic"
+    lore:
+      - "&7&ohaha motorul se învârte niuuum"
+  magical:
+    display-name: "&dMagic"
+    lore:
+      - "&7&oMăiestria este opera timpului."
+  other:
+    display-name: "&7Altele"
+    lore:
+      - "&7&oRealizări diverse"

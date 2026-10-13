@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[יצירה ניידת]"
+    display-name: "&aיצירה ניידת"
+    lore:
+      - "השתמש ביוצר נייד"
+    criteria:
+      interact: "שימוש ביוצר נייד"
+  dust:
+    name: "&a[לאבק הוא הופך]"
+    display-name: "&aלאבק הוא הופך"
+    lore:
+      - "רסק עפרה במרסק עפרות"
+    criteria:
+      inventory: "שימוש במרסק עפרות"
+  electricity:
+    name: "&a[חשמל!!!]"
+    display-name: "&aחשמל!!!"
+    lore:
+      - "הנח מווסת אנרגיה"
+    criteria:
+      build: "הנחת מווסת אנרגיה"
+  gapple_juice:
+    name: "&a[טעם של יין מיושן]"
+    display-name: "&aטעם של יין מיושן"
+    lore:
+      - "שתה מיץ תפוח זהב"
+    criteria:
+      consume: "שתיית מיץ תפוח זהב"
+  industrial_revolution:
+    name: "&a[המהפכה התעשייתית]"
+    display-name: "&aהמהפכה התעשייתית"
+    lore:
+      - "השג את הפריטים הבאים:"
+      - "טוחן עפרות, מחבת זהב, מכונת שטיפת אבקה, מפעל מטילים"
+    criteria:
+      oregrinder: "השגת טוחן עפרות חשמלי"
+      goldpan: "השגת מחבת זהב חשמלית"
+      dustwasher: "השגת מכונת שטיפת אבקה חשמלית"
+      ingotfactory: "השגת מפעל מטילים חשמלי"
+  exploding_tools:
+    name: "&a[כלים מתפוצצים]"
+    display-name: "&aכלים מתפוצצים"
+    lore:
+      - "השג מכוש ואת נפיצים"
+    criteria:
+      pickaxe: "השגת מכוש נפיצה"
+      shovel: "השגת את נפיצה"
+  fake_diamond:
+    name: "&a[יהלומים מעשה ידי אדם]"
+    display-name: "&aיהלומים מעשה ידי אדם"
+    lore:
+      - "צור יהלום סינתטי"
+    criteria:
+      diamond: "השגת יהלום סינתטי"
+  carbonado:
+    name: "&a[חשכה נוצצת]"
+    display-name: "&aחשכה נוצצת"
+    lore:
+      - "צור יהלום קרבונדו"
+    criteria:
+      carbonado: "השגת קרבונדו"
+  black_gold:
+    name: "&a[זהב שחור]"
+    display-name: "&aזהב שחור"
+    lore:
+      - "כרה נפט"
+    criteria:
+      oil: "השגת נפט"
+  ender_charms:
+    name: "&a[קמעות אנדר]"
+    display-name: "&aקמעות אנדר"
+    lore:
+      - "חקור את קמעות אנדר"
+    criteria:
+      research: "חקר קמעות אנדר"
+  who_asked:
+    name: "&a[מי שאל?]"
+    display-name: "&aמי שאל?"
+    lore:
+      - "חפש \"who asked\""
+    criteria:
+      ask: "חיפוש \"who asked\""
+groups:
+  basic:
+    display-name: "&fבסיסי"
+    lore:
+      - "&7&oעצם נשמתו של Slimefun."
+  electric:
+    display-name: "&eחשמלי"
+    lore:
+      - "&7&oמרכז הציוויליזציה."
+  cargo:
+    display-name: "&6מטען"
+    lore:
+      - "&7&oההתחלה של משהו מפואר."
+  technical:
+    display-name: "&4טכני"
+    lore:
+      - "&7&oהאהה המנוע מסתובב נייוום"
+  magical:
+    display-name: "&dקסום"
+    lore:
+      - "&7&oמצוינות היא מעשה ידי הזמן."
+  other:
+    display-name: "&7אחר"
+    lore:
+      - "&7&oהישגים שונים"

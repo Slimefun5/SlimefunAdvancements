@@ -3,6 +3,7 @@ package me.char321.sfadvancements.api;
 import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.criteria.Criterion;
 import me.char321.sfadvancements.api.reward.Reward;
+import me.char321.sfadvancements.util.AdvancementContent;
 import me.char321.sfadvancements.util.ComponentCompat;
 import me.char321.sfadvancements.util.Messages;
 import me.char321.sfadvancements.util.Utils;
@@ -56,6 +57,11 @@ public class Advancement {
         return key;
     }
 
+    /** This advancement's id, which is also its section name in {@code advancements.yml}. */
+    public String getId() {
+        return key.getKey();
+    }
+
     public NamespacedKey getParent() {
         return parent;
     }
@@ -74,6 +80,11 @@ public class Advancement {
 
     public String getName() {
         return name;
+    }
+
+    /** As {@link #getName()}, in the viewer's own language. */
+    public String getName(@Nullable Player viewer) {
+        return AdvancementContent.name(viewer, this);
     }
 
     public boolean isHidden() {
@@ -113,6 +124,13 @@ public class Advancement {
             }
         }
         return res;
+    }
+
+    /** As {@link #getDescription()}, in the viewer's own language. */
+    public String getDescription(@Nullable Player viewer) {
+        return getName(viewer).replaceAll("[\\[\\]]", "")
+                + "\n"
+                + String.join(" ", AdvancementContent.displayLore(viewer, this));
     }
 
     public void register() {
@@ -165,7 +183,7 @@ public class Advancement {
         for (Player online : Bukkit.getOnlinePlayers()) {
             String prefix = Messages.get(online, "advancement.announce", "%player% has made the advancement")
                     .replace("%player%", p.getName());
-            ComponentCompat.send(online, ComponentCompat.buildAdvancementMessage(prefix + " ", getName(), getDescription()));
+            ComponentCompat.send(online, ComponentCompat.buildAdvancementMessage(prefix + " ", getName(online), getDescription(online)));
         }
     }
 

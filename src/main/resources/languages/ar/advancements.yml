@@ -1,0 +1,108 @@
+advancements:
+  portable_workbench:
+    name: "&a[تصنيع محمول]"
+    display-name: "&aتصنيع محمول"
+    lore:
+      - "استخدم منضدة عمل محمولة"
+    criteria:
+      interact: "استخدام منضدة العمل المحمولة"
+  dust:
+    name: "&a[إلى غبار يتحول]"
+    display-name: "&aإلى غبار يتحول"
+    lore:
+      - "اطحن خاماً بكسارة الخام"
+    criteria:
+      inventory: "استخدام كسارة الخام"
+  electricity:
+    name: "&a[كهرباء!!!]"
+    display-name: "&aكهرباء!!!"
+    lore:
+      - "ضع منظم طاقة"
+    criteria:
+      build: "وضع منظم الطاقة"
+  gapple_juice:
+    name: "&a[مذاقه كالنبيذ المعتق]"
+    display-name: "&aمذاقه كالنبيذ المعتق"
+    lore:
+      - "اشرب عصير التفاحة الذهبية"
+    criteria:
+      consume: "شرب عصير التفاحة الذهبية"
+  industrial_revolution:
+    name: "&a[الثورة الصناعية]"
+    display-name: "&aالثورة الصناعية"
+    lore:
+      - "احصل على الأغراض التالية:"
+      - "طاحونة الخام، غربال الذهب، غسالة الغبار، مصنع السبائك"
+    criteria:
+      oregrinder: "الحصول على طاحونة الخام الكهربائية"
+      goldpan: "الحصول على غربال الذهب الكهربائي"
+      dustwasher: "الحصول على غسالة الغبار الكهربائية"
+      ingotfactory: "الحصول على مصنع السبائك الكهربائي"
+  exploding_tools:
+    name: "&a[أدوات متفجرة]"
+    display-name: "&aأدوات متفجرة"
+    lore:
+      - "احصل على معول ومجرفة متفجرين"
+    criteria:
+      pickaxe: "الحصول على المعول المتفجر"
+      shovel: "الحصول على المجرفة المتفجرة"
+  fake_diamond:
+    name: "&a[ماس من صنع الإنسان]"
+    display-name: "&aماس من صنع الإنسان"
+    lore:
+      - "اصنع ماسة اصطناعية"
+    criteria:
+      diamond: "الحصول على ماسة اصطناعية"
+  carbonado:
+    name: "&a[ظلام لامع]"
+    display-name: "&aظلام لامع"
+    lore:
+      - "اصنع ماسة كربونادو"
+    criteria:
+      carbonado: "الحصول على كربونادو"
+  black_gold:
+    name: "&a[الذهب الأسود]"
+    display-name: "&aالذهب الأسود"
+    lore:
+      - "استخرج النفط"
+    criteria:
+      oil: "الحصول على النفط"
+  ender_charms:
+    name: "&a[تمائم اندر]"
+    display-name: "&aتمائم اندر"
+    lore:
+      - "ابحث في تعويذة اندر"
+    criteria:
+      research: "البحث في تعويذة اندر"
+  who_asked:
+    name: "&a[من سأل؟]"
+    display-name: "&aمن سأل؟"
+    lore:
+      - "ابحث عن \"who asked\""
+    criteria:
+      ask: "البحث عن \"who asked\""
+groups:
+  basic:
+    display-name: "&fالأساسيات"
+    lore:
+      - "&7&oروح Slimefun الأصيلة."
+  electric:
+    display-name: "&eالكهرباء"
+    lore:
+      - "&7&oمركز الحضارة."
+  cargo:
+    display-name: "&6الشحن"
+    lore:
+      - "&7&oبداية شيء عظيم."
+  technical:
+    display-name: "&4التقنية"
+    lore:
+      - "&7&oهاها المحرك يدور نيووم"
+  magical:
+    display-name: "&dالسحر"
+    lore:
+      - "&7&oالإتقان صنيعة الزمن."
+  other:
+    display-name: "&7أخرى"
+    lore:
+      - "&7&oإنجازات متنوعة"

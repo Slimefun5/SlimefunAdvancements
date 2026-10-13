@@ -31,3 +31,10 @@ command:
 
 advancement:
   announce: "%player% ජයග්‍රහණය ලබා ගත්තේය:"
+
+gui:
+  title: "ජයග්‍රහණ"
+  stats: "සංඛ්‍යාලේඛන"
+  completed: "සම්පූර්ණ කළ ජයග්‍රහණ: "
+  scroll-up: "ඉහළට අනුචලනය"
+  scroll-down: "පහළට අනුචලනය"
