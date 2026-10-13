@@ -5,3 +5,7 @@ use-advancements-api: true
 # whether to announce advancements
 announce-advancements: true
 add-advancements-to-guide: true
+# translates the vanilla advancements screen into each player's own language.
+# the screen is registered once for the whole server, so this rewrites it per viewer as it is sent;
+# on versions where that is not possible the screen stays in the server's default language.
+translate-vanilla-advancements: true

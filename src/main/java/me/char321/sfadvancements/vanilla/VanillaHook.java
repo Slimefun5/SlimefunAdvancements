@@ -4,6 +4,7 @@ import me.char321.sfadvancements.SFAdvancements;
 import me.char321.sfadvancements.api.Advancement;
 import me.char321.sfadvancements.api.AdvancementGroup;
 import me.char321.sfadvancements.api.criteria.Criterion;
+import me.char321.sfadvancements.util.AdvancementContent;
 import me.char321.sfadvancements.util.Utils;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -26,6 +27,7 @@ import java.util.Map;
  */
 public class VanillaHook {
     private AdvancementManager vanillaManager;
+    private AdvancementPacketTranslator translator;
     private boolean initialized = false;
     private boolean vanillaUnavailable = false;
 
@@ -74,7 +76,27 @@ public class VanillaHook {
 
         Utils.listen(new PlayerJoinListener());
         Utils.listen(new AdvancementListener());
+
+        if (SFAdvancements.getMainConfig().getConfiguration().getBoolean("translate-vanilla-advancements", true)) {
+            translator = AdvancementPacketTranslator.create();
+
+            if (translator != null) {
+                translator.start();
+            }
+        }
+
         reload();
+    }
+
+    /** Re-reads every online player's language, after a reload may have changed the loaded languages. */
+    private void refreshLanguages() {
+        if (translator == null) {
+            return;
+        }
+
+        for (Player p : Bukkit.getOnlinePlayers()) {
+            translator.refresh(p);
+        }
     }
 
     public void reload() {
@@ -95,6 +117,8 @@ public class VanillaHook {
             SFAdvancements.warn("Failed to create vanilla advancements due to JSON format changes in 1.21.4+. Skipping vanilla advancement generation.");
         }
 
+        refreshLanguages();
+
         for (Player p : Bukkit.getOnlinePlayers()) {
             syncProgress(p);
         }
@@ -109,13 +133,11 @@ public class VanillaHook {
                     ItemStack item = group.getDisplayItem();
                     String background = group.getBackground();
                     ItemMeta meta = item.getItemMeta();
+                    String language = AdvancementContent.defaultLanguage();
+                    String title = AdvancementContent.groupName(language, group);
                     //noinspection DataFlowIssue
-                    display.setTitle(meta.getDisplayName());
-                    List<String> lore = meta.getLore();
-                    if (lore == null) {
-                        lore = new ArrayList<>();
-                    }
-                    display.setDescription(String.join("\n", lore));
+                    display.setTitle(title != null ? title : meta.getDisplayName());
+                    display.setDescription(String.join("\n", AdvancementContent.groupLore(language, group)));
                     display.setIcon(new Icon(item));
                     display.setFrame(FrameType.valueOf(group.getFrameType()));
                     setBackground(display, NamespacedKey.minecraft("textures/block/" + background.toLowerCase() + ".png"));
@@ -155,16 +177,11 @@ public class VanillaHook {
 
             vadvancement.setDisplay(display -> {
                 ItemStack item = advancement.getDisplay();
-                ItemMeta meta = item.getItemMeta();
-                BaseComponent title;
-                String description;
-                //noinspection DataFlowIssue
-                if (meta.hasDisplayName()) {
-                    title = new TextComponent(meta.getDisplayName());
-                } else {
-                    title = Utils.getItemName(item);
-                }
-                description = getDescriptionfor (meta.getLore(), advancement);
+                String language = AdvancementContent.defaultLanguage();
+                String name = AdvancementContent.displayName(language, advancement);
+                BaseComponent title = name != null ? new TextComponent(name) : Utils.getItemName(item);
+                String description = getDescriptionfor (
+                        AdvancementContent.displayLore(language, advancement), advancement, language);
                 display.setTitle(title);
                 display.setDescription(description);
                 display.setIcon(new Icon(item));
@@ -210,22 +227,22 @@ public class VanillaHook {
         }
     }
 
-    private static String getDescriptionfor (List<String> lore, Advancement adv) {
+    private static String getDescriptionfor (List<String> lore, Advancement adv, String language) {
         lore = lore == null ? new ArrayList<>() : new ArrayList<>(lore);
         for (int i = lore.size() - 1; i >= 0; i--) {
             if ("%criteria%".equals(lore.get(i))) {
                 lore.remove(i);
-                lore.addAll(i, getCriteriaLore(adv));
+                lore.addAll(i, getCriteriaLore(adv, language));
                 return String.join("\n", lore);
             }
         }
         return String.join("\n", lore);
     }
 
-    private static List<String> getCriteriaLore(Advancement adv) {
+    private static List<String> getCriteriaLore(Advancement adv, String language) {
         List<String> res = new ArrayList<>();
         for (Criterion criterion : adv.getCriteria()) {
-            res.add("§7" + criterion.getName());
+            res.add("§7" + AdvancementContent.criterionName(language, adv, criterion));
         }
         return res;
     }

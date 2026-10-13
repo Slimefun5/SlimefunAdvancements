@@ -14,6 +14,10 @@ dependencies {
     githubImplementation("Slimefun5:SlimefunMetrics:v1.0.0")
     implementation("org.bstats:bstats-bukkit:2.2.1")
     githubImplementation("Slimefun5:AdvancementAPI:v1.0.0")
+
+    // Same version core compiles its own packet handler against: the oldest netty in the supported
+    // range, so nothing newer than 1.8's API is relied on.
+    compileOnly("io.netty:netty-all:4.0.23.Final")
 }
 
 tasks {
