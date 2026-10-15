@@ -51,6 +51,7 @@ public final class AdvancementPacketTranslator implements Listener {
 
     private static final String[] PACKET_NAMES = {
         "net.minecraft.network.protocol.game.ClientboundUpdateAdvancementsPacket",
+        "net.minecraft.network.protocol.game.PacketPlayOutAdvancements",
         "PacketPlayOutAdvancements",
     };
 
