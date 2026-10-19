@@ -112,7 +112,10 @@ public class OpenGUI {
         Player viewer = viewer();
         ItemStack head = MaterialCompat.stack(XMaterial.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) head.getItemMeta();
-        setOwningPlayer(meta, Bukkit.getOfflinePlayer(playerUUID));
+        Player owner = Bukkit.getPlayer(playerUUID);
+        if (owner != null) {
+            setOwningPlayer(meta, owner);
+        }
         meta.setDisplayName(ChatColor.YELLOW + Messages.get(viewer, "gui.stats", "Stats"));
         StringBuilder completedadvancements = new StringBuilder();
         completedadvancements.append(ChatColor.GRAY)

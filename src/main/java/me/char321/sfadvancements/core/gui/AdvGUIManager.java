@@ -21,11 +21,15 @@ public class AdvGUIManager implements Listener {
         p.openInventory(gui.getInventory());
     }
 
+    /**
+     * @implNote Only a player who opened the gui has one, so a click elsewhere never builds a gui, whose stats
+     *           head would look the player's profile up.
+     */
     @EventHandler
     public void onClick(InventoryClickEvent e) {
         final Player player = (Player) e.getWhoClicked();
-        OpenGUI openGUI = getByPlayer(player);
-        if (e.getInventory().equals(openGUI.getInventory())) {
+        OpenGUI openGUI = guis.get(player.getUniqueId());
+        if (openGUI != null && e.getInventory().equals(openGUI.getInventory())) {
             e.setCancelled(true);
             Utils.runSync(() -> openGUI.click(player, e.getRawSlot()));
         }
@@ -44,7 +48,7 @@ public class AdvGUIManager implements Listener {
      * @return whether the player has the advancements gui open
      */
     public boolean isOpen(Player p) {
-        OpenGUI openGUI = getByPlayer(p);
-        return p.getOpenInventory().getTopInventory().equals(openGUI.getInventory());
+        OpenGUI openGUI = guis.get(p.getUniqueId());
+        return openGUI != null && p.getOpenInventory().getTopInventory().equals(openGUI.getInventory());
     }
 }
