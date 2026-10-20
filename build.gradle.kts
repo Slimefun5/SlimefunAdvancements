@@ -11,7 +11,6 @@ description = "Slimefun Advancements is a Slimefun addon adding an advancement s
 apply(from = "https://raw.githubusercontent.com/Slimefun5/gradle/main/slimefun-addon.gradle")
 
 dependencies {
-    githubImplementation("Slimefun5:SlimefunMetrics:v1.0.0")
     implementation("org.bstats:bstats-bukkit:2.2.1")
     githubImplementation("Slimefun5:AdvancementAPI:v1.0.0")
 
